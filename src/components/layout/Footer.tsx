@@ -6,7 +6,7 @@ export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="border-t border-glass-border bg-background">
+    <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-6xl px-4 py-12">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {/* Products */}
@@ -89,7 +89,7 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t border-glass-border pt-6 md:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t border-border pt-6 md:flex-row">
           <p className="text-xs text-muted-fg">{t('footer.builtBy')}</p>
           <p className="text-xs text-muted-fg">&copy; 2026 LoadMind</p>
         </div>

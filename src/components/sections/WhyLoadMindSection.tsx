@@ -1,6 +1,6 @@
 import { Atom, UserX, DollarSign, Target } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
-import { GlassCard } from '@/components/ui/GlassCard';
+import { Card } from '@/components/ui/Card';
 
 export function WhyLoadMindSection() {
   const { t } = useLanguage();
@@ -20,7 +20,7 @@ export function WhyLoadMindSection() {
         </h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {reasons.map((r) => (
-            <GlassCard key={r.titleKey} hover>
+            <Card key={r.titleKey} hover>
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg icon-gradient">
                   <r.icon className="h-5 w-5 text-white" />
@@ -30,7 +30,7 @@ export function WhyLoadMindSection() {
                   <p className="text-sm leading-relaxed text-muted-fg">{t(r.descKey)}</p>
                 </div>
               </div>
-            </GlassCard>
+            </Card>
           ))}
         </div>
       </div>

@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { GlassCard } from './GlassCard';
+import { Card } from './Card';
 import { Button } from './Button';
 import { Badge } from './Badge';
 
@@ -14,7 +14,7 @@ interface ProductCardProps {
 
 export function ProductCard({ icon: Icon, title, description, ctaText, ctaHref, comingSoon }: ProductCardProps) {
   return (
-    <GlassCard className={`flex flex-col ${comingSoon ? 'opacity-70' : ''}`} hover={!comingSoon}>
+    <Card className={`flex flex-col ${comingSoon ? 'opacity-70' : ''}`} hover={!comingSoon}>
       <div className="mb-4 flex items-center gap-3">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg icon-gradient">
           <Icon className="h-5 w-5 text-white" />
@@ -30,6 +30,6 @@ export function ProductCard({ icon: Icon, title, description, ctaText, ctaHref, 
       >
         {ctaText}
       </Button>
-    </GlassCard>
+    </Card>
   );
 }

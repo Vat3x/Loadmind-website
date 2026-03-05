@@ -1,5 +1,5 @@
 import { Check } from 'lucide-react';
-import { GlassCard } from './GlassCard';
+import { Card } from './Card';
 import { Button } from './Button';
 
 interface PricingCardProps {
@@ -26,7 +26,7 @@ export function PricingCard({
   note,
 }: PricingCardProps) {
   return (
-    <GlassCard className={`flex flex-col ${highlighted ? 'border-primary/30 glow-primary' : ''}`}>
+    <Card className={`flex flex-col ${highlighted ? 'border-primary' : ''}`}>
       <div className="mb-6">
         <h3 className="text-lg font-semibold text-foreground">{planName}</h3>
         <p className="text-xs text-muted-fg">{duration}</p>
@@ -55,6 +55,6 @@ export function PricingCard({
       {note && (
         <p className="mt-3 text-center text-xs text-muted-fg">{note}</p>
       )}
-    </GlassCard>
+    </Card>
   );
 }

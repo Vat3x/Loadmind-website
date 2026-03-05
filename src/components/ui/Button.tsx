@@ -18,10 +18,10 @@ const sizeClasses = {
 };
 
 const variantClasses = {
-  primary: 'bg-primary text-background font-semibold hover:brightness-110 glow-primary',
-  secondary: 'glass-card border-primary/30 text-primary font-semibold hover:border-primary/50',
+  primary: 'bg-primary text-background font-semibold hover:bg-primary-hover',
+  secondary: 'bg-surface border border-border text-primary font-semibold hover:border-border-accent',
   ghost: 'text-muted-fg hover:text-foreground',
-  disabled: 'bg-muted text-muted-fg cursor-not-allowed opacity-60',
+  disabled: 'bg-surface text-muted cursor-not-allowed opacity-60',
 };
 
 export function Button({

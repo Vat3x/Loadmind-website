@@ -1,6 +1,6 @@
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
-import { GlassCard } from '@/components/ui/GlassCard';
+import { Card } from '@/components/ui/Card';
 
 export default function Terms() {
   const { t } = useLanguage();
@@ -16,7 +16,7 @@ export default function Terms() {
 
       <section className="pb-20">
         <div className="mx-auto max-w-3xl px-4">
-          <GlassCard>
+          <Card>
             <div className="space-y-6">
               {sections.map((s) => (
                 <div key={s.title}>
@@ -25,7 +25,7 @@ export default function Terms() {
                 </div>
               ))}
             </div>
-          </GlassCard>
+          </Card>
         </div>
       </section>
     </>

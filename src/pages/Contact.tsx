@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Mail, MapPin } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
-import { GlassCard } from '@/components/ui/GlassCard';
+import { Card } from '@/components/ui/Card';
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -22,7 +22,7 @@ export default function Contact() {
     window.location.href = mailtoLink;
   };
 
-  const inputClasses = 'w-full rounded-lg bg-muted border border-glass-border px-4 py-3 text-sm text-foreground placeholder:text-muted-fg focus:border-primary focus:outline-none transition-colors';
+  const inputClasses = 'w-full rounded-lg bg-surface border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-fg focus:border-primary focus:outline-none transition-colors';
 
   return (
     <>
@@ -33,7 +33,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
             {/* Info */}
             <div className="md:col-span-2">
-              <GlassCard>
+              <Card>
                 <h3 className="mb-4 text-lg font-semibold text-foreground">{t('contact.info.title')}</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -47,12 +47,12 @@ export default function Contact() {
                     <span className="text-sm text-muted-fg">{t('contact.info.location')}</span>
                   </div>
                 </div>
-              </GlassCard>
+              </Card>
             </div>
 
             {/* Form */}
             <div className="md:col-span-3">
-              <GlassCard>
+              <Card>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="mb-1 block text-xs font-medium text-muted-fg">{t('contact.form.name')}</label>
@@ -98,12 +98,12 @@ export default function Contact() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-primary px-6 py-3 font-semibold text-background transition-all hover:brightness-110 glow-primary"
+                    className="w-full rounded-xl bg-primary px-6 py-3 font-semibold text-background transition-all hover:bg-primary-hover"
                   >
                     {t('contact.form.submit')}
                   </button>
                 </form>
-              </GlassCard>
+              </Card>
             </div>
           </div>
         </div>

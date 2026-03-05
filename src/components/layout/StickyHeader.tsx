@@ -43,7 +43,7 @@ export function StickyHeader() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-background/80 backdrop-blur-xl border-b border-glass-border'
+          ? 'bg-background/80 backdrop-blur-xl border-b border-border'
           : 'bg-transparent'
       }`}
     >
@@ -86,7 +86,7 @@ export function StickyHeader() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="border-t border-glass-border bg-background/95 backdrop-blur-xl md:hidden">
+        <div className="border-t border-border bg-background/95 backdrop-blur-xl md:hidden">
           <div className="flex flex-col gap-4 p-4">
             {navLinks.map((link) => (
               <Link
@@ -98,7 +98,7 @@ export function StickyHeader() {
                 {link.label}
               </Link>
             ))}
-            <div className="flex items-center justify-between pt-4 border-t border-glass-border">
+            <div className="flex items-center justify-between pt-4 border-t border-border">
               <LanguageToggle />
               <Button href="/3dplan" size="sm">
                 {t('nav.openApp')}

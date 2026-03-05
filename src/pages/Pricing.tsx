@@ -2,7 +2,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
 import { PricingCard } from '@/components/ui/PricingCard';
 import { FAQAccordion } from '@/components/ui/FAQAccordion';
-import { GlassCard } from '@/components/ui/GlassCard';
+import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 
 export default function Pricing() {
@@ -50,7 +50,7 @@ export default function Pricing() {
               duration={t('pricing.free.duration')}
               features={freeFeatures}
               ctaText={t('pricing.free.cta')}
-              ctaHref="https://loadmind.app/app"
+              ctaHref="/3dplan"
               note={t('pricing.free.note')}
             />
             <PricingCard
@@ -60,7 +60,7 @@ export default function Pricing() {
               duration={t('pricing.pro.duration')}
               features={proFeatures}
               ctaText={t('pricing.pro.cta')}
-              ctaHref="https://loadmind.app/app"
+              ctaHref="/3dplan"
               highlighted
             />
           </div>
@@ -76,9 +76,9 @@ export default function Pricing() {
             </h3>
             <Badge variant="coming-soon">{t('common.comingSoon')}</Badge>
           </div>
-          <GlassCard className="text-center">
+          <Card className="text-center">
             <p className="text-muted-fg">{t('pricing.tracking.desc')}</p>
-          </GlassCard>
+          </Card>
         </div>
       </section>
 

@@ -5,7 +5,7 @@ export function CTASection() {
   const { t } = useLanguage();
 
   return (
-    <section className="gradient-mesh py-24">
+    <section className="hero-gradient py-24">
       <div className="mx-auto max-w-3xl px-4 text-center">
         <h2 className="text-3xl font-bold md:text-4xl gradient-text">
           {t('cta.title')}
@@ -14,7 +14,7 @@ export function CTASection() {
           {t('cta.subtitle')}
         </p>
         <div className="mt-8">
-          <Button href="https://loadmind.app/app" external size="lg">
+          <Button href="/3dplan" size="lg">
             {t('cta.button')}
           </Button>
         </div>

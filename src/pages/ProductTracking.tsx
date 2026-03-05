@@ -1,7 +1,7 @@
 import { MapPin, Radio, Bell, History, Plug } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { FeatureCard } from '@/components/ui/FeatureCard';
-import { GlassCard } from '@/components/ui/GlassCard';
+import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 
 export default function ProductTracking() {
@@ -45,11 +45,11 @@ export default function ProductTracking() {
       {/* Integration */}
       <section className="pb-20">
         <div className="mx-auto max-w-3xl px-4">
-          <GlassCard className="text-center">
+          <Card className="text-center">
             <Radio className="mx-auto mb-4 h-8 w-8 text-primary" />
             <h3 className="text-lg font-semibold text-foreground">{t('tracking.integration.title')}</h3>
             <p className="mt-2 text-sm text-muted-fg">{t('tracking.integration.desc')}</p>
-          </GlassCard>
+          </Card>
         </div>
       </section>
     </>

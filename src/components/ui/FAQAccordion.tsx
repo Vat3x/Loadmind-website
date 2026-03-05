@@ -16,7 +16,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
   return (
     <div className="space-y-3">
       {items.map((item, index) => (
-        <div key={index} className="glass-card overflow-hidden">
+        <div key={index} className="card overflow-hidden">
           <button
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
             className="flex w-full items-center justify-between p-5 text-left"

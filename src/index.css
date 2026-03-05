@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: oklch(0.13 0.03 260);
-  --color-foreground: oklch(0.97 0.01 240);
-  --color-primary: oklch(0.78 0.15 195);
-  --color-accent: oklch(0.55 0.25 295);
-  --color-muted: oklch(0.22 0.02 260);
-  --color-muted-fg: oklch(0.65 0.03 250);
+  --color-background: #0A0A0F;
+  --color-surface: #12121A;
+  --color-elevated: #1C1C28;
+  --color-border: #2A2A3A;
+  --color-border-accent: #3A3A50;
+  --color-foreground: #E8E8ED;
+  --color-muted-fg: #8888A0;
+  --color-muted: #5A5A70;
+  --color-primary: #06B6D4;
+  --color-primary-hover: #22D3EE;
+  --color-accent: #8B5CF6;
 
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
@@ -28,12 +33,10 @@
 }
 
 @layer utilities {
-  .glass-card {
-    background: oklch(0.16 0.02 260 / 0.6);
-    border: 1px solid oklch(0.78 0.15 195 / 0.15);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 1rem;
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
   }
 
   .gradient-text {
@@ -47,18 +50,10 @@
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   }
 
-  .glow-primary {
-    box-shadow: 0 0 40px oklch(0.78 0.15 195 / 0.3);
-  }
-
-  .glow-accent {
-    box-shadow: 0 0 40px oklch(0.55 0.25 295 / 0.4);
-  }
-
-  .gradient-mesh {
+  .hero-gradient {
     background:
-      radial-gradient(ellipse at 20% 50%, oklch(0.78 0.15 195 / 0.15), transparent 50%),
-      radial-gradient(ellipse at 80% 20%, oklch(0.55 0.25 295 / 0.2), transparent 50%),
+      radial-gradient(ellipse at 20% 50%, oklch(0.55 0.12 195 / 0.08), transparent 50%),
+      radial-gradient(ellipse at 80% 20%, oklch(0.45 0.15 270 / 0.1), transparent 50%),
       var(--color-background);
   }
 

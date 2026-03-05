@@ -4,7 +4,7 @@ export function LanguageToggle() {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className="flex items-center gap-1 rounded-lg bg-muted p-1">
+    <div className="flex items-center gap-1 rounded-lg bg-elevated p-1">
       <button
         onClick={() => setLang('en')}
         className={`rounded-md px-3 py-1 text-xs font-medium transition-all ${
