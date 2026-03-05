@@ -45,7 +45,7 @@ export function Button({
     }
     if (href === '/app' || href.startsWith('/app/')) {
       return (
-        <a href={href} className={classes}>
+        <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
           {children}
         </a>
       );
