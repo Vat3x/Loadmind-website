@@ -38,7 +38,7 @@ export default function Product3DPlan() {
         title={t('3dplan.hero.title')}
         subtitle={t('3dplan.hero.subtitle')}
         ctaText={t('3dplan.hero.cta')}
-        ctaHref="/3dplan"
+        ctaHref="/app"
       />
 
       {/* Features */}
@@ -104,7 +104,7 @@ export default function Product3DPlan() {
           <Card>
             <p className="text-2xl font-bold gradient-text">{t('3dplan.pricing.label')}</p>
             <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <Button href="/3dplan">{t('3dplan.pricing.cta')}</Button>
+              <Button href="/app">{t('3dplan.pricing.cta')}</Button>
               <Button variant="ghost" href="/pricing">{t('3dplan.pricing.link')}</Button>
             </div>
           </Card>

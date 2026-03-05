@@ -181,6 +181,8 @@ export const en: Record<string, string> = {
 
   // Nav (extended)
   'nav.products': 'Products',
+  'nav.3dPlan': '3D Plan',
+  'nav.tracking': 'Tracking',
   'nav.api': 'API',
   'nav.about': 'About',
   'nav.contact': 'Contact',

@@ -14,7 +14,7 @@ export function HeroSection() {
           {t('hero.subtitle')}
         </p>
         <div className="mt-10">
-          <Button href="/3dplan" size="lg">
+          <Button href="/app" size="lg">
             {t('hero.cta')}
           </Button>
         </div>

@@ -3,14 +3,26 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/3dplan"
+  from = "/app"
   to = "https://3dloadplanning.netlify.app/"
   status = 200
   force = true
 
 [[redirects]]
-  from = "/3dplan/*"
+  from = "/app/*"
   to = "https://3dloadplanning.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/embed"
+  to = "https://3dloadplanning.netlify.app/embed"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/embed/*"
+  to = "https://3dloadplanning.netlify.app/embed/:splat"
   status = 200
   force = true
 

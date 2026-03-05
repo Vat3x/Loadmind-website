@@ -14,7 +14,7 @@ export function CTASection() {
           {t('cta.subtitle')}
         </p>
         <div className="mt-8">
-          <Button href="/3dplan" size="lg">
+          <Button href="/app" size="lg">
             {t('cta.button')}
           </Button>
         </div>

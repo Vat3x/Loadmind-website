@@ -23,6 +23,11 @@ export function Footer() {
                   {t('footer.tracking')}
                 </Link>
               </li>
+              <li>
+                <Link to="/pricing" className="text-sm text-muted-fg hover:text-foreground transition-colors">
+                  {t('footer.pricing')}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -36,18 +41,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-sm text-muted-fg hover:text-foreground transition-colors">
-                  {t('footer.faq')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/pricing" className="text-sm text-muted-fg hover:text-foreground transition-colors">
-                  {t('footer.pricing')}
-                </Link>
-              </li>
-              <li>
                 <Link to="/contact" className="text-sm text-muted-fg hover:text-foreground transition-colors">
                   {t('footer.contact')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="text-sm text-muted-fg hover:text-foreground transition-colors">
+                  {t('footer.faq')}
                 </Link>
               </li>
             </ul>

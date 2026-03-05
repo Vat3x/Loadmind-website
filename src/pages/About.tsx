@@ -55,7 +55,7 @@ export default function About() {
 
           {/* CTA */}
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Button href="/3dplan">{t('about.cta.try')}</Button>
+            <Button href="/app">{t('about.cta.try')}</Button>
             <Button variant="secondary" href="/contact">{t('about.cta.contact')}</Button>
           </div>
         </div>

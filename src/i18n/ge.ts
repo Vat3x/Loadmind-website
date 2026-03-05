@@ -181,6 +181,8 @@ export const ge: Record<string, string> = {
 
   // Nav (extended)
   'nav.products': 'პროდუქტები',
+  'nav.3dPlan': '3D გეგმა',
+  'nav.tracking': 'ტრეკინგი',
   'nav.api': 'API',
   'nav.about': 'შესახებ',
   'nav.contact': 'კონტაქტი',
