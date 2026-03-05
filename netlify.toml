@@ -4,7 +4,7 @@
 
 [[redirects]]
   from = "/3dplan/*"
-  to = "https://3dloadplan.netlify.app/:splat"
+  to = "https://3dloadplanning.netlify.app/:splat"
   status = 200
   force = true
 
