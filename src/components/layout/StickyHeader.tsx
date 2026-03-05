@@ -60,18 +60,22 @@ export function StickyHeader() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-1 md:flex">
           {/* Products Dropdown */}
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => setProductsOpen(!productsOpen)}
-              className="flex items-center gap-1 text-sm text-muted-fg transition-colors hover:text-foreground"
+              className={`flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 ${
+                productsOpen
+                  ? 'bg-surface text-foreground'
+                  : 'text-foreground/70 hover:bg-surface/50 hover:text-foreground'
+              }`}
             >
               {t('nav.products')}
-              <ChevronDown className={`h-3.5 w-3.5 transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${productsOpen ? 'rotate-180' : ''}`} />
             </button>
             <div
-              className={`absolute left-0 top-full mt-2 w-40 rounded-lg border border-border bg-surface py-1 shadow-lg transition-all duration-200 origin-top ${
+              className={`absolute left-0 top-full mt-2 w-44 rounded-lg border border-border bg-surface p-1.5 shadow-xl shadow-background/50 transition-all duration-200 origin-top ${
                 productsOpen
                   ? 'opacity-100 scale-100 pointer-events-auto'
                   : 'opacity-0 scale-95 pointer-events-none'
@@ -81,7 +85,7 @@ export function StickyHeader() {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="block px-4 py-2 text-sm text-muted-fg transition-colors hover:bg-elevated hover:text-foreground"
+                  className="block rounded-md px-3 py-2 text-sm text-muted-fg transition-colors hover:bg-elevated hover:text-foreground"
                 >
                   {link.label}
                 </Link>
@@ -93,7 +97,11 @@ export function StickyHeader() {
             <Link
               key={link.href}
               to={link.href}
-              className="text-sm text-muted-fg transition-colors hover:text-foreground"
+              className={`rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 ${
+                location.pathname === link.href
+                  ? 'text-foreground bg-surface/50'
+                  : 'text-foreground/70 hover:bg-surface/50 hover:text-foreground'
+              }`}
             >
               {link.label}
             </Link>

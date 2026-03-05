@@ -7,7 +7,7 @@ export const en: Record<string, string> = {
   'nav.openApp': 'Open App',
 
   // Hero
-  'hero.badge': 'Dispatch SaaS Platform',
+  'hero.badge': '3D Load Planning & Tracking',
   'hero.title': 'LoadMind',
   'hero.subtitle': 'Dispatch tools that work.',
   'hero.cta': 'Try Free — No Login',

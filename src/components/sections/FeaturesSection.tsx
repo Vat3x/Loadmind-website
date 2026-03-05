@@ -17,7 +17,7 @@ export function FeaturesSection() {
   ];
 
   return (
-    <section ref={ref} id="features" className="py-20">
+    <section ref={ref} id="features" className="py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <h2 className="reveal mb-12 text-center text-2xl font-bold md:text-3xl gradient-text">
           {t('features.title')}

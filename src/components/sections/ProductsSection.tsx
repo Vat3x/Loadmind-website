@@ -8,7 +8,7 @@ export function ProductsSection() {
   const ref = useRevealChildren<HTMLElement>();
 
   return (
-    <section ref={ref} className="section-alt py-24">
+    <section ref={ref} className="section-alt py-16 md:py-20">
       <div className="mx-auto max-w-5xl px-4">
         <h2 className="reveal mb-12 text-center text-2xl font-bold md:text-3xl gradient-text">
           {t('products.title')}
