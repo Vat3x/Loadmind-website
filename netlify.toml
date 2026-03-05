@@ -4,22 +4,22 @@
 
 [[redirects]]
   from = "/app"
-  to = "https://app.loadmind.app/"
+  to = "https://3d.loadmind.app/"
   status = 302
 
 [[redirects]]
   from = "/app/*"
-  to = "https://app.loadmind.app/:splat"
+  to = "https://3d.loadmind.app/:splat"
   status = 302
 
 [[redirects]]
   from = "/embed"
-  to = "https://app.loadmind.app/embed"
+  to = "https://3d.loadmind.app/embed"
   status = 302
 
 [[redirects]]
   from = "/embed/*"
-  to = "https://app.loadmind.app/embed/:splat"
+  to = "https://3d.loadmind.app/embed/:splat"
   status = 302
 
 [[redirects]]
