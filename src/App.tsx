@@ -1,0 +1,43 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { LanguageProvider } from '@/i18n/LanguageContext';
+import { PageLayout } from '@/components/layout/PageLayout';
+import Landing from '@/pages/Landing';
+import Pricing from '@/pages/Pricing';
+import FAQ from '@/pages/FAQ';
+import Product3DPlan from '@/pages/Product3DPlan';
+import ProductTracking from '@/pages/ProductTracking';
+import ApiIntegrations from '@/pages/ApiIntegrations';
+import About from '@/pages/About';
+import Contact from '@/pages/Contact';
+import Terms from '@/pages/Terms';
+import Privacy from '@/pages/Privacy';
+import NotFound from '@/pages/NotFound';
+
+const router = createBrowserRouter([
+  {
+    element: <PageLayout />,
+    children: [
+      { path: '/', element: <Landing /> },
+      { path: '/3d-plan', element: <Product3DPlan /> },
+      { path: '/tracking', element: <ProductTracking /> },
+      { path: '/pricing', element: <Pricing /> },
+      { path: '/api', element: <ApiIntegrations /> },
+      { path: '/faq', element: <FAQ /> },
+      { path: '/about', element: <About /> },
+      { path: '/contact', element: <Contact /> },
+      { path: '/terms', element: <Terms /> },
+      { path: '/privacy', element: <Privacy /> },
+      { path: '*', element: <NotFound /> },
+    ],
+  },
+]);
+
+function App() {
+  return (
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
+  );
+}
+
+export default App;
