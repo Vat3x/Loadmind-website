@@ -5,26 +5,22 @@
 [[redirects]]
   from = "/app"
   to = "https://3dloadplanning.netlify.app/"
-  status = 200
-  force = true
+  status = 302
 
 [[redirects]]
   from = "/app/*"
   to = "https://3dloadplanning.netlify.app/:splat"
-  status = 200
-  force = true
+  status = 302
 
 [[redirects]]
   from = "/embed"
   to = "https://3dloadplanning.netlify.app/embed"
-  status = 200
-  force = true
+  status = 302
 
 [[redirects]]
   from = "/embed/*"
   to = "https://3dloadplanning.netlify.app/embed/:splat"
-  status = 200
-  force = true
+  status = 302
 
 [[redirects]]
   from = "/*"
