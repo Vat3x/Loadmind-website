@@ -43,6 +43,13 @@ export function Button({
         </a>
       );
     }
+    if (href === '/app' || href.startsWith('/app/')) {
+      return (
+        <a href={href} className={classes}>
+          {children}
+        </a>
+      );
+    }
     return (
       <Link to={href} className={classes}>
         {children}
