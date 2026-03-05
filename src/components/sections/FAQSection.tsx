@@ -1,8 +1,10 @@
 import { useLanguage } from '@/hooks/useLanguage';
+import { useReveal } from '@/hooks/useReveal';
 import { FAQAccordion } from '@/components/ui/FAQAccordion';
 
 export function FAQSection() {
   const { t } = useLanguage();
+  const ref = useReveal<HTMLElement>();
 
   const items = [
     { question: t('faq.q1'), answer: t('faq.a1') },
@@ -14,7 +16,7 @@ export function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="py-20">
+    <section ref={ref} id="faq" className="reveal section-alt py-24">
       <div className="mx-auto max-w-3xl px-4">
         <h2 className="mb-12 text-center text-2xl font-bold md:text-3xl gradient-text">
           {t('faq.title')}

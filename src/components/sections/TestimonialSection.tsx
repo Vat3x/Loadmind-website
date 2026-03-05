@@ -1,12 +1,14 @@
 import { Quote } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useReveal } from '@/hooks/useReveal';
 import { Card } from '@/components/ui/Card';
 
 export function TestimonialSection() {
   const { t } = useLanguage();
+  const ref = useReveal<HTMLElement>();
 
   return (
-    <section className="py-20">
+    <section ref={ref} className="reveal section-alt py-24">
       <div className="mx-auto max-w-3xl px-4">
         <h2 className="mb-12 text-center text-2xl font-bold md:text-3xl gradient-text">
           {t('testimonial.title')}

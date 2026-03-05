@@ -18,7 +18,7 @@ const sizeClasses = {
 };
 
 const variantClasses = {
-  primary: 'bg-primary text-background font-semibold hover:bg-primary-hover',
+  primary: 'bg-primary text-background font-semibold hover:bg-primary-hover hover:shadow-md hover:shadow-primary/20 active:scale-[0.98]',
   secondary: 'bg-surface border border-border text-primary font-semibold hover:border-border-accent',
   ghost: 'text-muted-fg hover:text-foreground',
   disabled: 'bg-surface text-muted cursor-not-allowed opacity-60',

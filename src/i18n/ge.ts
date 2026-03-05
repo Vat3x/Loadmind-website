@@ -7,6 +7,7 @@ export const ge: Record<string, string> = {
   'nav.openApp': 'გახსენი აპი',
 
   // Hero
+  'hero.badge': 'სადისპეჩერო SaaS პლატფორმა',
   'hero.title': 'LoadMind',
   'hero.subtitle': 'სადისპეჩერო ხელსაწყოები რომლებიც მუშაობს.',
   'hero.cta': 'სცადე უფასოდ — რეგისტრაციის გარეშე',

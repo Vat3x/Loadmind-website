@@ -1,9 +1,11 @@
 import { Scale, ShieldCheck, Shapes, Star, FileDown, Zap } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useRevealChildren } from '@/hooks/useRevealChildren';
 import { FeatureCard } from '@/components/ui/FeatureCard';
 
 export function FeaturesSection() {
   const { t } = useLanguage();
+  const ref = useRevealChildren<HTMLElement>();
 
   const features = [
     { icon: Scale, titleKey: 'features.weightBalance.title', descKey: 'features.weightBalance.desc' },
@@ -15,19 +17,20 @@ export function FeaturesSection() {
   ];
 
   return (
-    <section id="features" className="py-20">
+    <section ref={ref} id="features" className="py-20">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="mb-12 text-center text-2xl font-bold md:text-3xl gradient-text">
+        <h2 className="reveal mb-12 text-center text-2xl font-bold md:text-3xl gradient-text">
           {t('features.title')}
         </h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f) => (
-            <FeatureCard
-              key={f.titleKey}
-              icon={f.icon}
-              title={t(f.titleKey)}
-              description={t(f.descKey)}
-            />
+          {features.map((f, i) => (
+            <div key={f.titleKey} className={`reveal reveal-delay-${i + 1}`}>
+              <FeatureCard
+                icon={f.icon}
+                title={t(f.titleKey)}
+                description={t(f.descKey)}
+              />
+            </div>
           ))}
         </div>
       </div>

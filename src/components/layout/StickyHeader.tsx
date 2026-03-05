@@ -70,19 +70,23 @@ export function StickyHeader() {
               {t('nav.products')}
               <ChevronDown className={`h-3.5 w-3.5 transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
             </button>
-            {productsOpen && (
-              <div className="absolute left-0 top-full mt-2 w-40 rounded-lg border border-border bg-surface py-1 shadow-lg">
-                {productLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    className="block px-4 py-2 text-sm text-muted-fg transition-colors hover:bg-elevated hover:text-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            )}
+            <div
+              className={`absolute left-0 top-full mt-2 w-40 rounded-lg border border-border bg-surface py-1 shadow-lg transition-all duration-200 origin-top ${
+                productsOpen
+                  ? 'opacity-100 scale-100 pointer-events-auto'
+                  : 'opacity-0 scale-95 pointer-events-none'
+              }`}
+            >
+              {productLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="block px-4 py-2 text-sm text-muted-fg transition-colors hover:bg-elevated hover:text-foreground"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {navLinks.map((link) => (
@@ -114,42 +118,44 @@ export function StickyHeader() {
       </div>
 
       {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="border-t border-border bg-background/95 backdrop-blur-xl md:hidden">
-          <div className="flex flex-col gap-4 p-4">
-            {/* Products section */}
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted">{t('nav.products')}</p>
-              <div className="mt-2 flex flex-col gap-2 pl-3">
-                {productLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    className="text-base text-muted-fg transition-colors hover:text-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className="text-base text-muted-fg transition-colors hover:text-foreground"
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="flex items-center justify-between pt-4 border-t border-border">
-              <LanguageToggle />
-              <Button href="/app" size="sm">
-                {t('nav.openApp')}
-              </Button>
+      <div
+        className={`overflow-hidden border-t border-border bg-background/95 backdrop-blur-xl transition-all duration-300 md:hidden ${
+          mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 border-t-transparent'
+        }`}
+      >
+        <div className="flex flex-col gap-4 p-4">
+          {/* Products section */}
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted">{t('nav.products')}</p>
+            <div className="mt-2 flex flex-col gap-2 pl-3">
+              {productLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="text-base text-muted-fg transition-colors hover:text-foreground"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              to={link.href}
+              className="text-base text-muted-fg transition-colors hover:text-foreground"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="flex items-center justify-between pt-4 border-t border-border">
+            <LanguageToggle />
+            <Button href="/app" size="sm">
+              {t('nav.openApp')}
+            </Button>
+          </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
