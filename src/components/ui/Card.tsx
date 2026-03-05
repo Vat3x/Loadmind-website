@@ -9,7 +9,7 @@ interface CardProps {
 export function Card({ children, className = '', hover = false }: CardProps) {
   return (
     <div
-      className={`card p-6 ${hover ? 'card-hover' : ''} ${className}`}
+      className={`card p-6 h-full ${hover ? 'card-hover' : ''} ${className}`}
     >
       {children}
     </div>

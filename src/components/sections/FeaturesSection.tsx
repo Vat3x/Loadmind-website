@@ -24,7 +24,7 @@ export function FeaturesSection() {
         </h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f, i) => (
-            <div key={f.titleKey} className={`reveal reveal-delay-${i + 1}`}>
+            <div key={f.titleKey} className={`reveal reveal-delay-${i + 1} h-full`}>
               <FeatureCard
                 icon={f.icon}
                 title={t(f.titleKey)}
