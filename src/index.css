@@ -12,6 +12,8 @@
   --color-primary: #06B6D4;
   --color-primary-hover: #22D3EE;
   --color-accent: #8B5CF6;
+  --color-warm: #F59E0B;
+  --color-warm-hover: #FBBF24;
 
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
@@ -80,6 +82,12 @@
 
   .accordion-inner {
     overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease 0.05s;
+  }
+
+  .accordion-content.open .accordion-inner {
+    opacity: 1;
   }
 
   /* Scroll-reveal */
@@ -152,6 +160,40 @@
       display: none;
     }
   }
+}
+
+/* Burger menu icon bounce */
+@keyframes burger-bounce-in {
+  0% {
+    transform: scale(0) rotate(-180deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.14) rotate(12deg);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(0.92) rotate(-6deg);
+  }
+  75% {
+    transform: scale(1.06) rotate(3deg);
+  }
+  88% {
+    transform: scale(0.98) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.burger-bounce-in {
+  animation: burger-bounce-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.burger-out {
+  opacity: 0;
+  transform: scale(0) rotate(180deg);
+  transition: all 0.2s ease-in;
 }
 
 /* Keyframes */

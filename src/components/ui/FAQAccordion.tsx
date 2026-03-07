@@ -21,22 +21,20 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
         const triggerId = `faq-trigger-${index}`;
 
         return (
-          <div key={index} className="card overflow-hidden" role="listitem">
+          <div key={index} className={`card overflow-hidden transition-all duration-300 ${isOpen ? 'border-border-accent' : ''}`} role="listitem">
             <button
               id={triggerId}
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
               aria-controls={panelId}
-              className="flex w-full items-center justify-between p-5 text-left"
+              className="group flex w-full items-center justify-between p-5 text-left transition-colors duration-200 hover:bg-surface/50"
             >
-              <span className="text-base font-medium text-foreground pr-4">
+              <span className={`text-base font-medium pr-4 transition-colors duration-200 ${isOpen ? 'text-primary' : 'text-foreground'}`}>
                 {item.question}
               </span>
-              <ChevronDown
-                className={`h-5 w-5 shrink-0 text-muted-fg transition-transform duration-300 ${
-                  isOpen ? 'rotate-180' : ''
-                }`}
-              />
+              <div className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen ? 'bg-primary/10 text-primary rotate-180' : 'text-muted-fg group-hover:text-foreground'}`}>
+                <ChevronDown className="h-4 w-4" />
+              </div>
             </button>
             <div
               id={panelId}

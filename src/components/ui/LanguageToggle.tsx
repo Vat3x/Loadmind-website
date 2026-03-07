@@ -4,12 +4,16 @@ export function LanguageToggle() {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className="flex items-center gap-1 rounded-lg bg-elevated p-1">
+    <div className="relative flex items-center gap-1 rounded-lg bg-elevated p-1">
+      <div
+        className="absolute top-1 h-[calc(100%-8px)] w-[calc(50%-4px)] rounded-md bg-primary transition-transform duration-200 ease-out"
+        style={{ transform: lang === 'en' ? 'translateX(2px)' : 'translateX(calc(100% + 6px))' }}
+      />
       <button
         onClick={() => setLang('en')}
-        className={`rounded-md px-3 py-1 text-xs font-medium transition-all ${
+        className={`relative z-10 rounded-md px-3 py-1 text-xs font-medium transition-colors duration-200 ${
           lang === 'en'
-            ? 'bg-primary text-background'
+            ? 'text-background'
             : 'text-muted-fg hover:text-foreground'
         }`}
       >
@@ -17,9 +21,9 @@ export function LanguageToggle() {
       </button>
       <button
         onClick={() => setLang('ge')}
-        className={`rounded-md px-3 py-1 text-xs font-medium transition-all ${
+        className={`relative z-10 rounded-md px-3 py-1 text-xs font-medium transition-colors duration-200 ${
           lang === 'ge'
-            ? 'bg-primary text-background'
+            ? 'text-background'
             : 'text-muted-fg hover:text-foreground'
         }`}
       >

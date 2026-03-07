@@ -12,6 +12,7 @@ export function StickyHeader() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const hasToggledMenu = useRef(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -55,8 +56,9 @@ export function StickyHeader() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         {/* Logo */}
-        <Link to="/" className="text-xl font-bold text-foreground">
-          LoadMind
+        <Link to="/" className="flex items-center gap-2 transition-opacity duration-200 hover:opacity-80">
+          <img src="/logo.svg" alt="" className="h-7 w-auto" />
+          <span className="text-xl font-bold text-foreground">LoadMind</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -85,7 +87,7 @@ export function StickyHeader() {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="block rounded-md px-3 py-2 text-sm text-muted-fg transition-colors hover:bg-elevated hover:text-foreground"
+                  className="block rounded-md px-3 py-2 text-sm text-muted-fg transition-all duration-150 hover:bg-elevated hover:text-foreground hover:translate-x-1"
                 >
                   {link.label}
                 </Link>
@@ -118,10 +120,23 @@ export function StickyHeader() {
 
         {/* Mobile Menu Button */}
         <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="text-foreground md:hidden"
+          onClick={() => {
+            hasToggledMenu.current = true;
+            setMobileOpen(!mobileOpen);
+          }}
+          className="relative h-6 w-6 text-foreground md:hidden"
+          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
         >
-          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          <Menu className={`absolute inset-0 h-6 w-6 ${
+            mobileOpen
+              ? 'burger-out'
+              : hasToggledMenu.current ? 'burger-bounce-in' : ''
+          }`} />
+          <X className={`absolute inset-0 h-6 w-6 ${
+            mobileOpen
+              ? 'burger-bounce-in'
+              : 'burger-out'
+          }`} />
         </button>
       </div>
 

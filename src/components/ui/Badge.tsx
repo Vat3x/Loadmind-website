@@ -8,7 +8,7 @@ interface BadgeProps {
 const variantClasses = {
   default: 'bg-primary/10 text-primary border-primary/20',
   'coming-soon': 'bg-accent/10 text-accent border-accent/20',
-  free: 'bg-green-500/10 text-green-400 border-green-500/20',
+  free: 'bg-warm/10 text-warm border-warm/20',
 };
 
 export function Badge({ variant = 'default', children }: BadgeProps) {
