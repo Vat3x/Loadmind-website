@@ -1,8 +1,9 @@
-import { MapPin, Radio, Bell, History, Plug } from 'lucide-react';
+import { MapPin, Radio, Bell, History, Plug, ShoppingCart } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { FeatureCard } from '@/components/ui/FeatureCard';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
 
 export default function ProductTracking() {
   const { t } = useLanguage();
@@ -39,6 +40,29 @@ export default function ProductTracking() {
               <FeatureCard key={f.titleKey} icon={f.icon} title={t(f.titleKey)} description={t(f.descKey)} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Pre-order */}
+      <section className="pb-20">
+        <div className="mx-auto max-w-3xl px-4">
+          <Card className="text-center p-8 md:p-12 border-primary/20">
+            <ShoppingCart className="mx-auto mb-4 h-10 w-10 text-primary" />
+            <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+              {t('tracking.preorder.title')}
+            </h2>
+            <p className="mx-auto mt-4 max-w-lg text-muted-fg">
+              {t('tracking.preorder.desc')}
+            </p>
+            <div className="mt-8">
+              <Button href="/contact" size="lg">
+                {t('tracking.preorder.cta')}
+              </Button>
+            </div>
+            <p className="mt-3 text-xs text-muted">
+              {t('tracking.preorder.note')}
+            </p>
+          </Card>
         </div>
       </section>
 

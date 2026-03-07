@@ -7,19 +7,18 @@ export const ge: Record<string, string> = {
   'nav.openApp': 'გახსენი აპი',
 
   // Hero
-  'hero.badge': '3D ტვირთის დაგეგმვა და თრექინგი',
   'hero.title': 'LoadMind',
   'hero.subtitle': 'სადისპეჩერო ხელსაწყოები რომლებიც მუშაობს.',
-  'hero.cta': 'სცადე უფასოდ — რეგისტრაციის გარეშე',
+  'hero.cta': 'სცადე 3D Load Planner უფასოდ',
 
   // Products
   'products.title': 'ჩვენი პროდუქტები',
-  'products.3dplan.title': '3D გეგმა',
+  'products.3dplan.title': '3D Load Planner',
   'products.3dplan.description': '3D დატვირთვის დაგეგმვა LTL დისპეჩერებისთვის. წონის ბალანსი, უსაფრთხოება, ექსპორტი.',
   'products.3dplan.cta': 'სცადე უფასოდ →',
   'products.tracking.title': 'თრექინგი',
   'products.tracking.description': 'მძღოლის რეალტაიმ თრექინგი TMS ინტეგრაციით. იცოდე სად არის ყველა მანქანა.',
-  'products.tracking.cta': 'მალე',
+  'products.tracking.cta': 'წინასწარი შეკვეთა →',
 
   // Features
   'features.title': 'ფუნქციები',
@@ -48,7 +47,7 @@ export const ge: Record<string, string> = {
   'valueProps.price.desc': 'ბარათის გარეშე დაიწყე',
 
   // How It Works
-  'howItWorks.title': 'როგორ მუშაობს',
+  'howItWorks.title': 'როგორ მუშაობს 3D Load Planner',
   'howItWorks.step1.title': 'აირჩიე მანქანა',
   'howItWorks.step1.desc': 'აირჩიე სპრინტერი, სტრეიტ თრაქი ან სემი-ტრეილერი. საჭიროებისას მიუთითე საკუთარი ზომები.',
   'howItWorks.step2.title': 'დაამატე ტვირთი',
@@ -92,14 +91,14 @@ export const ge: Record<string, string> = {
   // CTA
   'cta.title': 'Load Smarter. Drive Safer.',
   'cta.subtitle': 'დაიწყე ტვირთის 3D დაგეგმვა — უფასოდ, რეგისტრაციის გარეშე.',
-  'cta.button': 'სცადე უფასოდ — რეგისტრაციის გარეშე',
+  'cta.button': 'სცადე 3D Load Planner უფასოდ',
 
   // Footer
   'footer.products': 'პროდუქტები',
   'footer.company': 'კომპანია',
   'footer.legal': 'იურიდიული',
   'footer.contact': 'კონტაქტი',
-  'footer.3dPlan': '3D გეგმა',
+  'footer.3dPlan': '3D Load Planner',
   'footer.tracking': 'თრექინგი',
   'footer.faq': 'FAQ',
   'footer.pricing': 'ფასები',
@@ -112,7 +111,7 @@ export const ge: Record<string, string> = {
   // Pricing Page
   'pricing.title': 'მარტივი, გამჭვირვალე ფასები',
   'pricing.subtitle': 'დაიწყე უფასოდ. განახლდი როცა დაგჭირდება.',
-  'pricing.3dplan.title': 'LoadMind 3D გეგმა',
+  'pricing.3dplan.title': 'LoadMind 3D Load Planner',
   'pricing.free.name': 'უფასო პერიოდი',
   'pricing.free.price': '$0',
   'pricing.free.period': '/თვე',
@@ -182,14 +181,14 @@ export const ge: Record<string, string> = {
 
   // Nav (extended)
   'nav.products': 'პროდუქტები',
-  'nav.3dPlan': '3D გეგმა',
+  'nav.3dPlan': '3D Load Planner',
   'nav.tracking': 'ტრეკინგი',
   'nav.api': 'API',
   'nav.about': 'შესახებ',
   'nav.contact': 'კონტაქტი',
 
   // 3D Plan Product Page
-  '3dplan.hero.title': 'LoadMind 3D გეგმა',
+  '3dplan.hero.title': 'LoadMind 3D Load Planner',
   '3dplan.hero.subtitle': 'დააბალანსე წონა, შეამოწმე უსაფრთხოება, ექსპორტი — წამებში.',
   '3dplan.hero.cta': 'სცადე უფასოდ — რეგისტრაციის გარეშე',
   '3dplan.pricing.label': 'პირველი თვე $0, შემდეგ $39/თვე',
@@ -215,7 +214,11 @@ export const ge: Record<string, string> = {
   // Tracking Product Page
   'tracking.hero.title': 'LoadMind თრექინგი',
   'tracking.hero.subtitle': 'იცოდე სად არის ყველა მანქანა. რეალტაიმ თრექინგი TMS ინტეგრაციით.',
-  'tracking.hero.cta': 'მოითხოვე ადრეული წვდომა',
+  'tracking.hero.cta': 'წინასწარი შეკვეთა',
+  'tracking.preorder.title': 'მიიღე ადრეული წვდომა',
+  'tracking.preorder.desc': 'იყავი პირველი ვინც გამოიყენებს LoadMind Tracking-ს გაშვებისას. შეუკვეთე წინასწარ და დაიფიქსირე ადრეული ფასი.',
+  'tracking.preorder.cta': 'წინასწარი შეკვეთა',
+  'tracking.preorder.note': 'გაშვებამდე თანხა არ ჩამოიჭრება',
   'tracking.features.title': 'ფუნქციები',
   'tracking.realtime.title': 'რეალტაიმ ლოკაცია',
   'tracking.realtime.desc': 'ცოცხალი რუკა ყველა მძღოლით. განახლება ყოველ 30 წამში.',

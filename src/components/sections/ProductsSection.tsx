@@ -29,7 +29,7 @@ export function ProductsSection() {
               title={t('products.tracking.title')}
               description={t('products.tracking.description')}
               ctaText={t('products.tracking.cta')}
-              comingSoon
+              ctaHref="/tracking"
             />
           </div>
         </div>

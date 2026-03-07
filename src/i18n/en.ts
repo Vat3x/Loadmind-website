@@ -7,19 +7,18 @@ export const en: Record<string, string> = {
   'nav.openApp': 'Open App',
 
   // Hero
-  'hero.badge': '3D Load Planning & Tracking',
   'hero.title': 'LoadMind',
   'hero.subtitle': 'Dispatch tools that work.',
-  'hero.cta': 'Try Free — No Login',
+  'hero.cta': 'Try 3D Load Planner for Free',
 
   // Products
   'products.title': 'Our Products',
-  'products.3dplan.title': '3D Plan',
+  'products.3dplan.title': '3D Load Planner',
   'products.3dplan.description': '3D load planning for LTL dispatchers. Balance weight, check safety, export plans.',
   'products.3dplan.cta': 'Try Free →',
   'products.tracking.title': 'Tracking',
   'products.tracking.description': 'Real-time driver tracking with TMS integration. Know where every truck is.',
-  'products.tracking.cta': 'Coming Soon',
+  'products.tracking.cta': 'Pre-order →',
 
   // Features
   'features.title': 'Features',
@@ -48,7 +47,7 @@ export const en: Record<string, string> = {
   'valueProps.price.desc': 'No credit card needed to start',
 
   // How It Works
-  'howItWorks.title': 'How It Works',
+  'howItWorks.title': 'How 3D Load Planner Works',
   'howItWorks.step1.title': 'Pick your truck',
   'howItWorks.step1.desc': 'Select from sprinters, straight trucks, or semi-trailers. Set custom dimensions if needed.',
   'howItWorks.step2.title': 'Add cargo',
@@ -92,14 +91,14 @@ export const en: Record<string, string> = {
   // CTA
   'cta.title': 'Load Smarter. Drive Safer.',
   'cta.subtitle': 'Start planning your loads in 3D — free, no login required.',
-  'cta.button': 'Try Free — No Login',
+  'cta.button': 'Try 3D Load Planner for Free',
 
   // Footer
   'footer.products': 'Products',
   'footer.company': 'Company',
   'footer.legal': 'Legal',
   'footer.contact': 'Contact',
-  'footer.3dPlan': '3D Plan',
+  'footer.3dPlan': '3D Load Planner',
   'footer.tracking': 'Tracking',
   'footer.faq': 'FAQ',
   'footer.pricing': 'Pricing',
@@ -112,7 +111,7 @@ export const en: Record<string, string> = {
   // Pricing Page
   'pricing.title': 'Simple, transparent pricing',
   'pricing.subtitle': 'Start free. Upgrade when you need more.',
-  'pricing.3dplan.title': 'LoadMind 3D Plan',
+  'pricing.3dplan.title': 'LoadMind 3D Load Planner',
   'pricing.free.name': 'Free Trial',
   'pricing.free.price': '$0',
   'pricing.free.period': '/month',
@@ -182,14 +181,14 @@ export const en: Record<string, string> = {
 
   // Nav (extended)
   'nav.products': 'Products',
-  'nav.3dPlan': '3D Plan',
+  'nav.3dPlan': '3D Load Planner',
   'nav.tracking': 'Tracking',
   'nav.api': 'API',
   'nav.about': 'About',
   'nav.contact': 'Contact',
 
   // 3D Plan Product Page
-  '3dplan.hero.title': 'LoadMind 3D Plan',
+  '3dplan.hero.title': 'LoadMind 3D Load Planner',
   '3dplan.hero.subtitle': 'Balance weight, check safety, export plans — in seconds.',
   '3dplan.hero.cta': 'Try Free — No Login',
   '3dplan.pricing.label': '$0 first month, then $39/mo',
@@ -215,7 +214,11 @@ export const en: Record<string, string> = {
   // Tracking Product Page
   'tracking.hero.title': 'LoadMind Tracking',
   'tracking.hero.subtitle': 'Know where every truck is. Real-time driver tracking with TMS integration.',
-  'tracking.hero.cta': 'Request Early Access',
+  'tracking.hero.cta': 'Pre-order Now',
+  'tracking.preorder.title': 'Get Early Access',
+  'tracking.preorder.desc': 'Be the first to use LoadMind Tracking when it launches. Pre-order now and lock in early-bird pricing.',
+  'tracking.preorder.cta': 'Pre-order Tracking',
+  'tracking.preorder.note': 'No charge until launch',
   'tracking.features.title': 'Features',
   'tracking.realtime.title': 'Real-Time Location',
   'tracking.realtime.desc': 'Live map with all your drivers. Updated every 30 seconds.',

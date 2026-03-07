@@ -7,29 +7,21 @@ export function HeroSection() {
   return (
     <section className="hero-gradient pt-16 pb-12 md:pt-20 md:pb-16">
       <div className="mx-auto max-w-4xl px-4 text-center">
-        <div
-          className="hero-animate"
-          style={{ animation: 'fade-in-up 0.7s ease forwards', opacity: 0 }}
-        >
-          <span className="mb-8 inline-block rounded-full border border-border-accent bg-surface px-4 py-1.5 text-xs font-medium tracking-wider text-muted-fg uppercase">
-            {t('hero.badge')}
-          </span>
-        </div>
         <h1
           className="hero-animate text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl gradient-text"
-          style={{ animation: 'fade-in-up 0.7s ease 0.15s forwards', opacity: 0 }}
+          style={{ animation: 'fade-in-up 0.7s ease forwards', opacity: 0 }}
         >
           {t('hero.title')}
         </h1>
         <p
           className="hero-animate mt-5 text-lg text-muted-fg md:text-xl"
-          style={{ animation: 'fade-in-up 0.7s ease 0.3s forwards', opacity: 0 }}
+          style={{ animation: 'fade-in-up 0.7s ease 0.15s forwards', opacity: 0 }}
         >
           {t('hero.subtitle')}
         </p>
         <div
           className="hero-animate mt-8"
-          style={{ animation: 'fade-in-up 0.7s ease 0.45s forwards', opacity: 0 }}
+          style={{ animation: 'fade-in-up 0.7s ease 0.3s forwards', opacity: 0 }}
         >
           <Button href="/app" size="lg">
             {t('hero.cta')}
@@ -40,7 +32,7 @@ export function HeroSection() {
       {/* Product Preview */}
       <div
         className="hero-animate mx-auto mt-16 max-w-5xl px-4 md:mt-20"
-        style={{ animation: 'fade-in-up 0.8s ease 0.6s forwards', opacity: 0 }}
+        style={{ animation: 'fade-in-up 0.8s ease 0.45s forwards', opacity: 0 }}
       >
         <div className="hero-preview-wrapper group relative transition-transform duration-500 hover:scale-[1.02]">
           {/* Gradient border glow */}

@@ -60,7 +60,7 @@ export function StickyHeader() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-2 md:flex">
           {/* Products Dropdown */}
           <div ref={dropdownRef} className="relative">
             <button
