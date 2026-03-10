@@ -1,5 +1,4 @@
 import { useLanguage } from '@/hooks/useLanguage';
-import { Button } from '@/components/ui/Button';
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -91,9 +90,9 @@ export function HeroSection() {
           className="hero-animate mt-12 flex items-center justify-center gap-4 flex-wrap"
           style={{ animation: 'fade-in-up 0.7s ease 0.3s forwards', opacity: 0 }}
         >
-          <Button theme="dark" variant="primary" href="/app" size="lg">
+          <a href="#products" className="inline-flex items-center justify-center rounded-full bg-white text-slate-900 hover:bg-slate-100 hover:shadow-lg hover:shadow-white/10 active:scale-[0.98] transition-all duration-300 hover:scale-[1.02] h-16 px-10 text-lg font-bold">
             {t('hero.cta')}
-          </Button>
+          </a>
         </div>
       </div>
     </section>

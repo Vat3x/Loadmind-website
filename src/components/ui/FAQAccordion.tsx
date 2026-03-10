@@ -21,7 +21,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
         const triggerId = `faq-trigger-${index}`;
 
         return (
-          <div key={index} className={`card overflow-hidden transition-all duration-300 ${isOpen ? 'border-border-accent' : ''}`} role="listitem">
+          <div key={index} className={`overflow-hidden rounded-2xl border bg-slate-900/70 backdrop-blur-sm transition-all duration-300 ${isOpen ? 'border-blue-500/30' : 'border-slate-800/50'}`} role="listitem">
             <button
               id={triggerId}
               onClick={() => setOpenIndex(isOpen ? null : index)}

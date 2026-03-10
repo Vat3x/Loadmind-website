@@ -9,11 +9,11 @@ interface PageHeroProps {
 
 export function PageHero({ title, subtitle, ctaText, ctaHref }: PageHeroProps) {
   return (
-    <section className="py-20 text-center">
+    <section className="relative py-24 text-center bg-slate-950">
       <div className="mx-auto max-w-4xl px-4">
-        <h1 className="text-3xl font-bold md:text-5xl gradient-text">{title}</h1>
+        <h1 className="text-4xl font-extrabold md:text-5xl text-white">{title}</h1>
         {subtitle && (
-          <p className="mt-4 text-lg text-muted-fg md:text-xl">{subtitle}</p>
+          <p className="mt-4 text-lg text-slate-400 md:text-xl">{subtitle}</p>
         )}
         {ctaText && ctaHref && (
           <div className="mt-8">

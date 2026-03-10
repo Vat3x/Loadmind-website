@@ -8,9 +8,9 @@ export function TestimonialSection() {
   const ref = useReveal<HTMLElement>();
 
   return (
-    <section ref={ref} className="reveal section-alt py-24">
+    <section ref={ref} className="reveal relative py-24 bg-slate-950 z-20">
       <div className="mx-auto max-w-3xl px-4">
-        <h2 className="mb-12 text-center text-2xl font-bold md:text-3xl gradient-text">
+        <h2 className="mb-12 text-center text-3xl md:text-4xl font-extrabold text-white">
           {t('testimonial.title')}
         </h2>
         <Card className="text-center">

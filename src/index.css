@@ -16,8 +16,16 @@
   /* slate-400 */
   --color-primary: #3b82f6;
   /* blue-500 */
+  --color-primary-hover: #2563eb;
+  /* blue-600 */
   --color-accent: #6366f1;
   /* indigo-500 */
+  --color-elevated: #1e293b;
+  /* slate-800 */
+  --color-border-accent: #334155;
+  /* slate-700 */
+  --color-warm: #f59e0b;
+  /* amber-500 */
 
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;

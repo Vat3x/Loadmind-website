@@ -149,7 +149,7 @@ export function StickyHeader() {
         <div className="flex flex-col gap-4 p-4">
           {/* Products section */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-muted">{t('nav.products')}</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">{t('nav.products')}</p>
             <div className="mt-2 flex flex-col gap-2 pl-3">
               {productLinks.map((link) => (
                 <Link

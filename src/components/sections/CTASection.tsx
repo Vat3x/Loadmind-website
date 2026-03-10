@@ -8,17 +8,11 @@ export function CTASection() {
 
   return (
     <section ref={ref} className="reveal relative overflow-hidden bg-slate-950 py-32 z-20">
-      {/* Background Layer Stack */}
+      {/* Background */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        {/* Logistics Imagery: Fleet/Terminal */}
-        <div
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=2600&auto=format&fit=crop')] bg-cover bg-center"
-          style={{ opacity: 0.35 }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/60 to-slate-950/10"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-transparent to-slate-950/80"></div>
-        <div className="absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-blue-500/20 blur-[100px]"></div>
-        <div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-cyan-400/20 blur-[100px]"></div>
+        <div className="absolute -top-20 left-1/4 h-[500px] w-[500px] rounded-full bg-blue-600/8 blur-[140px]" />
+        <div className="absolute -bottom-20 right-1/4 h-[500px] w-[500px] rounded-full bg-indigo-600/8 blur-[140px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_rgba(2,6,23,0.9)_100%)]" />
       </div>
 
       <div className="relative z-20 mx-auto max-w-3xl px-4 text-center">

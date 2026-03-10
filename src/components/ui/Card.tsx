@@ -8,7 +8,7 @@ interface CardProps {
 }
 
 export function Card({ children, className = '', hover = false, theme = 'dark' }: CardProps) {
-  const baseClasses = 'p-10 rounded-[2.5rem] backdrop-blur-sm transition-all duration-300 h-full';
+  const baseClasses = 'p-6 rounded-2xl transition-all duration-300 h-full';
 
   const themeClasses = {
     dark: 'bg-slate-900/70 border border-slate-800/50',

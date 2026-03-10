@@ -98,7 +98,7 @@ export default function Contact() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-primary px-6 py-3 font-semibold text-background transition-all hover:bg-primary-hover"
+                    className="w-full rounded-full bg-blue-600 px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 active:scale-[0.98]"
                   >
                     {t('contact.form.submit')}
                   </button>
