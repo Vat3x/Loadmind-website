@@ -57,6 +57,16 @@ export const ge: Record<string, string> = {
   'howItWorks.step4.title': 'აღჭურვე დოკი',
   'howItWorks.step4.desc': 'მოახდინე მაღალი რეზოლუციის 3D სქემის ექსპორტი ან გაუზიარე პირდაპირი ბმული. შენი მტვირთავები იღებენ ზუსტ ნახაზს, მძღოლები კი - სიმშვიდეს.',
 
+  // How It Works — Tracker
+  'howItWorks.tracker.step1.title': 'დაუკავშირე TMS',
+  'howItWorks.tracker.step1.desc': 'LoadMind Tracker-ი შენს TMS-ს უკავშირდება წუთებში. არანაირი IT-კონფიგურაცია — მხოლოდ API გასაღები და მზად ხარ.',
+  'howItWorks.tracker.step2.title': 'განანაწილე გადატვირთვები',
+  'howItWorks.tracker.step2.desc': 'გაგზავნე დისპეჩ ბორდიდან ჩვეულებისამებრ. LoadMind Tracker ავტომატურად უკავშირებს თითოეულ მძღოლს მათ აქტიურ ტვირთს.',
+  'howItWorks.tracker.step3.title': 'ნახე ფლოტი ლაივში',
+  'howItWorks.tracker.step3.desc': 'ნახე ყველა მანქანა ლაივ რუკაზე. ETA, სისწრაფე და სტატუსი ავტომატურად განახლდება — აღარ გჭირდება ზარები.',
+  'howItWorks.tracker.step4.title': 'გაუზიარე ETA-ები',
+  'howItWorks.tracker.step4.desc': 'გაუგზავნე ბრო­კე­რებს და შიფერებს ლაივ ბმულები ერთი კლიკით. ისინი ხედავენ მიწოდების პროგრესს. შენ — ნაკლებ ზარებს.',
+
   // Testimonial
   'testimonial.title': 'ნდობა სწრაფი ფლოტებისგან',
   'testimonial.quote': '"LoadMind-მა ფუნდამენტურად შეცვალა ჩვენი დილის რუტინა. მან სტრესული საათი 2-წუთიან ვიზუალურ ექსპორტად აქცია. გავშვების შემდეგ ჩვენს მძღოლებს წონაზე ჯარიმა არ მიუღიათ."',

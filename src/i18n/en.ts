@@ -57,6 +57,16 @@ export const en: Record<string, string> = {
   'howItWorks.step4.title': 'Equip the Dock',
   'howItWorks.step4.desc': 'Export a high-resolution 3D schematic or share a direct link. Your loaders get a foolproof blueprint; your drivers get peace of mind.',
 
+  // How It Works — Tracker
+  'howItWorks.tracker.step1.title': 'Connect Your TMS',
+  'howItWorks.tracker.step1.desc': 'Link LoadMind Tracker to your existing TMS in minutes. No complex IT setup — just an API key and you\'re live.',
+  'howItWorks.tracker.step2.title': 'Assign Loads to Drivers',
+  'howItWorks.tracker.step2.desc': 'Dispatch from your board as usual. LoadMind Tracker automatically pairs each driver with their active load.',
+  'howItWorks.tracker.step3.title': 'Watch Your Fleet Live',
+  'howItWorks.tracker.step3.desc': 'See every truck on a real-time map. ETA, speed, and status update automatically — no more check calls.',
+  'howItWorks.tracker.step4.title': 'Share Instant ETAs',
+  'howItWorks.tracker.step4.desc': 'Send live tracking links to brokers and shippers with one click. They see real-time progress. You get fewer phone calls.',
+
   // Testimonial
   'testimonial.title': 'Trusted by the Fast Fleet',
   'testimonial.quote': '"LoadMind fundamentally changed our morning routine. It turned a stressful hour of manual weight calculations into a 2-minute visual export. Our drivers haven\'t hit an overweight fine since we deployed it."',
