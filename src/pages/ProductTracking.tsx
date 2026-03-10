@@ -2,7 +2,6 @@ import { MapPin, Radio, Bell, History, Plug, ShoppingCart } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { FeatureCard } from '@/components/ui/FeatureCard';
 import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 
 export default function ProductTracking() {
@@ -19,7 +18,6 @@ export default function ProductTracking() {
     <>
       <section className="py-20 text-center">
         <div className="mx-auto max-w-4xl px-4">
-          <Badge variant="coming-soon">{t('common.comingSoon')}</Badge>
           <h1 className="mt-4 text-3xl font-bold md:text-5xl gradient-text">
             {t('tracking.hero.title')}
           </h1>
@@ -49,19 +47,16 @@ export default function ProductTracking() {
           <Card className="text-center p-8 md:p-12 border-primary/20">
             <ShoppingCart className="mx-auto mb-4 h-10 w-10 text-primary" />
             <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-              {t('tracking.preorder.title')}
+              Ready to track your fleet?
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-muted-fg">
-              {t('tracking.preorder.desc')}
+              LoadMind Tracker gives you real-time GPS visibility integrated directly with your TMS. See your entire fleet on a live map.
             </p>
             <div className="mt-8">
-              <Button href="/contact" size="lg">
-                {t('tracking.preorder.cta')}
+              <Button href="/app" size="lg" external>
+                Launch Tracker
               </Button>
             </div>
-            <p className="mt-3 text-xs text-muted">
-              {t('tracking.preorder.note')}
-            </p>
           </Card>
         </div>
       </section>
