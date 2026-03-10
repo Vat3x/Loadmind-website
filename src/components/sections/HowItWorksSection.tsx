@@ -15,23 +15,40 @@ export function HowItWorksSection() {
   ];
 
   return (
-    <section ref={ref} id="how-it-works" className="py-24">
-      <div className="mx-auto max-w-6xl px-4">
-        <h2 className="reveal mb-12 text-center text-2xl font-bold md:text-3xl gradient-text">
+    <section ref={ref} id="how-it-works" className="py-32 bg-slate-50 relative z-20">
+      <div className="mx-auto max-w-7xl px-4">
+        <h2 className="reveal mb-20 text-center text-3xl md:text-5xl font-extrabold text-slate-900">
           {t('howItWorks.title')}
         </h2>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, i) => (
-            <div key={step.titleKey} className={`reveal reveal-delay-${i + 1} ${i < steps.length - 1 ? 'step-connector' : ''}`}>
-              <StepCard
-                stepNumber={i + 1}
-                icon={step.icon}
-                title={t(step.titleKey)}
-                description={t(step.descKey)}
-              />
-            </div>
-          ))}
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Column: Steps Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+            {steps.map((step, i) => (
+              <div key={step.titleKey} className={`reveal reveal-delay-${i + 1} h-full`}>
+                <StepCard
+                  theme="light"
+                  stepNumber={i + 1}
+                  icon={step.icon}
+                  title={t(step.titleKey)}
+                  description={t(step.descKey)}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Right Column: Concept Image */}
+          <div className="reveal reveal-delay-4 relative h-[400px] lg:h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-200/60 group">
+            <img
+              src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=2000&auto=format&fit=crop"
+              alt="Logistics Technology Operations"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+            />
+            {/* Subtle inner gradient overlay of the image */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+          </div>
         </div>
+
       </div>
     </section>
   );

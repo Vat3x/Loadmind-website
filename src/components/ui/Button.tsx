@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'ghost' | 'disabled';
+  theme?: 'dark' | 'light';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   external?: boolean;
@@ -12,20 +13,28 @@ interface ButtonProps {
 }
 
 const sizeClasses = {
-  sm: 'px-4 py-2 text-sm',
-  md: 'px-6 py-3 text-base',
-  lg: 'px-8 py-4 text-lg',
+  sm: 'h-10 px-6 text-sm',
+  md: 'h-14 px-8 text-base font-semibold',
+  lg: 'h-16 px-10 text-lg font-bold',
 };
 
 const variantClasses = {
-  primary: 'bg-primary text-background font-semibold hover:bg-primary-hover hover:shadow-md hover:shadow-primary/20 active:scale-[0.98]',
-  secondary: 'bg-surface border border-border text-primary font-semibold hover:border-border-accent hover:shadow-md hover:shadow-accent/10 active:scale-[0.98]',
-  ghost: 'text-muted-fg hover:text-foreground',
-  disabled: 'bg-surface text-muted cursor-not-allowed opacity-60',
+  dark: {
+    primary: 'bg-white text-slate-900 hover:bg-slate-100 hover:shadow-lg hover:shadow-white/10 active:scale-[0.98]',
+    secondary: 'border border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white active:scale-[0.98]',
+    ghost: 'text-slate-400 hover:text-white',
+  },
+  light: {
+    primary: 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 active:scale-[0.98]',
+    secondary: 'border border-slate-200 text-slate-700 hover:bg-slate-50 hover:text-slate-900 active:scale-[0.98]',
+    ghost: 'text-slate-500 hover:text-slate-900',
+  },
+  disabled: 'bg-slate-800 text-slate-500 cursor-not-allowed opacity-60',
 };
 
 export function Button({
   variant = 'primary',
+  theme = 'dark',
   size = 'md',
   href,
   external,
@@ -33,7 +42,9 @@ export function Button({
   children,
   className = '',
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-xl transition-all duration-300 ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
+  const isVariantDisabled = variant === 'disabled';
+  const themeStyles = isVariantDisabled ? variantClasses.disabled : variantClasses[theme][variant];
+  const classes = `inline-flex items-center justify-center rounded-full transition-all duration-300 hover:scale-[1.02] ${sizeClasses[size]} ${themeStyles} ${className}`;
 
   if (href && variant !== 'disabled') {
     if (external || href.startsWith('http')) {

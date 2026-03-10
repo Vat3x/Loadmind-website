@@ -10,26 +10,45 @@ interface ProductCardProps {
   ctaText: string;
   ctaHref?: string;
   comingSoon?: boolean;
+  theme?: 'dark' | 'light';
+  imageUrl?: string;
 }
 
-export function ProductCard({ icon: Icon, title, description, ctaText, ctaHref, comingSoon }: ProductCardProps) {
+export function ProductCard({ icon: Icon, title, description, ctaText, ctaHref, comingSoon, theme = 'dark', imageUrl }: ProductCardProps) {
+  const isDark = theme === 'dark';
+
   return (
-    <Card className={`flex flex-col ${comingSoon ? 'opacity-70' : ''}`} hover={!comingSoon}>
-      <div className="mb-4 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg icon-gradient">
-          <Icon className="h-5 w-5 text-white" />
+    <Card theme={theme} className={`flex flex-col h-full ${comingSoon ? 'opacity-70' : ''}`} hover={!comingSoon}>
+      {imageUrl && (
+        <div className="mb-6 h-48 w-full overflow-hidden rounded-2xl relative group-hover:shadow-lg transition-all">
+          <img
+            src={imageUrl}
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className={`absolute inset-0 bg-gradient-to-t ${isDark ? 'from-slate-900/80' : 'from-slate-100/80'} to-transparent opacity-60`}></div>
         </div>
-        <h3 className="text-xl font-bold text-foreground">{title}</h3>
-        {comingSoon && <Badge variant="coming-soon">Coming Soon</Badge>}
+      )}
+
+      <div className="mb-4 flex items-center gap-4">
+        <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${isDark ? 'bg-slate-800' : 'bg-blue-100'}`}>
+          <Icon className={`h-6 w-6 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+        </div>
+        <div>
+          <h3 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>{title}</h3>
+          {comingSoon && <Badge variant="coming-soon">Coming Soon</Badge>}
+        </div>
       </div>
-      <p className="mb-6 flex-1 text-sm leading-relaxed text-muted-fg">{description}</p>
-      <Button
-        variant={comingSoon ? 'disabled' : 'secondary'}
-        href={ctaHref}
-        size="sm"
-      >
-        {ctaText}
-      </Button>
+      <p className={`mb-8 flex-1 text-lg leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{description}</p>
+      <div className="mt-auto">
+        <Button
+          theme={theme}
+          variant={comingSoon ? 'disabled' : 'secondary'}
+          href={ctaHref}
+        >
+          {ctaText}
+        </Button>
+      </div>
     </Card>
   );
 }
