@@ -1,4 +1,4 @@
-import { Scale, ShieldCheck, Shapes, Star, FileDown, Zap } from 'lucide-react';
+import { Scale, ShieldCheck, Sparkles, Star, FileDown, Zap } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
 import { FeatureCard } from '@/components/ui/FeatureCard';
@@ -10,7 +10,7 @@ export function FeaturesSection() {
   const features = [
     { icon: Scale, titleKey: 'features.weightBalance.title', descKey: 'features.weightBalance.desc' },
     { icon: ShieldCheck, titleKey: 'features.safetyChecks.title', descKey: 'features.safetyChecks.desc' },
-    { icon: Shapes, titleKey: 'features.anyShape.title', descKey: 'features.anyShape.desc' },
+    { icon: Sparkles, titleKey: 'features.anyShape.title', descKey: 'features.anyShape.desc' },
     { icon: Star, titleKey: 'features.qualityScore.title', descKey: 'features.qualityScore.desc' },
     { icon: FileDown, titleKey: 'features.easyExport.title', descKey: 'features.easyExport.desc' },
     { icon: Zap, titleKey: 'features.instantResults.title', descKey: 'features.instantResults.desc' },
