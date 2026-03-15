@@ -13,6 +13,16 @@
   status = 302
 
 [[redirects]]
+  from = "/tracker"
+  to = "https://tracking.loadmind.app/"
+  status = 302
+
+[[redirects]]
+  from = "/tracker/*"
+  to = "https://tracking.loadmind.app/:splat"
+  status = 302
+
+[[redirects]]
   from = "/embed"
   to = "https://3d.loadmind.app/embed"
   status = 302
