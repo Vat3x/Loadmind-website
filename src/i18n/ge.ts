@@ -10,6 +10,18 @@ export const ge: Record<string, string> = {
   'hero.title': 'ინტელექტი თანამედროვე დისპეჩერისთვის',
   'hero.subtitle': 'შეწყვიტე ვარაუდი. LoadMind Suite აერთიანებს იდეალურად დაბალანსებულ 3D დაგეგმვასა და ფლოტის ცოცხალ მართვას ერთ მძლავრ პლატფორმაში.',
   'hero.cta': 'აღმოაჩინე ხელსაწყოები',
+  'hero.cta2': 'დაგვიკავშირდით',
+
+  // Trust
+  'trust.noCard': 'ბარათის გარეშე',
+  'trust.cancel': 'გაუქმება ნებისმიერ დროს',
+  'trust.freeTrial': 'უფასო პერიოდი',
+  'trust.support': '24/7 მხარდაჭერა',
+
+  // Mid CTA
+  'midCta.title': 'მზად ხარ დისპეჩერიზაციის ოპტიმიზაციისთვის?',
+  'midCta.tryFree': 'სცადე უფასოდ',
+  'midCta.contact': 'დაგვიკავშირდით',
 
   // Products
   'products.title': 'ერთიანი ლოჯისტიკური მართვის ცენტრი',
@@ -115,6 +127,8 @@ export const ge: Record<string, string> = {
   'footer.about': 'შესახებ',
   'footer.terms': 'პირობები',
   'footer.privacy': 'კონფიდენციალურობა',
+  'footer.description': 'LoadMind არის სადისპეჩერო ხელსაწყოების ნაკრები, რომელიც აერთიანებს 3D ტვირთის დაგეგმვასა და ფლოტის რეალტაიმ თრექინგს ერთ მძლავრ პლატფორმაში.',
+  'footer.api': 'API და ინტეგრაციები',
   'footer.builtBy': 'შექმნილია Nexsus-ის მიერ',
   'footer.location': 'თბილისი, საქართველო',
 
@@ -287,6 +301,7 @@ export const ge: Record<string, string> = {
   'contact.form.subject.api': 'API',
   'contact.form.subject.partnership': 'პარტნიორობა',
   'contact.form.subject.bug': 'ხარვეზის რეპორტი',
+  'contact.responseTime': 'ჩვენ ჩვეულებრივ 24 საათში ვპასუხობთ',
 
   // Terms Page
   'terms.hero.title': 'მომსახურების პირობები',

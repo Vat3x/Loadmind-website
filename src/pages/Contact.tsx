@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Clock } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useRevealChildren } from '@/hooks/useRevealChildren';
 import { PageHero } from '@/components/ui/PageHero';
 import { Card } from '@/components/ui/Card';
 
 export default function Contact() {
   const { t } = useLanguage();
+  const ref = useRevealChildren<HTMLElement>();
   const [form, setForm] = useState({ name: '', email: '', subject: 'General', message: '' });
 
   const subjects = [
@@ -22,17 +24,17 @@ export default function Contact() {
     window.location.href = mailtoLink;
   };
 
-  const inputClasses = 'w-full rounded-lg bg-surface border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-fg focus:border-primary focus:outline-none transition-colors';
+  const inputClasses = 'w-full rounded-lg bg-surface border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-fg focus:border-primary focus:ring-1 focus:ring-primary/30 focus:outline-none transition-all';
 
   return (
     <>
       <PageHero title={t('contact.hero.title')} />
 
-      <section className="pb-20">
+      <section ref={ref} className="pb-20">
         <div className="mx-auto max-w-4xl px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
             {/* Info */}
-            <div className="md:col-span-2">
+            <div className="reveal reveal-delay-1 md:col-span-2">
               <Card>
                 <h3 className="mb-4 text-lg font-semibold text-foreground">{t('contact.info.title')}</h3>
                 <div className="space-y-4">
@@ -46,12 +48,16 @@ export default function Contact() {
                     <MapPin className="h-5 w-5 text-primary" />
                     <span className="text-sm text-muted-fg">{t('contact.info.location')}</span>
                   </div>
+                  <div className="flex items-center gap-3">
+                    <Clock className="h-5 w-5 text-primary" />
+                    <span className="text-sm text-muted-fg">{t('contact.responseTime')}</span>
+                  </div>
                 </div>
               </Card>
             </div>
 
             {/* Form */}
-            <div className="md:col-span-3">
+            <div className="reveal reveal-delay-2 md:col-span-3">
               <Card>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>

@@ -8,7 +8,18 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-6xl px-4 py-12">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-[2fr_1fr_1fr_1fr_1fr]">
+          {/* Brand */}
+          <div className="md:pr-8">
+            <Link to="/" className="flex items-center gap-2 mb-4">
+              <img src="/logo.svg" alt="LoadMind" className="h-8 w-8" />
+              <span className="text-lg font-bold text-foreground">LoadMind</span>
+            </Link>
+            <p className="text-sm leading-relaxed text-muted-fg">
+              {t('footer.description')}
+            </p>
+          </div>
+
           {/* Products */}
           <div>
             <h4 className="mb-4 text-sm font-semibold text-foreground">{t('footer.products')}</h4>
@@ -26,6 +37,11 @@ export function Footer() {
               <li>
                 <Link to="/pricing" className="text-sm text-muted-fg hover:text-foreground transition-colors">
                   {t('footer.pricing')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/api" className="text-sm text-muted-fg hover:text-foreground transition-colors">
+                  {t('footer.api')}
                 </Link>
               </li>
             </ul>
@@ -75,13 +91,13 @@ export function Footer() {
             <h4 className="mb-4 text-sm font-semibold text-foreground">{t('footer.contact')}</h4>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-muted-fg" />
+                <Mail className="h-4 w-4 text-muted-fg shrink-0" />
                 <a href="mailto:team@loadmind.app" className="text-sm text-muted-fg hover:text-foreground transition-colors">
                   team@loadmind.app
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-muted-fg" />
+                <MapPin className="h-4 w-4 text-muted-fg shrink-0" />
                 <span className="text-sm text-muted-fg">{t('footer.location')}</span>
               </li>
             </ul>

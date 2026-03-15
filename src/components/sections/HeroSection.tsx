@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/hooks/useLanguage';
 
 export function HeroSection() {
@@ -13,12 +14,9 @@ export function HeroSection() {
           className="absolute inset-0 w-full h-full object-cover object-center"
           aria-hidden="true"
         />
-        {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-slate-950/70" />
-        {/* Ambient glows over the image */}
         <div className="absolute -top-32 -left-32 h-[600px] w-[600px] rounded-full bg-blue-600/10 blur-[140px]" />
         <div className="absolute -bottom-32 -right-32 h-[600px] w-[600px] rounded-full bg-indigo-600/10 blur-[140px]" />
-        {/* Bottom fade to seamlessly blend into next section */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/40" />
       </div>
 
@@ -43,6 +41,9 @@ export function HeroSection() {
           <a href="#products" className="inline-flex items-center justify-center rounded-full bg-white text-slate-900 hover:bg-slate-100 hover:shadow-lg hover:shadow-white/10 active:scale-[0.98] transition-all duration-300 hover:scale-[1.02] h-16 px-10 text-lg font-bold">
             {t('hero.cta')}
           </a>
+          <Link to="/contact" className="inline-flex items-center justify-center rounded-full border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/5 active:scale-[0.98] transition-all duration-300 hover:scale-[1.02] h-16 px-10 text-lg font-bold">
+            {t('hero.cta2')}
+          </Link>
         </div>
       </div>
     </section>

@@ -10,6 +10,18 @@ export const en: Record<string, string> = {
   'hero.title': 'Intelligence for the Modern Dispatcher',
   'hero.subtitle': 'Stop guessing. Start shipping. The LoadMind Suite combines perfectly balanced 3D load planning and live fleet tracking into one powerful platform.',
   'hero.cta': 'Explore Our Tools',
+  'hero.cta2': 'Contact Us',
+
+  // Trust
+  'trust.noCard': 'No Credit Card',
+  'trust.cancel': 'Cancel Anytime',
+  'trust.freeTrial': 'Free Trial',
+  'trust.support': '24/7 Support',
+
+  // Mid CTA
+  'midCta.title': 'Ready to optimize your dispatch?',
+  'midCta.tryFree': 'Try Free',
+  'midCta.contact': 'Contact Us',
 
   // Products
   'products.title': 'A Unified Logistics Command Center',
@@ -115,6 +127,8 @@ export const en: Record<string, string> = {
   'footer.about': 'About',
   'footer.terms': 'Terms',
   'footer.privacy': 'Privacy',
+  'footer.description': 'LoadMind is a dispatch toolset combining 3D load planning and real-time fleet tracking into one powerful platform.',
+  'footer.api': 'API & Integrations',
   'footer.builtBy': 'Built by Nexsus',
   'footer.location': 'Tbilisi, Georgia',
 
@@ -287,6 +301,7 @@ export const en: Record<string, string> = {
   'contact.form.subject.api': 'API',
   'contact.form.subject.partnership': 'Partnership',
   'contact.form.subject.bug': 'Bug Report',
+  'contact.responseTime': 'We typically respond within 24 hours',
 
   // Terms Page
   'terms.hero.title': 'Terms & Conditions',
