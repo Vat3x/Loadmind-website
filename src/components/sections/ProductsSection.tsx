@@ -21,7 +21,7 @@ export function ProductsSection() {
               title={t('products.3dplan.title')}
               description={t('products.3dplan.description')}
               ctaText={t('products.3dplan.cta')}
-              ctaHref="/app"
+              ctaHref="/3d"
               imageUrl="/product-3d-plan.png"
             />
           </div>

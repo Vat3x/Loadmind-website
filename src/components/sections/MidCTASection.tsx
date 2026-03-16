@@ -14,7 +14,7 @@ export function MidCTASection() {
             {t('midCta.title')}
           </h2>
           <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
-            <Button theme="dark" variant="primary" href="/app" size="md">
+            <Button theme="dark" variant="primary" href="/3d" size="md">
               {t('midCta.tryFree')}
             </Button>
             <Button theme="dark" variant="secondary" href="/contact" size="md">

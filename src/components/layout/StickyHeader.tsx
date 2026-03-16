@@ -113,7 +113,7 @@ export function StickyHeader() {
         {/* Desktop Right */}
         <div className="hidden items-center gap-3 md:flex">
           <LanguageToggle />
-          <Button href="/app" size="sm">
+          <Button href="/3d" size="sm">
             {t('nav.openApp')}
           </Button>
         </div>
@@ -173,7 +173,7 @@ export function StickyHeader() {
           ))}
           <div className="flex items-center justify-between pt-4 border-t border-border">
             <LanguageToggle />
-            <Button href="/app" size="sm">
+            <Button href="/3d" size="sm">
               {t('nav.openApp')}
             </Button>
           </div>

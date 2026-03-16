@@ -3,34 +3,40 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/app"
-  to = "https://3d.loadmind.app/"
-  status = 302
+  from = "/3d"
+  to = "https://3dloadplanning.netlify.app/"
+  status = 200
+  force = true
 
 [[redirects]]
-  from = "/app/*"
-  to = "https://3d.loadmind.app/:splat"
-  status = 302
+  from = "/3d/*"
+  to = "https://3dloadplanning.netlify.app/:splat"
+  status = 200
+  force = true
 
 [[redirects]]
-  from = "/tracker"
-  to = "https://tracking.loadmind.app/"
-  status = 302
+  from = "/tracking"
+  to = "https://tracking-app-f6ad7.web.app/"
+  status = 200
+  force = true
 
 [[redirects]]
-  from = "/tracker/*"
-  to = "https://tracking.loadmind.app/:splat"
-  status = 302
+  from = "/tracking/*"
+  to = "https://tracking-app-f6ad7.web.app/:splat"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/embed"
-  to = "https://3d.loadmind.app/embed"
-  status = 302
+  to = "https://3dloadplanning.netlify.app/embed"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/embed/*"
-  to = "https://3d.loadmind.app/embed/:splat"
-  status = 302
+  to = "https://3dloadplanning.netlify.app/embed/:splat"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/*"

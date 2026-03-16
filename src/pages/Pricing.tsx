@@ -50,7 +50,7 @@ export default function Pricing() {
               duration={t('pricing.free.duration')}
               features={freeFeatures}
               ctaText={t('pricing.free.cta')}
-              ctaHref="/app"
+              ctaHref="/3d"
               note={t('pricing.free.note')}
             />
             <PricingCard
@@ -60,7 +60,7 @@ export default function Pricing() {
               duration={t('pricing.pro.duration')}
               features={proFeatures}
               ctaText={t('pricing.pro.cta')}
-              ctaHref="/app"
+              ctaHref="/3d"
               highlighted
             />
           </div>
