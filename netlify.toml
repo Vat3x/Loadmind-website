@@ -21,6 +21,12 @@
   force = true
 
 [[redirects]]
+  from = "/tracker/track/*"
+  to = "https://tracking-app-f6ad7.web.app/track/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
