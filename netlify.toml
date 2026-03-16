@@ -15,6 +15,12 @@
   force = true
 
 [[redirects]]
+  from = "/tracker/invite/*"
+  to = "https://tracking-app-f6ad7.web.app/invite/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
