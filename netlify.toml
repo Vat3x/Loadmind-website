@@ -17,14 +17,20 @@
 [[redirects]]
   from = "/tracker/invite/*"
   to = "https://tracking-app-f6ad7.web.app/invite/:splat"
-  status = 301
+  status = 200
   force = true
 
 [[redirects]]
   from = "/tracker/track/*"
   to = "https://tracking-app-f6ad7.web.app/track/:splat"
-  status = 301
+  status = 200
   force = true
+
+# Proxy Firebase dashboard assets (hashed filenames won't collide with Netlify's own assets)
+[[redirects]]
+  from = "/assets/*"
+  to = "https://tracking-app-f6ad7.web.app/assets/:splat"
+  status = 200
 
 [[redirects]]
   from = "/*"
