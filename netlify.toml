@@ -3,18 +3,6 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/tracking"
-  to = "https://tracking-app-f6ad7.web.app/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/tracking/*"
-  to = "https://tracking-app-f6ad7.web.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/embed"
   to = "https://3dloadplanning.netlify.app/embed"
   status = 200

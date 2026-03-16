@@ -13,9 +13,11 @@ import Terms from '@/pages/Terms';
 import Privacy from '@/pages/Privacy';
 import NotFound from '@/pages/NotFound';
 import App3D from '@/pages/App3D';
+import AppTracking from '@/pages/AppTracking';
 
 const router = createBrowserRouter([
   { path: '/3d', element: <App3D /> },
+  { path: '/tracker', element: <AppTracking /> },
   {
     element: <PageLayout />,
     children: [
