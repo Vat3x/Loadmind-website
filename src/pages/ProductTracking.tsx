@@ -6,7 +6,7 @@ import { FeatureCard } from '@/components/ui/FeatureCard';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 
-const TRACKING_URL = 'https://tracking.loadmind.app';
+const TRACKING_URL = '/tracker';
 
 export default function ProductTracking() {
   const { t } = useLanguage();

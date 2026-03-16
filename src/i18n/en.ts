@@ -289,7 +289,7 @@ export const en: Record<string, string> = {
   // Contact Page
   'contact.hero.title': 'Get in touch',
   'contact.info.title': 'Contact Info',
-  'contact.info.email': 'team@loadmind.app',
+  'contact.info.email': 'team@load-mind.com',
   'contact.info.location': 'Based in Tbilisi, Georgia',
   'contact.form.name': 'Name',
   'contact.form.email': 'Email',
@@ -324,7 +324,7 @@ export const en: Record<string, string> = {
   'terms.t9.title': '9. Changes to Terms',
   'terms.t9.desc': 'We may update these terms. Continued use means acceptance.',
   'terms.t10.title': '10. Contact',
-  'terms.t10.desc': 'Questions? Email team@loadmind.app.',
+  'terms.t10.desc': 'Questions? Email team@load-mind.com.',
 
   // Privacy Page
   'privacy.hero.title': 'Privacy Policy',
@@ -337,9 +337,9 @@ export const en: Record<string, string> = {
   'privacy.p4.title': '4. Data Storage',
   'privacy.p4.desc': 'No user data is stored server-side currently. All load plans are browser-only.',
   'privacy.p5.title': '5. Your Rights',
-  'privacy.p5.desc': 'You can request data deletion. Contact team@loadmind.app.',
+  'privacy.p5.desc': 'You can request data deletion. Contact team@load-mind.com.',
   'privacy.p6.title': '6. Changes',
   'privacy.p6.desc': 'We may update this policy. Check this page for updates.',
   'privacy.p7.title': '7. Contact',
-  'privacy.p7.desc': 'Questions about privacy? Email team@loadmind.app.',
+  'privacy.p7.desc': 'Questions about privacy? Email team@load-mind.com.',
 };

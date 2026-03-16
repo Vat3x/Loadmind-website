@@ -289,7 +289,7 @@ export const ge: Record<string, string> = {
   // Contact Page
   'contact.hero.title': 'დაგვიკავშირდი',
   'contact.info.title': 'საკონტაქტო ინფორმაცია',
-  'contact.info.email': 'team@loadmind.app',
+  'contact.info.email': 'team@load-mind.com',
   'contact.info.location': 'თბილისი, საქართველო',
   'contact.form.name': 'სახელი',
   'contact.form.email': 'ელფოსტა',
@@ -324,7 +324,7 @@ export const ge: Record<string, string> = {
   'terms.t9.title': '9. პირობების ცვლილება',
   'terms.t9.desc': 'პირობები შეიძლება განახლდეს. გამოყენების გაგრძელება ნიშნავს მიღებას.',
   'terms.t10.title': '10. კონტაქტი',
-  'terms.t10.desc': 'კითხვები? მოგვწერეთ team@loadmind.app.',
+  'terms.t10.desc': 'კითხვები? მოგვწერეთ team@load-mind.com.',
 
   // Privacy Page
   'privacy.hero.title': 'კონფიდენციალურობის პოლიტიკა',
@@ -337,9 +337,9 @@ export const ge: Record<string, string> = {
   'privacy.p4.title': '4. მონაცემთა შენახვა',
   'privacy.p4.desc': 'ამჟამად სერვერზე მომხმარებლის მონაცემები არ ინახება. ყველა გეგმა მხოლოდ ბრაუზერშია.',
   'privacy.p5.title': '5. თქვენი უფლებები',
-  'privacy.p5.desc': 'შეგიძლიათ მონაცემების წაშლის მოთხოვნა. მოგვწერეთ team@loadmind.app.',
+  'privacy.p5.desc': 'შეგიძლიათ მონაცემების წაშლის მოთხოვნა. მოგვწერეთ team@load-mind.com.',
   'privacy.p6.title': '6. ცვლილებები',
   'privacy.p6.desc': 'პოლიტიკა შეიძლება განახლდეს. შეამოწმეთ ეს გვერდი.',
   'privacy.p7.title': '7. კონტაქტი',
-  'privacy.p7.desc': 'კითხვები კონფიდენციალურობაზე? მოგვწერეთ team@loadmind.app.',
+  'privacy.p7.desc': 'კითხვები კონფიდენციალურობაზე? მოგვწერეთ team@load-mind.com.',
 };

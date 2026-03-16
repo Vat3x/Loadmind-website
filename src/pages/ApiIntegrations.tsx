@@ -38,7 +38,7 @@ export default function ApiIntegrations() {
                 <h3 className="text-lg font-semibold text-foreground">{t('api.embed.title')}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-fg">{t('api.embed.desc')}</p>
                 <code className="mt-3 block rounded-lg bg-elevated p-3 text-xs font-mono text-muted-fg">
-                  {`<iframe src="https://loadmind.app/embed?loadId=..." width="800" height="600"></iframe>`}
+                  {`<iframe src="https://load-mind.com/embed?loadId=..." width="800" height="600"></iframe>`}
                 </code>
               </div>
             </div>

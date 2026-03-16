@@ -92,8 +92,8 @@ export function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-muted-fg shrink-0" />
-                <a href="mailto:team@loadmind.app" className="text-sm text-muted-fg hover:text-foreground transition-colors">
-                  team@loadmind.app
+                <a href="mailto:team@load-mind.com" className="text-sm text-muted-fg hover:text-foreground transition-colors">
+                  team@load-mind.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
