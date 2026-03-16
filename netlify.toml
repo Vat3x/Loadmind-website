@@ -17,13 +17,13 @@
 [[redirects]]
   from = "/tracker/invite/*"
   to = "https://tracking-app-f6ad7.web.app/invite/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/tracker/track/*"
   to = "https://tracking-app-f6ad7.web.app/track/:splat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
