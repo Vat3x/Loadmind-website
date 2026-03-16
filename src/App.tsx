@@ -12,8 +12,10 @@ import Contact from '@/pages/Contact';
 import Terms from '@/pages/Terms';
 import Privacy from '@/pages/Privacy';
 import NotFound from '@/pages/NotFound';
+import App3D from '@/pages/App3D';
 
 const router = createBrowserRouter([
+  { path: '/3d', element: <App3D /> },
   {
     element: <PageLayout />,
     children: [

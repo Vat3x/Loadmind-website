@@ -54,13 +54,6 @@ export function Button({
         </a>
       );
     }
-    if (href === '/3d' || href.startsWith('/3d/') || href === '/tracking' || href.startsWith('/tracking/')) {
-      return (
-        <a href={href} className={classes}>
-          {children}
-        </a>
-      );
-    }
     return (
       <Link to={href} className={classes}>
         {children}
