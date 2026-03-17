@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/Card';
 export default function Privacy() {
   const { t } = useLanguage();
 
-  const sections = Array.from({ length: 7 }, (_, i) => ({
+  const sections = Array.from({ length: 11 }, (_, i) => ({
     title: t(`privacy.p${i + 1}.title`),
     desc: t(`privacy.p${i + 1}.desc`),
   }));

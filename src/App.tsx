@@ -11,6 +11,7 @@ import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import Terms from '@/pages/Terms';
 import Privacy from '@/pages/Privacy';
+import Support from '@/pages/Support';
 import NotFound from '@/pages/NotFound';
 import App3D from '@/pages/App3D';
 import AppTracking from '@/pages/AppTracking';
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
       { path: '/contact', element: <Contact /> },
       { path: '/terms', element: <Terms /> },
       { path: '/privacy', element: <Privacy /> },
+      { path: '/support', element: <Support /> },
       { path: '*', element: <NotFound /> },
     ],
   },
