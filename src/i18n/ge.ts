@@ -450,4 +450,40 @@ export const ge: Record<string, string> = {
   'privacy.p10.desc': 'ყველა პერსონალური მონაცემი, მათ შორის ლოკაციის ისტორია და საიდენტიფიკაციო დოკუმენტები, გადაიცემა უსაფრთხო, დაშიფრული არხებით (SSL/TLS) და ინახება დაცულ სერვერებზე არაავტორიზებული წვდომის თავიდან ასაცილებლად.',
   'privacy.p11.title': '11. ბავშვების კონფიდენციალურობა',
   'privacy.p11.desc': 'LoadMind განკუთვნილია მხოლოდ პროფესიონალური გამოყენებისთვის ზრდასრულების მიერ. ჩვენ შეგნებულად არ ვაგროვებთ პერსონალურ ინფორმაციას 13 წლამდე ბავშვებისგან.',
+
+  // Auth - Nav
+  'nav.logIn': 'შესვლა',
+  'nav.signUp': 'რეგისტრაცია',
+  'nav.signOut': 'გასვლა',
+
+  // Auth - Register
+  'auth.register.title': 'ანგარიშის შექმნა',
+  'auth.register.subtitle': 'დარეგისტრირდი LoadMind-ის ხელსაწყოების გამოსაყენებლად.',
+  'auth.register.displayName': 'სახელი',
+  'auth.register.displayName.placeholder': 'თქვენი სახელი',
+  'auth.register.email': 'ელფოსტა',
+  'auth.register.email.placeholder': 'you@company.com',
+  'auth.register.password': 'პაროლი',
+  'auth.register.password.placeholder': 'მინ. 6 სიმბოლო',
+  'auth.register.confirmPassword': 'პაროლის დადასტურება',
+  'auth.register.confirmPassword.placeholder': 'ხელახლა შეიყვანეთ პაროლი',
+  'auth.register.submit': 'ანგარიშის შექმნა',
+  'auth.register.submitting': 'იქმნება ანგარიში...',
+  'auth.register.hasAccount': 'უკვე გაქვს ანგარიში?',
+  'auth.register.logInLink': 'შესვლა',
+  'auth.register.passwordMismatch': 'პაროლები არ ემთხვევა.',
+  'auth.register.passwordTooShort': 'პაროლი მინიმუმ 6 სიმბოლო უნდა იყოს.',
+
+  // Auth - Login
+  'auth.login.title': 'შესვლა',
+  'auth.login.subtitle': 'კეთილი იყოს შენი დაბრუნება LoadMind-ში.',
+  'auth.login.email': 'ელფოსტა',
+  'auth.login.email.placeholder': 'you@company.com',
+  'auth.login.password': 'პაროლი',
+  'auth.login.password.placeholder': 'თქვენი პაროლი',
+  'auth.login.submit': 'შესვლა',
+  'auth.login.submitting': 'მიმდინარეობს შესვლა...',
+  'auth.login.noAccount': 'არ გაქვს ანგარიში?',
+  'auth.login.signUpLink': 'რეგისტრაცია',
+  'auth.login.invalidCredentials': 'არასწორი ელფოსტა ან პაროლი.',
 };

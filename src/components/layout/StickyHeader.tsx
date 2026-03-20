@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, LogOut } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useAuth } from '@/hooks/useAuth';
 import { LanguageToggle } from '@/components/ui/LanguageToggle';
 import { Button } from '@/components/ui/Button';
 
 export function StickyHeader() {
   const { t } = useLanguage();
+  const { user, loading, signOut } = useAuth();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -113,9 +115,34 @@ export function StickyHeader() {
         {/* Desktop Right */}
         <div className="hidden items-center gap-3 md:flex">
           <LanguageToggle />
-          <Button href="/3d" size="sm">
-            {t('nav.openApp')}
-          </Button>
+          {!loading && (
+            user ? (
+              <>
+                <span className="text-sm text-muted-fg">
+                  {user.user_metadata?.display_name || user.email}
+                </span>
+                <Button href="/3d" size="sm">
+                  {t('nav.openApp')}
+                </Button>
+                <button
+                  onClick={() => signOut()}
+                  className="rounded-lg p-2 text-muted-fg transition-colors hover:bg-surface hover:text-foreground"
+                  title={t('nav.signOut')}
+                >
+                  <LogOut className="h-4 w-4" />
+                </button>
+              </>
+            ) : (
+              <>
+                <Button href="/login" variant="ghost" size="sm">
+                  {t('nav.logIn')}
+                </Button>
+                <Button href="/register" size="sm">
+                  {t('nav.signUp')}
+                </Button>
+              </>
+            )
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -173,9 +200,31 @@ export function StickyHeader() {
           ))}
           <div className="flex items-center justify-between pt-4 border-t border-border">
             <LanguageToggle />
-            <Button href="/3d" size="sm">
-              {t('nav.openApp')}
-            </Button>
+            {!loading && (
+              user ? (
+                <div className="flex items-center gap-3">
+                  <Button href="/3d" size="sm">
+                    {t('nav.openApp')}
+                  </Button>
+                  <button
+                    onClick={() => signOut()}
+                    className="rounded-lg p-2 text-muted-fg transition-colors hover:bg-surface hover:text-foreground"
+                    title={t('nav.signOut')}
+                  >
+                    <LogOut className="h-4 w-4" />
+                  </button>
+                </div>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <Button href="/login" variant="ghost" size="sm">
+                    {t('nav.logIn')}
+                  </Button>
+                  <Button href="/register" size="sm">
+                    {t('nav.signUp')}
+                  </Button>
+                </div>
+              )
+            )}
           </div>
         </div>
       </div>

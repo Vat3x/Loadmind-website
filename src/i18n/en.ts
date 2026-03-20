@@ -450,4 +450,40 @@ export const en: Record<string, string> = {
   'privacy.p10.desc': 'All personal data, including location history and identity documents, is transmitted over secure, encrypted channels (SSL/TLS) and stored on protected servers to prevent unauthorized access.',
   'privacy.p11.title': '11. Children\'s Privacy',
   'privacy.p11.desc': 'LoadMind is intended for professional use by adults only. We do not knowingly collect personal information from children under the age of 13.',
+
+  // Auth - Nav
+  'nav.logIn': 'Log In',
+  'nav.signUp': 'Sign Up',
+  'nav.signOut': 'Sign Out',
+
+  // Auth - Register
+  'auth.register.title': 'Create Account',
+  'auth.register.subtitle': 'Sign up to start using LoadMind tools.',
+  'auth.register.displayName': 'Display Name',
+  'auth.register.displayName.placeholder': 'Your name',
+  'auth.register.email': 'Email',
+  'auth.register.email.placeholder': 'you@company.com',
+  'auth.register.password': 'Password',
+  'auth.register.password.placeholder': 'Min. 6 characters',
+  'auth.register.confirmPassword': 'Confirm Password',
+  'auth.register.confirmPassword.placeholder': 'Re-enter password',
+  'auth.register.submit': 'Create Account',
+  'auth.register.submitting': 'Creating account...',
+  'auth.register.hasAccount': 'Already have an account?',
+  'auth.register.logInLink': 'Log in',
+  'auth.register.passwordMismatch': 'Passwords do not match.',
+  'auth.register.passwordTooShort': 'Password must be at least 6 characters.',
+
+  // Auth - Login
+  'auth.login.title': 'Log In',
+  'auth.login.subtitle': 'Welcome back to LoadMind.',
+  'auth.login.email': 'Email',
+  'auth.login.email.placeholder': 'you@company.com',
+  'auth.login.password': 'Password',
+  'auth.login.password.placeholder': 'Your password',
+  'auth.login.submit': 'Log In',
+  'auth.login.submitting': 'Logging in...',
+  'auth.login.noAccount': "Don't have an account?",
+  'auth.login.signUpLink': 'Sign up',
+  'auth.login.invalidCredentials': 'Invalid email or password.',
 };

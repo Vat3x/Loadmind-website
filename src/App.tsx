@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { LanguageProvider } from '@/i18n/LanguageContext';
+import { AuthProvider } from '@/auth/AuthContext';
 import { PageLayout } from '@/components/layout/PageLayout';
 import Landing from '@/pages/Landing';
 import Pricing from '@/pages/Pricing';
@@ -15,6 +16,8 @@ import Support from '@/pages/Support';
 import NotFound from '@/pages/NotFound';
 import App3D from '@/pages/App3D';
 import AppTracking from '@/pages/AppTracking';
+import Login from '@/pages/Login';
+import Register from '@/pages/Register';
 
 const router = createBrowserRouter([
   { path: '/3d', element: <App3D /> },
@@ -30,6 +33,8 @@ const router = createBrowserRouter([
       { path: '/faq', element: <FAQ /> },
       { path: '/about', element: <About /> },
       { path: '/contact', element: <Contact /> },
+      { path: '/login', element: <Login /> },
+      { path: '/register', element: <Register /> },
       { path: '/terms', element: <Terms /> },
       { path: '/privacy', element: <Privacy /> },
       { path: '/support', element: <Support /> },
@@ -41,7 +46,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <LanguageProvider>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </LanguageProvider>
   );
 }
