@@ -27,7 +27,7 @@ export default function Login() {
       setError(t('auth.login.invalidCredentials'));
       setSubmitting(false);
     } else {
-      navigate('/3d');
+      navigate('/');
     }
   };
 

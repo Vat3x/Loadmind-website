@@ -36,7 +36,7 @@ export default function Register() {
       setError(signUpError.message);
       setSubmitting(false);
     } else {
-      navigate('/3d');
+      navigate('/');
     }
   };
 
