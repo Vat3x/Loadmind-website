@@ -121,9 +121,6 @@ export function StickyHeader() {
                 <span className="text-sm text-muted-fg">
                   {user.user_metadata?.display_name || user.email}
                 </span>
-                <Button href="/3d" size="sm">
-                  {t('nav.openApp')}
-                </Button>
                 <button
                   onClick={() => signOut()}
                   className="rounded-lg p-2 text-muted-fg transition-colors hover:bg-surface hover:text-foreground"
@@ -203,9 +200,6 @@ export function StickyHeader() {
             {!loading && (
               user ? (
                 <div className="flex items-center gap-3">
-                  <Button href="/3d" size="sm">
-                    {t('nav.openApp')}
-                  </Button>
                   <button
                     onClick={() => signOut()}
                     className="rounded-lg p-2 text-muted-fg transition-colors hover:bg-surface hover:text-foreground"
