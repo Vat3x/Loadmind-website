@@ -62,7 +62,7 @@ export function StickyHeader() {
           : 'bg-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 transition-opacity duration-200 hover:opacity-80">
           <img src="/logo.svg" alt="" className="h-7 w-auto" />
