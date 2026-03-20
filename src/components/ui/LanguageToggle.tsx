@@ -4,30 +4,28 @@ export function LanguageToggle() {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className="relative flex items-center gap-1 rounded-lg bg-elevated p-1">
-      <div
-        className="absolute top-1 h-[calc(100%-8px)] w-[calc(50%-4px)] rounded-md bg-primary transition-transform duration-200 ease-out"
-        style={{ transform: lang === 'en' ? 'translateX(2px)' : 'translateX(calc(100% + 6px))' }}
-      />
+    <div className="flex items-center gap-1">
       <button
         onClick={() => setLang('en')}
-        className={`relative z-10 rounded-md px-3 py-1 text-xs font-medium transition-colors duration-200 ${
+        className={`rounded-md p-1 transition-all duration-200 ${
           lang === 'en'
-            ? 'text-background'
-            : 'text-muted-fg hover:text-foreground'
+            ? 'opacity-100 ring-1 ring-primary'
+            : 'opacity-50 hover:opacity-80'
         }`}
+        title="English"
       >
-        EN
+        <span className="text-base leading-none">🇺🇸</span>
       </button>
       <button
         onClick={() => setLang('ge')}
-        className={`relative z-10 rounded-md px-3 py-1 text-xs font-medium transition-colors duration-200 ${
+        className={`rounded-md p-1 transition-all duration-200 ${
           lang === 'ge'
-            ? 'text-background'
-            : 'text-muted-fg hover:text-foreground'
+            ? 'opacity-100 ring-1 ring-primary'
+            : 'opacity-50 hover:opacity-80'
         }`}
+        title="ქართული"
       >
-        GE
+        <span className="text-base leading-none">🇬🇪</span>
       </button>
     </div>
   );

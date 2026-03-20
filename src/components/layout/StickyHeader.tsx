@@ -11,9 +11,11 @@ export function StickyHeader() {
   const { user, loading, signOut } = useAuth();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
+  const [accountOpen, setAccountOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const accountRef = useRef<HTMLDivElement>(null);
   const hasToggledMenu = useRef(false);
 
   useEffect(() => {
@@ -25,12 +27,16 @@ export function StickyHeader() {
   useEffect(() => {
     setMobileOpen(false);
     setProductsOpen(false);
+    setAccountOpen(false);
   }, [location]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setProductsOpen(false);
+      }
+      if (accountRef.current && !accountRef.current.contains(e.target as Node)) {
+        setAccountOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -117,18 +123,34 @@ export function StickyHeader() {
           <LanguageToggle />
           {!loading && (
             user ? (
-              <>
-                <span className="text-sm text-muted-fg">
-                  {user.user_metadata?.display_name || user.email}
-                </span>
+              <div ref={accountRef} className="relative">
                 <button
-                  onClick={() => signOut()}
-                  className="rounded-lg p-2 text-muted-fg transition-colors hover:bg-surface hover:text-foreground"
-                  title={t('nav.signOut')}
+                  onClick={() => setAccountOpen(!accountOpen)}
+                  className={`flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 ${
+                    accountOpen
+                      ? 'bg-surface text-foreground'
+                      : 'text-foreground/70 hover:bg-surface/50 hover:text-foreground'
+                  }`}
                 >
-                  <LogOut className="h-4 w-4" />
+                  {user.user_metadata?.display_name || user.email}
+                  <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${accountOpen ? 'rotate-180' : ''}`} />
                 </button>
-              </>
+                <div
+                  className={`absolute right-0 top-full mt-2 w-40 rounded-lg border border-border bg-surface p-1.5 shadow-xl shadow-background/50 transition-all duration-200 origin-top ${
+                    accountOpen
+                      ? 'opacity-100 scale-100 pointer-events-auto'
+                      : 'opacity-0 scale-95 pointer-events-none'
+                  }`}
+                >
+                  <button
+                    onClick={() => signOut()}
+                    className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-muted-fg transition-all duration-150 hover:bg-elevated hover:text-foreground"
+                  >
+                    <LogOut className="h-3.5 w-3.5" />
+                    {t('nav.signOut')}
+                  </button>
+                </div>
+              </div>
             ) : (
               <>
                 <Button href="/login" variant="ghost" size="sm">
