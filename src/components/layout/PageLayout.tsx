@@ -14,13 +14,3 @@ export function PageLayout() {
   );
 }
 
-export function AppLayout() {
-  return (
-    <div className="flex h-screen flex-col">
-      <StickyHeader />
-      <main className="flex-1">
-        <Outlet />
-      </main>
-    </div>
-  );
-}
