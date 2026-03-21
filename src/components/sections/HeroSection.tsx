@@ -5,7 +5,7 @@ export function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden bg-slate-950 -mt-16 pt-48 pb-40 md:pt-56 md:pb-56">
+    <section className="relative z-0 overflow-hidden bg-slate-950 -mt-16 pt-48 pb-40 md:pt-56 md:pb-56">
       {/* ── Background Image ── */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <img
