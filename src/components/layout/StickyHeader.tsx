@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown, LogOut } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/hooks/useAuth';
 import { LanguageToggle } from '@/components/ui/LanguageToggle';
-import { Button } from '@/components/ui/Button';
+
 
 export function StickyHeader() {
   const { t } = useLanguage();
@@ -56,10 +56,10 @@ export function StickyHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-background/80 backdrop-blur-xl border-b border-border'
-          : 'bg-transparent'
+          ? 'bg-background/70 backdrop-blur-xl border-b border-border'
+          : 'bg-slate-950/20 backdrop-blur-sm'
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
@@ -152,14 +152,9 @@ export function StickyHeader() {
                 </div>
               </div>
             ) : (
-              <>
-                <Button href="/login" variant="ghost" size="sm">
-                  {t('nav.logIn')}
-                </Button>
-                <Button href="/register" size="sm">
-                  {t('nav.signUp')}
-                </Button>
-              </>
+              <Link to="/login" className="rounded-lg px-3 py-2 text-sm font-medium text-foreground/70 hover:bg-surface/50 hover:text-foreground transition-all duration-200">
+                {t('nav.logIn')}
+              </Link>
             )
           )}
         </div>
@@ -231,14 +226,9 @@ export function StickyHeader() {
                   </button>
                 </div>
               ) : (
-                <div className="flex items-center gap-2">
-                  <Button href="/login" variant="ghost" size="sm">
-                    {t('nav.logIn')}
-                  </Button>
-                  <Button href="/register" size="sm">
-                    {t('nav.signUp')}
-                  </Button>
-                </div>
+                <Link to="/login" className="text-base text-muted-fg transition-colors hover:text-foreground">
+                  {t('nav.logIn')}
+                </Link>
               )
             )}
           </div>

@@ -486,4 +486,8 @@ export const en: Record<string, string> = {
   'auth.login.noAccount': "Don't have an account?",
   'auth.login.signUpLink': 'Sign up',
   'auth.login.invalidCredentials': 'Invalid email or password.',
+
+  'auth.continueWithGoogle': 'Continue with Google',
+  'auth.continueWithApple': 'Continue with Apple',
+  'auth.orDivider': 'or',
 };

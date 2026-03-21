@@ -486,4 +486,8 @@ export const ge: Record<string, string> = {
   'auth.login.noAccount': 'არ გაქვს ანგარიში?',
   'auth.login.signUpLink': 'რეგისტრაცია',
   'auth.login.invalidCredentials': 'არასწორი ელფოსტა ან პაროლი.',
+
+  'auth.continueWithGoogle': 'გაგრძელება Google-ით',
+  'auth.continueWithApple': 'გაგრძელება Apple-ით',
+  'auth.orDivider': 'ან',
 };
