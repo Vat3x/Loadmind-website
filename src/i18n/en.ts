@@ -24,7 +24,7 @@ export const en: Record<string, string> = {
   'midCta.contact': 'Contact Us',
 
   // Products
-  'products.title': 'Built for Dispatchers, by Logistics People',
+  'products.title': 'Our Products',
   'products.3dplan.title': 'LoadMind 3D Planner',
   'products.3dplan.problem': 'Stop guessing if it fits.',
   'products.3dplan.description': 'Plan cargo placement in 3D. See what fits and where, check weight distribution, and share the plan with one click.',

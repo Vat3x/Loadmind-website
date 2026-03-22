@@ -24,7 +24,7 @@ export const ge: Record<string, string> = {
   'midCta.contact': 'დაგვიკავშირდით',
 
   // Products
-  'products.title': 'შექმნილია დისპეტჩერებისთვის, ლოჯისტიკის ხალხის მიერ',
+  'products.title': 'ჩვენი პროდუქტები',
   'products.3dplan.title': 'ტვირთის თავსევადობა',
   'products.3dplan.problem': 'აღარ იფიქრო, ეტევა თუ არა.',
   'products.3dplan.description': 'დაგეგმე ტვირთის განთავსება 3D-ში. ნახე რა და სად ეტევა, შეამოწმე წონის განაწილება და გააზიარე გეგმა ერთი კლიკით.',
