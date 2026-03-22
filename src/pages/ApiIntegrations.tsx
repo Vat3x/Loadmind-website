@@ -1,9 +1,7 @@
-import { Plug, Code2, Webhook, MonitorSmartphone } from 'lucide-react';
+import { Plug, MonitorSmartphone } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
 import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { Button } from '@/components/ui/Button';
 
 export default function ApiIntegrations() {
   const { t } = useLanguage();
@@ -40,41 +38,6 @@ export default function ApiIntegrations() {
                 <code className="mt-3 block rounded-lg bg-elevated p-3 text-xs font-mono text-muted-fg">
                   {`<iframe src="https://load-mind.com/embed?loadId=..." width="800" height="600"></iframe>`}
                 </code>
-              </div>
-            </div>
-          </Card>
-
-          {/* REST API */}
-          <Card>
-            <div className="flex items-start gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg icon-gradient">
-                <Code2 className="h-5 w-5 text-white" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h3 className="text-lg font-semibold text-foreground">{t('api.rest.title')}</h3>
-                  <Badge variant="coming-soon">{t('common.comingSoon')}</Badge>
-                </div>
-                <p className="mt-2 text-sm leading-relaxed text-muted-fg">{t('api.rest.desc')}</p>
-                <div className="mt-4">
-                  <Button variant="secondary" href="/contact" size="sm">{t('api.rest.cta')}</Button>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Webhooks */}
-          <Card>
-            <div className="flex items-start gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg icon-gradient">
-                <Webhook className="h-5 w-5 text-white" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h3 className="text-lg font-semibold text-foreground">{t('api.webhooks.title')}</h3>
-                  <Badge variant="coming-soon">{t('common.comingSoon')}</Badge>
-                </div>
-                <p className="mt-2 text-sm leading-relaxed text-muted-fg">{t('api.webhooks.desc')}</p>
               </div>
             </div>
           </Card>

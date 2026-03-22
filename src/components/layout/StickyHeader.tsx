@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, LogOut } from 'lucide-react';
+import { Menu, X, ChevronDown, LogOut, Box, MapPin } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/hooks/useAuth';
 import { LanguageToggle } from '@/components/ui/LanguageToggle';
@@ -50,8 +50,8 @@ export function StickyHeader() {
   ];
 
   const productLinks = [
-    { label: t('nav.3dPlan'), href: '/3d-plan' },
-    { label: t('nav.tracking'), href: '/tracking' },
+    { label: t('nav.3dPlan'), desc: t('nav.3dPlan.desc'), href: '/3d-plan', icon: Box, iconBg: 'bg-gradient-to-br from-blue-500 to-indigo-600 shadow-blue-500/30 shadow-lg', image: '/product-3d-plan.png' },
+    { label: t('nav.tracking'), desc: t('nav.tracking.desc'), href: '/tracking', icon: MapPin, iconBg: 'bg-gradient-to-br from-emerald-500 to-teal-600 shadow-emerald-500/30 shadow-lg', image: '/product-fleet.png' },
   ];
 
   return (
@@ -85,19 +85,27 @@ export function StickyHeader() {
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${productsOpen ? 'rotate-180' : ''}`} />
             </button>
             <div
-              className={`absolute left-0 top-full mt-2 w-44 rounded-lg border border-border bg-surface p-1.5 shadow-xl shadow-background/50 transition-all duration-200 origin-top ${
+              className={`absolute left-0 top-full mt-2 w-72 rounded-xl border border-border bg-surface p-2 shadow-xl shadow-background/50 transition-all duration-200 origin-top ${
                 productsOpen
                   ? 'opacity-100 scale-100 pointer-events-auto'
                   : 'opacity-0 scale-95 pointer-events-none'
               }`}
             >
-              {productLinks.map((link) => (
+              {productLinks.map((link, i) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="block rounded-md px-3 py-2 text-sm text-muted-fg transition-all duration-150 hover:bg-elevated hover:text-foreground hover:translate-x-1"
+                  className={`flex items-start gap-3 rounded-lg px-3 py-3 transition-all duration-150 hover:bg-elevated group ${
+                    i > 0 ? 'mt-1' : ''
+                  }`}
                 >
-                  {link.label}
+                  <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${link.iconBg} mt-0.5 transition-transform duration-150 group-hover:scale-110`}>
+                    <link.icon className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{link.label}</p>
+                    <p className="mt-0.5 text-xs text-muted-fg">{link.desc}</p>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -192,14 +200,20 @@ export function StickyHeader() {
           {/* Products section */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">{t('nav.products')}</p>
-            <div className="mt-2 flex flex-col gap-2 pl-3">
+            <div className="mt-3 flex flex-col gap-3 pl-1">
               {productLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-base text-muted-fg transition-colors hover:text-foreground"
+                  className="flex items-start gap-3 transition-colors hover:text-foreground"
                 >
-                  {link.label}
+                  <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl ${link.iconBg}`}>
+                    <link.icon className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{link.label}</p>
+                    <p className="text-xs text-muted-fg">{link.desc}</p>
+                  </div>
                 </Link>
               ))}
             </div>

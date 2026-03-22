@@ -28,15 +28,9 @@ export function HeroSection() {
         >
           {t('hero.title')}
         </h1>
-        <p
-          className="hero-animate mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-400 md:mt-8 md:text-xl"
-          style={{ animation: 'fade-in-up 0.7s ease 0.15s forwards', opacity: 0 }}
-        >
-          {t('hero.subtitle')}
-        </p>
         <div
           className="hero-animate mt-8 flex items-center justify-center gap-3 flex-wrap md:mt-12 md:gap-4"
-          style={{ animation: 'fade-in-up 0.7s ease 0.3s forwards', opacity: 0 }}
+          style={{ animation: 'fade-in-up 0.7s ease 0.15s forwards', opacity: 0 }}
         >
           <a href="#products" className="inline-flex items-center justify-center rounded-full bg-white text-slate-900 hover:bg-slate-100 hover:shadow-lg hover:shadow-white/10 active:scale-[0.98] transition-all duration-300 hover:scale-[1.02] h-10 px-6 text-sm font-semibold md:h-11 md:px-7">
             {t('hero.cta')}
