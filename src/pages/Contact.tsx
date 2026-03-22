@@ -43,7 +43,8 @@ export default function Contact() {
     }
   };
 
-  const inputClasses = 'w-full rounded-lg bg-surface border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-fg focus:border-primary focus:ring-1 focus:ring-primary/30 focus:outline-none transition-all';
+  const inputClasses = 'w-full h-12 rounded-lg bg-slate-900 border border-slate-700 px-4 text-sm text-white placeholder:text-slate-500 focus:border-blue-500 focus:outline-none transition-all';
+  const selectClasses = inputClasses + ' cursor-pointer';
 
   return (
     <>
@@ -120,7 +121,7 @@ export default function Contact() {
                     <div>
                       <label className="mb-1 block text-xs font-medium text-muted-fg">{t('contact.form.subject')}</label>
                       <select
-                        className={inputClasses}
+                        className={selectClasses}
                         value={form.subject}
                         onChange={(e) => setForm({ ...form, subject: e.target.value })}
                       >
@@ -134,7 +135,7 @@ export default function Contact() {
                       <textarea
                         required
                         rows={5}
-                        className={inputClasses}
+                        className={inputClasses.replace('h-12', 'h-auto py-3')}
                         value={form.message}
                         onChange={(e) => setForm({ ...form, message: e.target.value })}
                       />

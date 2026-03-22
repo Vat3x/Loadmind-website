@@ -350,10 +350,23 @@ export const en: Record<string, string> = {
   '3dplan.comparison.price.us': '$39/mo',
   '3dplan.comparison.price.them': '$55-79/mo',
 
+  // 3D Plan Showcase
+  '3dplan.showcase.title': 'See It in Action',
+  '3dplan.showcase.subtitle': 'Powerful 3D visualization with real-time load optimization',
+  '3dplan.feature.ai.title': 'AI-Powered Cargo Input',
+  '3dplan.feature.ai.desc': 'Describe your cargo in plain text and let AI parse dimensions, weight, and stacking rules automatically. No manual data entry needed.',
+  '3dplan.feature.optimization.title': 'Real-Time Optimization',
+  '3dplan.feature.optimization.desc': 'Get instant feedback on space utilization, weight distribution, packing efficiency, and center of gravity. Every load is balanced and compliant.',
+  '3dplan.feature.loadingOrder.title': 'Step-by-Step Loading Order',
+  '3dplan.feature.loadingOrder.desc': 'Get a numbered loading sequence with exact placement instructions: row, column, and floor position for every item. Your drivers know exactly what goes where.',
+  '3dplan.feature.export.title': 'Export & Share',
+  '3dplan.feature.export.desc': 'Generate PDF reports, Excel spreadsheets, or shareable links with one click. Send load plans directly to drivers or dispatchers.',
+
   // Tracking Product Page
   'tracking.hero.title': 'LoadMind Tracking',
   'tracking.hero.subtitle': 'Know where every truck is. Real-time GPS tracking with TMS integration, all on one live dashboard.',
   'tracking.hero.cta': 'Open Tracking Dashboard',
+  'tracking.hero.demoCta': 'Request Demo',
   'tracking.cta.title': 'Ready to track your fleet?',
   'tracking.cta.desc': 'Get real-time GPS visibility for your entire fleet. See every truck on a live map, integrated directly with your TMS.',
   'tracking.cta.button': 'Launch Tracking Dashboard',
@@ -372,6 +385,23 @@ export const en: Record<string, string> = {
   'tracking.history.desc': 'Full route history. See where every truck has been.',
   'tracking.integration.title': 'Integrations',
   'tracking.integration.desc': 'Works with Action Express and other TMS platforms.',
+
+  // Tracking — Dashboard Showcase
+  'tracking.dashboard.title': 'Dispatch Dashboard',
+  'tracking.dashboard.subtitle': 'Manage your entire fleet from one screen. Create trips, assign drivers, and monitor routes in real time.',
+  'tracking.dashboard.screen1': 'Trip management with live route map',
+  'tracking.dashboard.screen2': 'Quick driver actions and status',
+
+  // Tracking — Feature Highlights
+  'tracking.feature.navigation.title': 'Live Route Navigation',
+  'tracking.feature.navigation.desc': 'Drivers see their full route on a live map with ETA, distance, and stop count. Turn-by-turn navigation integrated with Google Maps keeps them on track.',
+  'tracking.feature.trips.title': 'Trip Management',
+  'tracking.feature.trips.desc': 'Drivers receive trip assignments with full pickup and drop-off details. Accept or decline with one tap. Multi-stop routes with notes for each stop.',
+  'tracking.feature.history.title': 'Trip History',
+  'tracking.feature.history.desc': 'Complete log of every trip: completed, cancelled, or rejected. Filter by status and date. Full route details available for review.',
+  'tracking.feature.eta.title': 'ETA Alerts & Notifications',
+  'tracking.feature.eta.desc': 'Automatic notifications when drivers approach pickup or delivery locations. Dispatchers and customers stay informed without a single phone call.',
+  'tracking.feature.eta.card': 'Driver arriving at pickup in 5 minutes',
 
   // API Page
   'api.hero.title': 'API & Integrations',

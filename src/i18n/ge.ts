@@ -350,10 +350,23 @@ export const ge: Record<string, string> = {
   '3dplan.comparison.price.us': '$39/თვე',
   '3dplan.comparison.price.them': '$55-79/თვე',
 
+  // 3D Plan Showcase
+  '3dplan.showcase.title': 'ნახე მოქმედებაში',
+  '3dplan.showcase.subtitle': 'მძლავრი 3D ვიზუალიზაცია რეალტაიმ დატვირთვის ოპტიმიზაციით',
+  '3dplan.feature.ai.title': 'AI ტვირთის შეყვანა',
+  '3dplan.feature.ai.desc': 'აღწერე ტვირთი ტექსტით და AI ავტომატურად ამოიცნობს ზომებს, წონას და დაწყობის წესებს. ხელით შეყვანა აღარ გჭირდება.',
+  '3dplan.feature.optimization.title': 'რეალტაიმ ოპტიმიზაცია',
+  '3dplan.feature.optimization.desc': 'მიიღე მყისიერი უკუკავშირი სივრცის გამოყენებაზე, წონის განაწილებაზე, შეფუთვის ეფექტურობასა და სიმძიმის ცენტრზე. ყოველი დატვირთვა დაბალანსებული და შესაბამისია.',
+  '3dplan.feature.loadingOrder.title': 'დატვირთვის თანმიმდევრობა',
+  '3dplan.feature.loadingOrder.desc': 'მიიღე დანომრილი დატვირთვის თანმიმდევრობა ზუსტი განთავსების ინსტრუქციებით: რიგი, სვეტი და იატაკის პოზიცია ყველა ნივთისთვის. მძღოლმა ზუსტად იცის რა სად მიდის.',
+  '3dplan.feature.export.title': 'ექსპორტი და გაზიარება',
+  '3dplan.feature.export.desc': 'შექმენი PDF რეპორტი, Excel ფაილი ან გასაზიარებელი ლინკი ერთი კლიკით. გაუგზავნე დატვირთვის გეგმა პირდაპირ მძღოლებს ან დისპეტჩერებს.',
+
   // Tracking Product Page
   'tracking.hero.title': 'LoadMind Tracker',
   'tracking.hero.subtitle': 'იცოდე სად არის ყველა მანქანა. რეალტაიმ GPS თრექინგი TMS ინტეგრაციით, ერთ ცოცხალ დეშბორდზე.',
   'tracking.hero.cta': 'გახსენი თრექინგ დეშბორდი',
+  'tracking.hero.demoCta': 'დემოს მოთხოვნა',
   'tracking.cta.title': 'მზად ხარ ფლოტის მართვისთვის?',
   'tracking.cta.desc': 'მიიღე რეალტაიმ GPS ხილვადობა მთელი ფლოტისთვის. ნახე ყველა მანქანა ცოცხალ რუკაზე, პირდაპირ შენს TMS-თან დაკავშირებული.',
   'tracking.cta.button': 'გახსენი თრექინგ დეშბორდი',
@@ -372,6 +385,23 @@ export const ge: Record<string, string> = {
   'tracking.history.desc': 'სრული მარშრუტის ისტორია. ნახე სად ყოფილა ყველა მანქანა.',
   'tracking.integration.title': 'ინტეგრაციები',
   'tracking.integration.desc': 'მუშაობს Action Express-თან და სხვა TMS პლატფორმებთან.',
+
+  // Tracking — Dashboard Showcase
+  'tracking.dashboard.title': 'დისპეჩერის დეშბორდი',
+  'tracking.dashboard.subtitle': 'მართე მთელი ფლოტი ერთი ეკრანიდან. შექმენი ტრიპები, მიაბარე მძღოლებს და აკონტროლე მარშრუტები რეალ ტაიმში.',
+  'tracking.dashboard.screen1': 'ტრიპების მართვა ცოცხალი რუკით',
+  'tracking.dashboard.screen2': 'მძღოლის სწრაფი მოქმედებები და სტატუსი',
+
+  // Tracking — Feature Highlights
+  'tracking.feature.navigation.title': 'ცოცხალი მარშრუტის ნავიგაცია',
+  'tracking.feature.navigation.desc': 'მძღოლები ხედავენ სრულ მარშრუტს ცოცხალ რუკაზე ETA-ით, მანძილით და გაჩერებების რაოდენობით. Google Maps ნავიგაცია ინტეგრირებულია.',
+  'tracking.feature.trips.title': 'ტრიპების მართვა',
+  'tracking.feature.trips.desc': 'მძღოლები იღებენ ტრიპის დავალებებს სრული პიკაპისა და მიტანის დეტალებით. მიიღე ან უარყავი ერთი შეხებით. მრავალ-გაჩერებიანი მარშრუტები შენიშვნებით.',
+  'tracking.feature.history.title': 'ტრიპების ისტორია',
+  'tracking.feature.history.desc': 'ყველა ტრიპის სრული ჟურნალი: შესრულებული, გაუქმებული თუ უარყოფილი. ფილტრაცია სტატუსით და თარიღით. მარშრუტის სრული დეტალები.',
+  'tracking.feature.eta.title': 'ETA შეტყობინებები',
+  'tracking.feature.eta.desc': 'ავტომატური შეტყობინებები როცა მძღოლი უახლოვდება პიკაპის ან მიტანის ადგილს. დისპეჩერები და კლიენტები ინფორმირებულნი არიან ზარის გარეშე.',
+  'tracking.feature.eta.card': 'მძღოლი მოდის პიკაპზე 5 წუთში',
 
   // API Page
   'api.hero.title': 'API და ინტეგრაციები',
