@@ -18,7 +18,7 @@ export function PricingToggle({
 
   return (
     <div
-      className={`relative inline-grid rounded-full bg-elevated border border-border ${
+      className={`relative inline-grid rounded-full bg-slate-800 border border-slate-600 ${
         size === 'sm' ? 'p-1' : 'p-1.5'
       }`}
       style={{ gridTemplateColumns: `repeat(${count}, 1fr)` }}
@@ -41,8 +41,8 @@ export function PricingToggle({
               : 'px-6 py-2 text-sm'
           } ${
             activeIndex === i
-              ? 'text-background'
-              : 'text-muted-fg hover:text-foreground'
+              ? 'text-white font-bold'
+              : 'text-slate-300 hover:text-white'
           }`}
         >
           {label}

@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { Sparkles, BarChart3, Download, ListOrdered, Truck, Package, LayoutGrid, Share2 } from 'lucide-react';
+import { Sparkles, BarChart3, Download, ListOrdered } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
 import { PageHero } from '@/components/ui/PageHero';
-import { StepCard } from '@/components/ui/StepCard';
 import { PricingCard } from '@/components/ui/PricingCard';
 import { PricingToggle } from '@/components/ui/PricingToggle';
 
@@ -79,15 +78,7 @@ export default function Product3DPlan() {
   const { t } = useLanguage();
   const showcaseRef = useRevealChildren<HTMLElement>();
   const featuresRef = useRevealChildren<HTMLElement>();
-  const stepsRef = useRevealChildren<HTMLElement>();
   const [billing, setBilling] = useState<BillingCycle>('monthly');
-
-  const steps = [
-    { icon: Truck, titleKey: 'howItWorks.step1.title', descKey: 'howItWorks.step1.desc' },
-    { icon: Package, titleKey: 'howItWorks.step2.title', descKey: 'howItWorks.step2.desc' },
-    { icon: LayoutGrid, titleKey: 'howItWorks.step3.title', descKey: 'howItWorks.step3.desc' },
-    { icon: Share2, titleKey: 'howItWorks.step4.title', descKey: 'howItWorks.step4.desc' },
-  ];
 
   const billingLabels = [t('pricing.billing.monthly'), t('pricing.billing.annual')];
   const periodKey = billing === 'monthly' ? 'pricing.period.monthly' : 'pricing.period.annual';
@@ -249,22 +240,6 @@ export default function Product3DPlan() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section ref={stepsRef} className="pb-24">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="reveal mb-12 text-center text-2xl font-bold md:text-3xl gradient-text">
-            {t('howItWorks.title')}
-          </h2>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map((step, i) => (
-              <div key={step.titleKey} className="reveal">
-                <StepCard stepNumber={i + 1} icon={step.icon} title={t(step.titleKey)} description={t(step.descKey)} />
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

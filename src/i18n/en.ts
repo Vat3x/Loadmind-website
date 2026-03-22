@@ -27,7 +27,7 @@ export const en: Record<string, string> = {
   'products.title': 'Built for Dispatchers, by Logistics People',
   'products.3dplan.title': 'LoadMind 3D Planner',
   'products.3dplan.problem': 'Stop guessing if it fits.',
-  'products.3dplan.description': 'Your drivers shouldn\'t get fined at the scales because of a bad load plan. LoadMind calculates real physics: axle weights, center of gravity, every inch of trailer space.',
+  'products.3dplan.description': 'Plan cargo placement in 3D. See what fits and where, check weight distribution, and share the plan with one click.',
   'products.3dplan.feature1': 'Axle weight compliance',
   'products.3dplan.feature2': 'AI cargo description',
   'products.3dplan.feature3': 'Export & share load plans',
@@ -35,7 +35,7 @@ export const en: Record<string, string> = {
   'products.3dplan.cta': 'Plan a Load →',
   'products.tracking.title': 'LoadMind Tracker',
   'products.tracking.problem': '"Where\'s my truck?" Answered.',
-  'products.tracking.description': 'Your customers call. Your broker calls. You don\'t know. With LoadMind Tracker, you always know: real-time GPS, live ETAs, and full trip history.',
+  'products.tracking.description': 'Know where every truck is at any time. GPS tracking, live ETA, and full route history on one dashboard.',
   'products.tracking.feature1': 'Real-time GPS tracking',
   'products.tracking.feature2': 'ETA notifications',
   'products.tracking.feature3': 'TMS integration',
@@ -45,13 +45,13 @@ export const en: Record<string, string> = {
   'features.title': 'The Engineer\'s Approach to Freight',
   'features.weightBalance.title': 'Physics-Driven Balance',
   'features.weightBalance.desc': 'We don\'t just fill empty space. LoadMind calculates real-world axle distribution across steer, drive, and trailer axles to guarantee highway safety.',
-  'features.safetyChecks.title': 'Automated Compliance Checks',
-  'features.safetyChecks.desc': 'Every single load plan is instantly verified against strict DOT regulations for gross and axle weights. Say goodbye to overweight fines.',
+  'features.safetyChecks.title': 'Safety Checks',
+  'features.safetyChecks.desc': 'Every load plan is instantly verified against weight limits for gross and axle weights. Say goodbye to overweight fines.',
   'features.anyShape.title': 'AI-Powered Cargo Input',
   'features.anyShape.desc': 'Describe your cargo in plain English and let AI parse it instantly. Or paste from Excel, type manually. LoadMind handles pallets, pipes, machinery, any shape.',
   'features.qualityScore.title': 'Live Fleet Tracking',
   'features.qualityScore.desc': 'Monitor your entire fleet on a live map integrated directly with your dispatch board. Reduce check calls down to zero.',
-  'features.easyExport.title': 'Frictionless Dispatching',
+  'features.easyExport.title': 'Easy Sharing',
   'features.easyExport.desc': 'Generate crisp PDF schematics for the dock, Excel manifests for the back office, or secure share links for your freight brokers. One click does it all.',
   'features.instantResults.title': 'The LoadMind Suite',
   'features.instantResults.desc': 'Use 3D Planner and Tracker standalone, or bundle them together for complete dock-to-door command over your operations.',
@@ -59,13 +59,13 @@ export const en: Record<string, string> = {
   // Value Props
   'valueProps.speed.metric': '95%',
   'valueProps.speed.label': 'Less planning time',
-  'valueProps.speed.desc': 'What used to take hours on a whiteboard now takes under a minute.',
+  'valueProps.speed.desc': 'What took minutes now takes seconds. Plan loads fast and accurately.',
   'valueProps.inspection.metric': '100%',
-  'valueProps.inspection.label': 'Scale-ready confidence',
+  'valueProps.inspection.label': '100% Accuracy',
   'valueProps.inspection.desc': 'Eliminate rework. Every schematic is engineered to pass DOT inspection.',
   'valueProps.price.metric': '$0',
   'valueProps.price.label': 'Zero friction entry',
-  'valueProps.price.desc': 'Try our core tools for free. Bundle them later to save.',
+  'valueProps.price.desc': 'Try for free or request a demo.',
 
   // How It Works
   'howItWorks.title': 'How It Works',
@@ -90,8 +90,8 @@ export const en: Record<string, string> = {
 
   // Testimonial
   'testimonial.title': 'Trusted by the Fast Fleet',
-  'testimonial.quote': '"LoadMind fundamentally changed our morning routine. It turned a stressful hour of manual weight calculations into a 2-minute visual export. Our drivers haven\'t hit an overweight fine since we deployed it."',
-  'testimonial.author': 'Operations Manager, National LTL Carrier',
+  'testimonial.quote': '"LoadMind fundamentally changed our daily routine. It turned a stressful hour of manual weight calculations into a 2-minute visual export. Our drivers haven\'t hit an overweight fine since we deployed it."',
+  'testimonial.author': 'Operations Manager, Action Express',
 
   // Why LoadMind
   'why.title': 'Why LoadMind',
@@ -109,7 +109,7 @@ export const en: Record<string, string> = {
   'faq.q1': 'Is LoadMind really free?',
   'faq.a1': 'Yes, start planning with no login, no credit card. Pro features coming soon.',
   'faq.q2': 'What trucks are supported?',
-  'faq.a2': 'Sprinters, straight trucks, and semi-trailers with customizable dimensions.',
+  'faq.a2': 'Sprinters, straight trucks, and semi-trailers. You can also add your own custom vehicle.',
   'faq.q3': 'How is LoadMind different from other tools?',
   'faq.a3': 'LoadMind uses real physics to balance weight across axles, not just fill empty space. And at $39/mo, it\'s half the price of alternatives.',
   'faq.q4': 'Can I share the plan with my driver?',
@@ -121,8 +121,8 @@ export const en: Record<string, string> = {
 
   // CTA
   'cta.title': 'Stop Guessing. Start Engineering.',
-  'cta.subtitle': 'Enter the new era of logistics operations. Give your dispatchers the tools to build safe, scale-ready plans in 60 seconds. No credit card required.',
-  'cta.button': 'Launch 3D Planner for Free',
+  'cta.subtitle': 'Enter the new era of logistics operations. Give your dispatchers the tools to build safe plans in 60 seconds.',
+  'cta.button': 'Try for Free',
 
   // Footer
   'footer.products': 'Products',
@@ -143,7 +143,7 @@ export const en: Record<string, string> = {
   'footer.location': 'Tbilisi, Georgia',
 
   // Pricing Page
-  'pricing.title': 'Simple, transparent pricing',
+  'pricing.title': 'Choose the plan that fits you',
   'pricing.subtitle': 'Start free. Upgrade when you need more.',
   'pricing.tab.3dplan': '3D Planner',
   'pricing.tab.tracking': 'Tracking',
@@ -198,20 +198,20 @@ export const en: Record<string, string> = {
   'pricing.track.starter.price.monthly': '$39',
   'pricing.track.starter.price.annual': '$33',
   'pricing.track.starter.desc': 'For individual brokers',
-  'pricing.track.starter.volume': '50 requests/month',
+  'pricing.track.starter.volume': '50 routes/month',
   'pricing.track.growth.name': 'Growth',
   'pricing.track.growth.price.monthly': '$99',
   'pricing.track.growth.price.annual': '$84',
   'pricing.track.growth.desc': 'For growing operations',
-  'pricing.track.growth.volume': '200 requests/month',
+  'pricing.track.growth.volume': '200 routes/month',
   'pricing.track.business.name': 'Business',
   'pricing.track.business.price.monthly': '$189',
   'pricing.track.business.price.annual': '$161',
   'pricing.track.business.desc': 'For fleets up to 30 trucks',
-  'pricing.track.business.volume': '500 requests/month',
+  'pricing.track.business.volume': '500 routes/month',
   'pricing.track.enterprise.name': 'Enterprise',
   'pricing.track.enterprise.desc': 'For large operations',
-  'pricing.track.enterprise.volume': 'Unlimited requests',
+  'pricing.track.enterprise.volume': 'Unlimited routes',
 
   // Tracking Features
   'pricing.track.feature.realtime': 'Real-time updates',
@@ -276,7 +276,7 @@ export const en: Record<string, string> = {
   'faqPage.q3': 'Who is LoadMind for?',
   'faqPage.a3': 'LTL dispatchers, small trucking companies, and freight brokers who need fast, accurate load planning.',
   'faqPage.q4': 'What trucks are supported?',
-  'faqPage.a4': 'Sprinters, straight trucks, and semi-trailers with customizable dimensions.',
+  'faqPage.a4': 'Sprinters, straight trucks, and semi-trailers. You can also add your own custom vehicle.',
   'faqPage.q5': 'How is LoadMind different from other tools?',
   'faqPage.a5': 'LoadMind uses real physics to balance weight across axles, not just fill empty space. And at $39/mo, it\'s half the price of alternatives.',
   'faqPage.q6': 'Can I share the plan with my driver?',
@@ -321,14 +321,14 @@ export const en: Record<string, string> = {
   'nav.3dPlan': '3D Load Planner',
   'nav.tracking': 'Tracking',
   'nav.3dPlan.desc': 'AI-powered trailer loading optimization',
-  'nav.tracking.desc': 'Real-time GPS fleet visibility',
+  'nav.tracking.desc': 'GPS fleet monitoring in real time',
   'nav.api': 'API',
   'nav.about': 'About',
   'nav.contact': 'Contact',
 
   // 3D Plan Product Page
   '3dplan.hero.title': 'LoadMind 3D Load Planner',
-  '3dplan.hero.subtitle': 'Balance weight, check safety, export plans in seconds.',
+  '3dplan.hero.subtitle': 'Place cargo optimally, calculate the best configuration, and maximize your space.',
   '3dplan.hero.cta': 'Try Free, No Login',
   '3dplan.pricing.label': '$0 first month, then $39/mo',
   '3dplan.pricing.cta': 'Start Free',
@@ -352,11 +352,11 @@ export const en: Record<string, string> = {
 
   // 3D Plan Showcase
   '3dplan.showcase.title': 'See It in Action',
-  '3dplan.showcase.subtitle': 'Powerful 3D visualization with real-time load optimization',
+  '3dplan.showcase.subtitle': 'Physics, engineering, and 3D modeling in one tool. Try it yourself.',
   '3dplan.feature.ai.title': 'AI-Powered Cargo Input',
   '3dplan.feature.ai.desc': 'Describe your cargo in plain text and let AI parse dimensions, weight, and stacking rules automatically. No manual data entry needed.',
-  '3dplan.feature.optimization.title': 'Real-Time Optimization',
-  '3dplan.feature.optimization.desc': 'Get instant feedback on space utilization, weight distribution, packing efficiency, and center of gravity. Every load is balanced and compliant.',
+  '3dplan.feature.optimization.title': 'Detailed Analytics',
+  '3dplan.feature.optimization.desc': 'See full statistics: used space, remaining capacity, weight distribution, packing efficiency, and center of gravity. Every plan is analyzed and optimized.',
   '3dplan.feature.loadingOrder.title': 'Step-by-Step Loading Order',
   '3dplan.feature.loadingOrder.desc': 'Get a numbered loading sequence with exact placement instructions: row, column, and floor position for every item. Your drivers know exactly what goes where.',
   '3dplan.feature.export.title': 'Export & Share',
@@ -388,17 +388,17 @@ export const en: Record<string, string> = {
 
   // Tracking — Dashboard Showcase
   'tracking.dashboard.title': 'Dispatch Dashboard',
-  'tracking.dashboard.subtitle': 'Manage your entire fleet from one screen. Create trips, assign drivers, and monitor routes in real time.',
-  'tracking.dashboard.screen1': 'Trip management with live route map',
+  'tracking.dashboard.subtitle': 'Manage your entire fleet from one screen. Create routes, assign drivers, and monitor in real time.',
+  'tracking.dashboard.screen1': 'Route management with live map',
   'tracking.dashboard.screen2': 'Quick driver actions and status',
 
   // Tracking — Feature Highlights
   'tracking.feature.navigation.title': 'Live Route Navigation',
   'tracking.feature.navigation.desc': 'Drivers see their full route on a live map with ETA, distance, and stop count. Turn-by-turn navigation integrated with Google Maps keeps them on track.',
-  'tracking.feature.trips.title': 'Trip Management',
-  'tracking.feature.trips.desc': 'Drivers receive trip assignments with full pickup and drop-off details. Accept or decline with one tap. Multi-stop routes with notes for each stop.',
-  'tracking.feature.history.title': 'Trip History',
-  'tracking.feature.history.desc': 'Complete log of every trip: completed, cancelled, or rejected. Filter by status and date. Full route details available for review.',
+  'tracking.feature.trips.title': 'Route Management',
+  'tracking.feature.trips.desc': 'Drivers receive assignments with full pickup and drop-off details. Accept or decline with one tap. Multi-stop routes with notes for each stop.',
+  'tracking.feature.history.title': 'Route History',
+  'tracking.feature.history.desc': 'Complete log of every route: completed, cancelled, or rejected. Filter by status and date. Full details available for review.',
   'tracking.feature.eta.title': 'ETA Alerts & Notifications',
   'tracking.feature.eta.desc': 'Automatic notifications when drivers approach pickup or delivery locations. Dispatchers and customers stay informed without a single phone call.',
   'tracking.feature.eta.card': 'Driver arriving at pickup in 5 minutes',
