@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Box, MapPin, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
 import { PricingCard } from '@/components/ui/PricingCard';
@@ -6,6 +7,7 @@ import { PricingToggle } from '@/components/ui/PricingToggle';
 import { FAQAccordion } from '@/components/ui/FAQAccordion';
 
 type BillingCycle = 'monthly' | 'annual';
+type SelectedProduct = '3d' | 'tracking' | null;
 
 interface TierData {
   nameKey: string;
@@ -18,7 +20,6 @@ interface TierData {
   popular?: boolean;
   enterprise?: boolean;
   noteKey?: string;
-  savingsKey?: string;
 }
 
 const PLANS_3D: TierData[] = [
@@ -93,10 +94,10 @@ const PLANS_3D: TierData[] = [
 
 const PLANS_TRACKING: TierData[] = [
   {
-    nameKey: 'pricing.track.free.name',
-    priceKey: { monthly: 'pricing.track.free.price.monthly', annual: 'pricing.track.free.price.annual' },
-    descKey: 'pricing.track.free.desc',
-    volumeKey: 'pricing.track.free.volume',
+    nameKey: 'pricing.track.demo.name',
+    priceKey: { monthly: 'pricing.track.demo.name', annual: 'pricing.track.demo.name' },
+    descKey: 'pricing.track.demo.desc',
+    volumeKey: 'pricing.track.demo.volume',
     features: [
       { key: 'pricing.track.feature.realtime', included: true },
       { key: 'pricing.track.feature.shareLink', included: true },
@@ -105,9 +106,9 @@ const PLANS_TRACKING: TierData[] = [
       { key: 'pricing.track.feature.chat', included: false },
       { key: 'pricing.track.feature.api', included: false },
     ],
-    ctaKey: 'pricing.cta.free',
-    ctaHref: '/tracker',
-    noteKey: 'pricing.note.free',
+    ctaKey: 'pricing.cta.demo',
+    ctaHref: '/demo',
+    enterprise: true,
   },
   {
     nameKey: 'pricing.track.starter.name',
@@ -118,7 +119,7 @@ const PLANS_TRACKING: TierData[] = [
       { key: 'pricing.track.feature.realtime', included: true },
       { key: 'pricing.track.feature.shareLink', included: true },
       { key: 'pricing.track.feature.emailNotif', included: true },
-      { key: 'pricing.track.feature.reports', included: true },
+      { key: 'pricing.track.feature.reports', included: false },
       { key: 'pricing.track.feature.chat', included: false },
       { key: 'pricing.track.feature.api', included: false },
     ],
@@ -126,10 +127,27 @@ const PLANS_TRACKING: TierData[] = [
     ctaHref: '/tracker',
   },
   {
-    nameKey: 'pricing.track.pro.name',
-    priceKey: { monthly: 'pricing.track.pro.price.monthly', annual: 'pricing.track.pro.price.annual' },
-    descKey: 'pricing.track.pro.desc',
-    volumeKey: 'pricing.track.pro.volume',
+    nameKey: 'pricing.track.growth.name',
+    priceKey: { monthly: 'pricing.track.growth.price.monthly', annual: 'pricing.track.growth.price.annual' },
+    descKey: 'pricing.track.growth.desc',
+    volumeKey: 'pricing.track.growth.volume',
+    features: [
+      { key: 'pricing.track.feature.realtime', included: true },
+      { key: 'pricing.track.feature.shareLink', included: true },
+      { key: 'pricing.track.feature.emailNotif', included: true },
+      { key: 'pricing.track.feature.reports', included: true },
+      { key: 'pricing.track.feature.chat', included: false },
+      { key: 'pricing.track.feature.api', included: false },
+    ],
+    ctaKey: 'pricing.cta.start',
+    ctaHref: '/tracker',
+    popular: true,
+  },
+  {
+    nameKey: 'pricing.track.business.name',
+    priceKey: { monthly: 'pricing.track.business.price.monthly', annual: 'pricing.track.business.price.annual' },
+    descKey: 'pricing.track.business.desc',
+    volumeKey: 'pricing.track.business.volume',
     features: [
       { key: 'pricing.track.feature.realtime', included: true },
       { key: 'pricing.track.feature.shareLink', included: true },
@@ -140,7 +158,6 @@ const PLANS_TRACKING: TierData[] = [
     ],
     ctaKey: 'pricing.cta.start',
     ctaHref: '/tracker',
-    popular: true,
   },
   {
     nameKey: 'pricing.track.enterprise.name',
@@ -161,98 +178,73 @@ const PLANS_TRACKING: TierData[] = [
   },
 ];
 
-const PLANS_ALL: TierData[] = [
+function PricingGrid({ plans, billing, t }: { plans: TierData[]; billing: BillingCycle; t: (key: string) => string }) {
+  const periodKey = billing === 'monthly' ? 'pricing.period.monthly' : 'pricing.period.annual';
+
+  return (
+    <div className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${plans.length > 4 ? 'lg:grid-cols-5 lg:gap-4' : 'lg:grid-cols-4'}`}>
+      {plans.map((tier, i) => (
+        <div
+          key={i}
+          style={{ animationDelay: `${i * 80}ms` }}
+          className="animate-[fade-in-up_0.4s_ease_both]"
+        >
+          <PricingCard
+            planName={t(tier.nameKey)}
+            price={tier.enterprise ? '' : t(tier.priceKey[billing])}
+            period={tier.enterprise ? '' : t(periodKey)}
+            volume={t(tier.volumeKey)}
+            description={t(tier.descKey)}
+            features={tier.features.map((f) => ({
+              label: t(f.key),
+              included: f.included,
+            }))}
+            ctaText={t(tier.ctaKey)}
+            ctaHref={tier.ctaHref}
+            popular={tier.popular}
+            enterprise={tier.enterprise}
+            note={tier.noteKey ? t(tier.noteKey) : undefined}
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+const PRODUCTS = [
   {
-    nameKey: 'pricing.all.free.name',
-    priceKey: { monthly: 'pricing.all.free.price.monthly', annual: 'pricing.all.free.price.annual' },
-    descKey: 'pricing.all.free.desc',
-    volumeKey: 'pricing.all.free.volume',
-    features: [
-      { key: 'pricing.all.feature.3dPlanner', included: true },
-      { key: 'pricing.all.feature.tracking', included: true },
-      { key: 'pricing.all.feature.export', included: false },
-      { key: 'pricing.all.feature.prioritySupport', included: false },
-      { key: 'pricing.all.feature.api', included: false },
-      { key: 'pricing.all.feature.dedicated', included: false },
-    ],
-    ctaKey: 'pricing.cta.free',
-    ctaHref: '/3d',
-    noteKey: 'pricing.note.free',
+    id: '3d' as const,
+    icon: Box,
+    titleKey: 'pricing.tab.3dplan',
+    descKey: 'products.3dplan.description',
+    startingPrice: '$0',
+    gradient: 'from-blue-500 to-indigo-600',
+    glow: 'shadow-blue-500/20',
+    borderActive: 'border-blue-500/60',
+    plans: PLANS_3D,
   },
   {
-    nameKey: 'pricing.all.starter.name',
-    priceKey: { monthly: 'pricing.all.starter.price.monthly', annual: 'pricing.all.starter.price.annual' },
-    descKey: 'pricing.all.starter.desc',
-    volumeKey: 'pricing.all.starter.volume',
-    features: [
-      { key: 'pricing.all.feature.3dPlanner', included: true },
-      { key: 'pricing.all.feature.tracking', included: true },
-      { key: 'pricing.all.feature.export', included: true },
-      { key: 'pricing.all.feature.prioritySupport', included: false },
-      { key: 'pricing.all.feature.api', included: false },
-      { key: 'pricing.all.feature.dedicated', included: false },
-    ],
-    ctaKey: 'pricing.cta.start',
-    ctaHref: '/3d',
-    savingsKey: 'pricing.all.starter.savings',
-  },
-  {
-    nameKey: 'pricing.all.pro.name',
-    priceKey: { monthly: 'pricing.all.pro.price.monthly', annual: 'pricing.all.pro.price.annual' },
-    descKey: 'pricing.all.pro.desc',
-    volumeKey: 'pricing.all.pro.volume',
-    features: [
-      { key: 'pricing.all.feature.3dPlanner', included: true },
-      { key: 'pricing.all.feature.tracking', included: true },
-      { key: 'pricing.all.feature.export', included: true },
-      { key: 'pricing.all.feature.prioritySupport', included: true },
-      { key: 'pricing.all.feature.api', included: false },
-      { key: 'pricing.all.feature.dedicated', included: false },
-    ],
-    ctaKey: 'pricing.cta.start',
-    ctaHref: '/3d',
-    popular: true,
-    savingsKey: 'pricing.all.pro.savings',
-  },
-  {
-    nameKey: 'pricing.all.enterprise.name',
-    priceKey: { monthly: 'pricing.all.enterprise.name', annual: 'pricing.all.enterprise.name' },
-    descKey: 'pricing.all.enterprise.desc',
-    volumeKey: 'pricing.all.enterprise.volume',
-    features: [
-      { key: 'pricing.all.feature.3dPlanner', included: true },
-      { key: 'pricing.all.feature.tracking', included: true },
-      { key: 'pricing.all.feature.export', included: true },
-      { key: 'pricing.all.feature.prioritySupport', included: true },
-      { key: 'pricing.all.feature.api', included: true },
-      { key: 'pricing.all.feature.dedicated', included: true },
-    ],
-    ctaKey: 'pricing.cta.enterprise',
-    ctaHref: '/contact',
-    enterprise: true,
+    id: 'tracking' as const,
+    icon: MapPin,
+    titleKey: 'pricing.tab.tracking',
+    descKey: 'products.tracking.description',
+    startingPrice: '$0',
+    gradient: 'from-emerald-500 to-teal-600',
+    glow: 'shadow-emerald-500/20',
+    borderActive: 'border-emerald-500/60',
+    plans: PLANS_TRACKING,
   },
 ];
 
-const ALL_PLANS = [PLANS_3D, PLANS_TRACKING, PLANS_ALL];
-
 export default function Pricing() {
   const { t } = useLanguage();
-  const [activeTab, setActiveTab] = useState(0);
   const [billing, setBilling] = useState<BillingCycle>('monthly');
-
-  const tabLabels = [
-    t('pricing.tab.3dplan'),
-    t('pricing.tab.tracking'),
-    t('pricing.tab.allinone'),
-  ];
+  const [selected, setSelected] = useState<SelectedProduct>(null);
 
   const billingLabels = [
     t('pricing.billing.monthly'),
     t('pricing.billing.annual'),
   ];
-
-  const plans = ALL_PLANS[activeTab];
-  const periodKey = billing === 'monthly' ? 'pricing.period.monthly' : 'pricing.period.annual';
 
   const pricingFAQ = [
     { question: t('pricing.faq.q1'), answer: t('pricing.faq.a1') },
@@ -266,64 +258,68 @@ export default function Pricing() {
     <>
       <PageHero title={t('pricing.title')} subtitle={t('pricing.subtitle')} />
 
-      {/* Toggles */}
-      <section className="pb-8 pt-4">
-        <div className="mx-auto max-w-6xl px-4 flex flex-col items-center gap-4">
-          <PricingToggle
-            labels={tabLabels}
-            activeIndex={activeTab}
-            onChange={setActiveTab}
-          />
-          <PricingToggle
-            labels={billingLabels}
-            activeIndex={billing === 'monthly' ? 0 : 1}
-            onChange={(i) => setBilling(i === 0 ? 'monthly' : 'annual')}
-            size="sm"
-            badge={{ index: 1, text: t('pricing.billing.save') }}
-          />
-        </div>
-      </section>
+      {/* Product Cards */}
+      <section className="pb-20 pt-4">
+        <div className="mx-auto max-w-7xl px-4 space-y-12">
+          {PRODUCTS.map((product) => {
+            const Icon = product.icon;
+            const isOpen = selected === product.id;
 
-      {/* Pricing Cards */}
-      <section className="pb-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <div
-            key={activeTab}
-            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 animate-[fade-in-up_0.4s_ease_both]"
-          >
-            {plans.map((tier, i) => {
-              const savingsAmount = tier.savingsKey ? t(tier.savingsKey) : undefined;
-              const savingsText = savingsAmount
-                ? t('pricing.savings').replace('{amount}', savingsAmount)
-                : undefined;
-
-              return (
-                <div
-                  key={i}
-                  style={{ animationDelay: `${i * 80}ms` }}
-                  className="animate-[fade-in-up_0.4s_ease_both]"
-                >
-                  <PricingCard
-                    planName={t(tier.nameKey)}
-                    price={tier.enterprise ? '' : t(tier.priceKey[billing])}
-                    period={tier.enterprise ? '' : t(periodKey)}
-                    volume={t(tier.volumeKey)}
-                    description={t(tier.descKey)}
-                    features={tier.features.map((f) => ({
-                      label: t(f.key),
-                      included: f.included,
-                    }))}
-                    ctaText={t(tier.ctaKey)}
-                    ctaHref={tier.ctaHref}
-                    popular={tier.popular}
-                    enterprise={tier.enterprise}
-                    note={tier.noteKey ? t(tier.noteKey) : undefined}
-                    savings={savingsText}
-                  />
+            return (
+              <div key={product.id}>
+                {/* Product selector card */}
+                <div className="mx-auto max-w-4xl">
+                  <button
+                    onClick={() => setSelected(isOpen ? null : product.id)}
+                    className={`w-full rounded-2xl border p-6 md:p-8 text-left transition-all duration-300 cursor-pointer group ${
+                      isOpen
+                        ? `bg-slate-900/80 ${product.borderActive} shadow-lg ${product.glow}`
+                        : 'bg-slate-900/40 border-slate-800 hover:border-slate-700 hover:bg-slate-900/60'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${product.gradient} shadow-lg ${product.glow}`}>
+                          <Icon className="h-6 w-6 text-white" />
+                        </div>
+                        <div>
+                          <h2 className="text-xl font-bold text-white md:text-2xl">
+                            {t(product.titleKey)}
+                          </h2>
+                          <p className="mt-1 text-sm text-slate-400 line-clamp-1">
+                            {t(product.descKey)}
+                          </p>
+                        </div>
+                      </div>
+                      <ChevronDown
+                        className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                      />
+                    </div>
+                  </button>
                 </div>
-              );
-            })}
-          </div>
+
+                {/* Expandable: billing toggle + pricing grid */}
+                <div
+                  className={`grid transition-all duration-500 ease-in-out ${
+                    isOpen ? 'grid-rows-[1fr] opacity-100 mt-8' : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="flex justify-center mb-8">
+                      <PricingToggle
+                        labels={billingLabels}
+                        activeIndex={billing === 'monthly' ? 0 : 1}
+                        onChange={(i) => setBilling(i === 0 ? 'monthly' : 'annual')}
+                        size="sm"
+                        badge={{ index: 1, text: t('pricing.billing.save') }}
+                      />
+                    </div>
+                    <PricingGrid plans={product.plans} billing={billing} t={t} />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 

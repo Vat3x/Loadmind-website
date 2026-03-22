@@ -13,6 +13,7 @@ import Contact from '@/pages/Contact';
 import Terms from '@/pages/Terms';
 import Privacy from '@/pages/Privacy';
 import Support from '@/pages/Support';
+import Demo from '@/pages/Demo';
 import NotFound from '@/pages/NotFound';
 import App3D from '@/pages/App3D';
 import AppTracking from '@/pages/AppTracking';
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
       { path: '/faq', element: <FAQ /> },
       { path: '/about', element: <About /> },
       { path: '/contact', element: <Contact /> },
+      { path: '/demo', element: <Demo /> },
       { path: '/login', element: <Login /> },
       { path: '/register', element: <Register /> },
       { path: '/auth/callback', element: <AuthCallback /> },
