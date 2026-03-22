@@ -126,14 +126,15 @@ export function StickyHeader() {
               <div ref={accountRef} className="relative">
                 <button
                   onClick={() => setAccountOpen(!accountOpen)}
-                  className={`flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 ${
-                    accountOpen
-                      ? 'bg-surface text-foreground'
-                      : 'text-foreground/70 hover:bg-surface/50 hover:text-foreground'
-                  }`}
+                  className="flex items-center rounded-full transition-all duration-200 hover:ring-2 hover:ring-primary/50"
                 >
-                  {user.user_metadata?.display_name || user.email}
-                  <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${accountOpen ? 'rotate-180' : ''}`} />
+                  {user.user_metadata?.avatar_url ? (
+                    <img src={user.user_metadata.avatar_url} alt="" className="h-8 w-8 rounded-full object-cover" />
+                  ) : (
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">
+                      {(user.user_metadata?.display_name || user.email || '?')[0].toUpperCase()}
+                    </div>
+                  )}
                 </button>
                 <div
                   className={`absolute right-0 top-full mt-2 w-40 rounded-lg border border-border bg-surface p-1.5 shadow-xl shadow-background/50 transition-all duration-200 origin-top ${
