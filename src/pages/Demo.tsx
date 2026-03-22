@@ -164,9 +164,9 @@ export default function Demo() {
                   </div>
                   <div>
                     <label className={labelClasses}>
-                      {t('demo.mcDot')}
+                      {t('demo.mcDot')} <span className="text-red-400">*</span>
                     </label>
-                    <input type="text" className={inputClasses} value={form.mcDot} onChange={update('mcDot')} placeholder={t('demo.optional')} />
+                    <input type="text" required className={inputClasses} value={form.mcDot} onChange={update('mcDot')} />
                   </div>
                 </div>
 
