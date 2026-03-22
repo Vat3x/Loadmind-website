@@ -140,7 +140,7 @@ export default function ProductTracking() {
             <div className="reveal flex flex-col items-center">
               <div className="relative mx-auto w-56 md:w-64 rounded-[2rem] border-2 border-slate-700 bg-slate-900 p-2 shadow-2xl shadow-emerald-500/10">
                 <img
-                  src="/tracking-home.png"
+                  src="/tracking-home.webp"
                   alt="LoadMind Tracker — Home Dashboard"
                   className="w-full rounded-[1.5rem]"
                   loading="lazy"
@@ -152,7 +152,7 @@ export default function ProductTracking() {
             <div className="reveal flex flex-col items-center">
               <div className="relative mx-auto w-64 md:w-72 rounded-[2rem] border-2 border-emerald-500/30 bg-slate-900 p-2 shadow-2xl shadow-emerald-500/20">
                 <img
-                  src="/tracking-route.png"
+                  src="/tracking-route.webp"
                   alt="LoadMind Tracker — Active Route"
                   className="w-full rounded-[1.5rem]"
                   loading="lazy"
@@ -164,7 +164,7 @@ export default function ProductTracking() {
             <div className="reveal flex flex-col items-center">
               <div className="relative mx-auto w-56 md:w-64 rounded-[2rem] border-2 border-slate-700 bg-slate-900 p-2 shadow-2xl shadow-emerald-500/10">
                 <img
-                  src="/tracking-progress.png"
+                  src="/tracking-progress.webp"
                   alt="LoadMind Tracker — In Progress"
                   className="w-full rounded-[1.5rem]"
                   loading="lazy"
@@ -201,7 +201,7 @@ export default function ProductTracking() {
               </div>
             </div>
             <img
-              src="/tracking-dashboard-newtrip.png"
+              src="/tracking-dashboard-newtrip.webp"
               alt="LoadMind Tracking Dashboard — Create New Trip"
               className="w-full rounded-b-xl"
               loading="lazy"
@@ -212,7 +212,7 @@ export default function ProductTracking() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-2 shadow-xl shadow-emerald-500/10">
               <img
-                src="/tracking-dashboard-trips.png"
+                src="/tracking-dashboard-trips.webp"
                 alt="Trip Management & Route Map"
                 className="w-full rounded-xl"
                 loading="lazy"
@@ -221,7 +221,7 @@ export default function ProductTracking() {
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-2 shadow-xl shadow-emerald-500/10">
               <img
-                src="/tracking-dashboard-driver.png"
+                src="/tracking-dashboard-driver.webp"
                 alt="Driver Management"
                 className="w-full rounded-xl"
                 loading="lazy"
@@ -240,7 +240,7 @@ export default function ProductTracking() {
           <div className="reveal grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2 items-center">
             <div className="rounded-[2rem] border-2 border-slate-700 bg-slate-900 p-2 shadow-2xl shadow-emerald-500/10 mx-auto w-56 md:w-64 order-2 md:order-1">
               <img
-                src="/tracking-navigation.png"
+                src="/tracking-navigation.webp"
                 alt="In Progress Navigation"
                 className="w-full rounded-[1.5rem]"
                 loading="lazy"
@@ -278,7 +278,7 @@ export default function ProductTracking() {
             </div>
             <div className="rounded-[2rem] border-2 border-slate-700 bg-slate-900 p-2 shadow-2xl shadow-blue-500/10 mx-auto w-56 md:w-64">
               <img
-                src="/tracking-trips.png"
+                src="/tracking-trips.webp"
                 alt="Active Trips"
                 className="w-full rounded-[1.5rem]"
                 loading="lazy"
@@ -290,7 +290,7 @@ export default function ProductTracking() {
           <div className="reveal grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2 items-center">
             <div className="rounded-[2rem] border-2 border-slate-700 bg-slate-900 p-2 shadow-2xl shadow-amber-500/10 mx-auto w-56 md:w-64 order-2 md:order-1">
               <img
-                src="/tracking-history.png"
+                src="/tracking-history.webp"
                 alt="Trip History"
                 className="w-full rounded-[1.5rem]"
                 loading="lazy"

@@ -126,7 +126,7 @@ export default function Product3DPlan() {
               </div>
             </div>
             <img
-              src="/3d-main-view.png"
+              src="/3d-main-view.webp"
               alt="LoadMind 3D Load Planner"
               className="w-full rounded-b-xl"
               loading="lazy"
@@ -143,7 +143,7 @@ export default function Product3DPlan() {
           <div className="reveal grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2 items-center">
             <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 shadow-xl shadow-purple-500/10 order-2 md:order-1">
               <img
-                src="/3d-ai-input.png"
+                src="/3d-ai-input.webp"
                 alt="AI Cargo Input"
                 className="w-full rounded-xl"
                 loading="lazy"
@@ -182,7 +182,7 @@ export default function Product3DPlan() {
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-2 shadow-xl shadow-blue-500/10">
                 <img
-                  src="/3d-optimization.png"
+                  src="/3d-optimization.webp"
                   alt="Optimization Complete"
                   className="w-full rounded-xl"
                   loading="lazy"
@@ -190,7 +190,7 @@ export default function Product3DPlan() {
               </div>
               <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-2 shadow-xl shadow-blue-500/10">
                 <img
-                  src="/3d-metrics.png"
+                  src="/3d-metrics.webp"
                   alt="Advanced Metrics"
                   className="w-full rounded-xl"
                   loading="lazy"
@@ -203,7 +203,7 @@ export default function Product3DPlan() {
           <div className="reveal grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2 items-center">
             <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 shadow-xl shadow-amber-500/10 order-2 md:order-1">
               <img
-                src="/3d-loading-order.png"
+                src="/3d-loading-order.webp"
                 alt="Loading Order"
                 className="w-full rounded-xl"
                 loading="lazy"
@@ -241,7 +241,7 @@ export default function Product3DPlan() {
             </div>
             <div className="flex justify-center rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-xl shadow-emerald-500/10">
               <img
-                src="/3d-export.png"
+                src="/3d-export.webp"
                 alt="Export Load Plan"
                 className="w-auto max-h-80 rounded-xl"
                 loading="lazy"
