@@ -33,7 +33,6 @@ export default function Demo() {
     businessType: '',
     shipmentVolume: '',
     mcDot: '',
-    preferredTime: '',
   });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -57,7 +56,6 @@ export default function Demo() {
           businessType: form.businessType,
           shipmentVolume: form.shipmentVolume,
           mcDot: form.mcDot,
-          preferredTime: form.preferredTime,
         }),
       });
       if (!res.ok) throw new Error('Failed');
@@ -168,14 +166,6 @@ export default function Demo() {
                     </label>
                     <input type="text" required className={inputClasses} value={form.mcDot} onChange={update('mcDot')} />
                   </div>
-                </div>
-
-                {/* Preferred time */}
-                <div>
-                  <label className={labelClasses}>
-                    {t('demo.preferredTime')} <span className="text-red-400">*</span>
-                  </label>
-                  <textarea required rows={3} className={inputClasses.replace('h-12', 'py-3 h-auto')} value={form.preferredTime} onChange={update('preferredTime')} />
                 </div>
 
                 <button
