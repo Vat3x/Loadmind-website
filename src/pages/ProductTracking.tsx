@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Bell, History, Navigation, ClipboardList, Smartphone, Monitor, ArrowRight } from 'lucide-react';
+import { MapPin, Bell, History, Navigation, ClipboardList, Smartphone, Monitor } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
 import { PageHero } from '@/components/ui/PageHero';
@@ -9,8 +9,6 @@ import { PricingCard } from '@/components/ui/PricingCard';
 import { PricingToggle } from '@/components/ui/PricingToggle';
 
 type BillingCycle = 'monthly' | 'annual';
-
-const TRACKING_URL = '/tracker';
 
 const PLANS = [
   {
