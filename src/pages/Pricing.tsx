@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { Box, MapPin, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/hooks/useAuth';
@@ -326,6 +326,7 @@ export default function Pricing() {
   const [selected, setSelected] = useState<SelectedProduct>(null);
   const [apiPlans, setApiPlans] = useState<Record<string, TierData[]>>({});
   const [apiLoaded, setApiLoaded] = useState(false);
+  const gridRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   useEffect(() => {
     fetch(`${API_BASE}/api/public/plans`)
@@ -353,6 +354,14 @@ export default function Pricing() {
         // Silently fall back to hardcoded plans
       });
   }, []);
+
+  useEffect(() => {
+    if (selected && gridRefs.current[selected]) {
+      setTimeout(() => {
+        gridRefs.current[selected]?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 150);
+    }
+  }, [selected]);
 
   const billingLabels = [
     t('pricing.billing.monthly'),
@@ -472,6 +481,7 @@ export default function Pricing() {
 
                 {/* Expandable: billing toggle + pricing grid */}
                 <div
+                  ref={(el) => { gridRefs.current[product.id] = el; }}
                   className={`grid transition-all duration-500 ease-in-out ${
                     isOpen ? 'grid-rows-[1fr] opacity-100 mt-8' : 'grid-rows-[0fr] opacity-0'
                   }`}
