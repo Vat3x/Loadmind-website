@@ -369,9 +369,9 @@ export default function Pricing() {
   ];
 
   const handlePlanCheckout = useCallback(async (planId: string, planName: string, _price: number, product: string) => {
-    // Tracker plans → straight to tracker registration (direct domain so register page shows, not login)
+    // Tracker plans → straight to tracker registration
     if (product === 'tracker') {
-      window.location.href = `https://tracking.loadmind.app/register?plan=${planName.toLowerCase()}`;
+      window.location.href = `https://load-mind.com/tracker/register?plan=${planName.toLowerCase()}`;
       return;
     }
 
