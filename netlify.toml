@@ -44,6 +44,19 @@
   status = 200
   force = true
 
+# Catch-all for any other tracker paths (dashboard, settings, etc.)
+[[redirects]]
+  from = "/tracker/*"
+  to = "https://tracking-app-f6ad7.web.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/tracker"
+  to = "https://tracking-app-f6ad7.web.app/"
+  status = 200
+  force = true
+
 # Proxy Firebase dashboard assets (hashed filenames won't collide with Netlify's own assets)
 [[redirects]]
   from = "/assets/*"
