@@ -389,6 +389,7 @@ export default function Pricing() {
           email: user.email,
           planId,
           product,
+          billing,
           returnUrl: `${window.location.origin}/checkout/return?plan=${planName.toLowerCase()}`,
         }),
       });
@@ -401,7 +402,7 @@ export default function Pricing() {
     } catch {
       alert('Failed to start checkout. Please try again.');
     }
-  }, [user]);
+  }, [user, billing]);
 
   const handlePaygCheckout = useCallback(async () => {
     if (!user) {
