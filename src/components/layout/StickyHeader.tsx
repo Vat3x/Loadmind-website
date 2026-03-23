@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, LogOut, Box, MapPin } from 'lucide-react';
+import { Menu, X, ChevronDown, LogOut, Box, MapPin, Settings } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/hooks/useAuth';
 import { LanguageToggle } from '@/components/ui/LanguageToggle';
@@ -151,6 +151,14 @@ export function StickyHeader() {
                       : 'opacity-0 scale-95 pointer-events-none'
                   }`}
                 >
+                  <Link
+                    to="/account"
+                    onClick={() => setAccountOpen(false)}
+                    className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-muted-fg transition-all duration-150 hover:bg-elevated hover:text-foreground"
+                  >
+                    <Settings className="h-3.5 w-3.5" />
+                    Account
+                  </Link>
                   <button
                     onClick={() => signOut()}
                     className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-muted-fg transition-all duration-150 hover:bg-elevated hover:text-foreground"

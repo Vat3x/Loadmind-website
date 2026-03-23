@@ -21,6 +21,7 @@ import Login from '@/pages/Login';
 import Register from '@/pages/Register';
 import AuthCallback from '@/pages/AuthCallback';
 import CheckoutReturn from '@/pages/CheckoutReturn';
+import Account from '@/pages/Account';
 
 const router = createBrowserRouter([
   { path: '/3d', element: <App3D /> },
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
       { path: '/register', element: <Register /> },
       { path: '/auth/callback', element: <AuthCallback /> },
       { path: '/checkout/return', element: <CheckoutReturn /> },
+      { path: '/account', element: <Account /> },
       { path: '/terms', element: <Terms /> },
       { path: '/privacy', element: <Privacy /> },
       { path: '/support', element: <Support /> },

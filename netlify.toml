@@ -27,6 +27,12 @@
   force = true
 
 [[redirects]]
+  from = "/tracker/register"
+  to = "https://tracking-app-f6ad7.web.app/tracker/register"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/tracker/auth/*"
   to = "https://tracking-app-f6ad7.web.app/auth/:splat"
   status = 200

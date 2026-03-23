@@ -1,8 +1,14 @@
 import { CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/Button';
 
 export default function CheckoutReturn() {
+  const [searchParams] = useSearchParams();
+  const plan = searchParams.get('plan');
+
+  const isPlan = plan && plan !== 'payg';
+  const planName = plan ? plan.charAt(0).toUpperCase() + plan.slice(1) : '';
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center space-y-6">
@@ -10,10 +16,13 @@ export default function CheckoutReturn() {
           <CheckCircle className="h-10 w-10 text-emerald-400" />
         </div>
 
-        <h1 className="text-3xl font-bold text-foreground">Card Saved!</h1>
+        <h1 className="text-3xl font-bold text-foreground">
+          {isPlan ? `You're on the ${planName} Plan!` : 'Card Saved!'}
+        </h1>
         <p className="text-muted-fg">
-          Your payment method has been saved. You can now use the 3D Load Planner
-          and pay per optimization.
+          {isPlan
+            ? `Your ${planName} subscription is now active. Enjoy unlimited access to the 3D Load Planner.`
+            : 'Your payment method has been saved. You can now use the 3D Load Planner and pay per optimization.'}
         </p>
 
         <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
@@ -26,9 +35,9 @@ export default function CheckoutReturn() {
         </div>
 
         <p className="text-xs text-muted-fg">
-          You can update your payment method anytime from the{' '}
-          <Link to="/pricing" className="text-primary hover:underline">
-            pricing page
+          You can manage your subscription anytime from your{' '}
+          <Link to="/account" className="text-primary hover:underline">
+            account settings
           </Link>.
         </p>
       </div>

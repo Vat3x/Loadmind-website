@@ -23,6 +23,9 @@ interface TierData {
   noteKey?: string;
   fromApi?: boolean;
   isPayg?: boolean;
+  planId?: string;
+  planPrice?: number;
+  apiProduct?: string;
 }
 
 interface ApiPlan {
@@ -219,6 +222,9 @@ function apiPlanToTier(plan: ApiPlan, productType: '3d' | 'tracking'): TierData 
     isPayg: hasPriceLabel,
     noteKey: plan.price === 0 && !isEnterprise ? 'pricing.note.free' : undefined,
     fromApi: true,
+    planId: plan.id,
+    planPrice: plan.price,
+    apiProduct: plan.product === 'tracker' ? 'tracker' : '3d-planning',
   };
 }
 
@@ -227,11 +233,13 @@ function PricingGrid({
   billing,
   t,
   onPaygClick,
+  onPlanClick,
 }: {
   plans: TierData[];
   billing: BillingCycle;
   t: (key: string) => string;
   onPaygClick?: () => void;
+  onPlanClick?: (planId: string, planName: string, price: number, product: string) => void;
 }) {
   const periodKey = billing === 'monthly' ? 'pricing.period.monthly' : 'pricing.period.annual';
 
@@ -269,7 +277,13 @@ function PricingGrid({
               popular={tier.popular}
               enterprise={tier.enterprise}
               note={note}
-              onCtaClick={tier.isPayg ? onPaygClick : undefined}
+              onCtaClick={
+                tier.isPayg
+                  ? onPaygClick
+                  : (tier.planId && tier.planPrice && tier.planPrice > 0 && !tier.enterprise && onPlanClick)
+                    ? () => onPlanClick(tier.planId!, tier.nameKey, tier.planPrice!, tier.apiProduct || '3d-planning')
+                    : undefined
+              }
             />
           </div>
         );
@@ -344,6 +358,46 @@ export default function Pricing() {
     t('pricing.billing.monthly'),
     t('pricing.billing.annual'),
   ];
+
+  const handlePlanCheckout = useCallback(async (planId: string, planName: string, _price: number, product: string) => {
+    // Tracker plans → website register first (if not logged in), then tracker registration
+    if (product === 'tracker') {
+      const trackerUrl = `/tracker/register?plan=${planName.toLowerCase()}`;
+      if (!user) {
+        window.location.href = `/register?redirect=${encodeURIComponent(trackerUrl)}`;
+      } else {
+        window.location.href = trackerUrl;
+      }
+      return;
+    }
+
+    // 3D Planning plans → Flitt checkout
+    if (!user) {
+      window.location.href = '/login?redirect=/pricing';
+      return;
+    }
+    try {
+      const res = await fetch(`${API_BASE}/api/public/subscribe`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId: user.id,
+          email: user.email,
+          planId,
+          product,
+          returnUrl: `${window.location.origin}/checkout/return?plan=${planName.toLowerCase()}`,
+        }),
+      });
+      const data = await res.json();
+      if (data.checkout_url) {
+        window.location.href = data.checkout_url;
+      } else {
+        alert(data.message || 'Failed to start checkout');
+      }
+    } catch {
+      alert('Failed to start checkout. Please try again.');
+    }
+  }, [user]);
 
   const handlePaygCheckout = useCallback(async () => {
     if (!user) {
@@ -437,7 +491,7 @@ export default function Pricing() {
                         badge={{ index: 1, text: t('pricing.billing.save') }}
                       />
                     </div>
-                    <PricingGrid plans={plans} billing={billing} t={t} onPaygClick={product.id === '3d' ? handlePaygCheckout : undefined} />
+                    <PricingGrid plans={plans} billing={billing} t={t} onPaygClick={product.id === '3d' ? handlePaygCheckout : undefined} onPlanClick={handlePlanCheckout} />
                   </div>
                 </div>
               </div>
