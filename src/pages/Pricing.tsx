@@ -358,8 +358,8 @@ export default function Pricing() {
   useEffect(() => {
     if (selected && gridRefs.current[selected]) {
       setTimeout(() => {
-        gridRefs.current[selected]?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 150);
+        gridRefs.current[selected]?.focus();
+      }, 500);
     }
   }, [selected]);
 
@@ -482,7 +482,8 @@ export default function Pricing() {
                 {/* Expandable: billing toggle + pricing grid */}
                 <div
                   ref={(el) => { gridRefs.current[product.id] = el; }}
-                  className={`grid transition-all duration-500 ease-in-out ${
+                  tabIndex={-1}
+                  className={`grid transition-all duration-500 ease-in-out outline-none ${
                     isOpen ? 'grid-rows-[1fr] opacity-100 mt-8' : 'grid-rows-[0fr] opacity-0'
                   }`}
                 >
