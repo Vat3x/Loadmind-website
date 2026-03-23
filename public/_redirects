@@ -1,3 +1,0 @@
-# Tracker proxy redirects (processed BEFORE netlify.toml)
-/tracker/register  https://tracking-app-f6ad7.web.app/register  200!
-/tracker/register/*  https://tracking-app-f6ad7.web.app/register/:splat  200!
