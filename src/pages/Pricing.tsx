@@ -358,7 +358,7 @@ export default function Pricing() {
   useEffect(() => {
     if (selected && gridRefs.current[selected]) {
       setTimeout(() => {
-        gridRefs.current[selected]?.focus();
+        gridRefs.current[selected]?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }, 500);
     }
   }, [selected]);
@@ -483,8 +483,7 @@ export default function Pricing() {
                 {/* Expandable: billing toggle + pricing grid */}
                 <div
                   ref={(el) => { gridRefs.current[product.id] = el; }}
-                  tabIndex={-1}
-                  className={`grid transition-all duration-500 ease-in-out outline-none ring-0 focus:outline-none focus:ring-0 ${
+                  className={`grid transition-all duration-500 ease-in-out ${
                     isOpen ? 'grid-rows-[1fr] opacity-100 mt-8' : 'grid-rows-[0fr] opacity-0'
                   }`}
                 >
