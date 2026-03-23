@@ -1,16 +1,12 @@
-import { useState } from 'react';
 import { MapPin, Bell, History, Navigation, ClipboardList, Smartphone, Monitor } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
 import { PageHero } from '@/components/ui/PageHero';
 import { StepCard } from '@/components/ui/StepCard';
 import { Card } from '@/components/ui/Card';
-import { PricingCard } from '@/components/ui/PricingCard';
-import { PricingToggle } from '@/components/ui/PricingToggle';
+import { ProductPricing, type TierData } from '@/components/sections/ProductPricing';
 
-type BillingCycle = 'monthly' | 'annual';
-
-const PLANS = [
+const FALLBACK_PLANS: TierData[] = [
   {
     nameKey: 'pricing.track.demo.name',
     priceKey: { monthly: 'pricing.track.demo.name', annual: 'pricing.track.demo.name' },
@@ -86,7 +82,6 @@ export default function ProductTracking() {
   const showcaseRef = useRevealChildren<HTMLElement>();
   const featuresRef = useRevealChildren<HTMLElement>();
   const stepsRef = useRevealChildren<HTMLElement>();
-  const [billing, setBilling] = useState<BillingCycle>('monthly');
 
   const steps = [
     { icon: Smartphone, titleKey: 'howItWorks.tracker.step1.title', descKey: 'howItWorks.tracker.step1.desc' },
@@ -94,9 +89,6 @@ export default function ProductTracking() {
     { icon: Navigation, titleKey: 'howItWorks.tracker.step3.title', descKey: 'howItWorks.tracker.step3.desc' },
     { icon: Bell, titleKey: 'howItWorks.tracker.step4.title', descKey: 'howItWorks.tracker.step4.desc' },
   ];
-
-  const billingLabels = [t('pricing.billing.monthly'), t('pricing.billing.annual')];
-  const periodKey = billing === 'monthly' ? 'pricing.period.monthly' : 'pricing.period.annual';
 
   return (
     <>
@@ -338,48 +330,7 @@ export default function ProductTracking() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="pb-24">
-        <div className="mx-auto max-w-7xl px-4">
-          <h2 className="mb-4 text-center text-2xl font-bold md:text-3xl gradient-text">
-            {t('pricing.title')}
-          </h2>
-          <div className="flex justify-center mb-8">
-            <PricingToggle
-              labels={billingLabels}
-              activeIndex={billing === 'monthly' ? 0 : 1}
-              onChange={(i) => setBilling(i === 0 ? 'monthly' : 'annual')}
-              size="sm"
-              badge={{ index: 1, text: t('pricing.billing.save') }}
-            />
-          </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
-            {PLANS.map((tier, i) => (
-              <div
-                key={i}
-                style={{ animationDelay: `${i * 80}ms` }}
-                className="animate-[fade-in-up_0.4s_ease_both]"
-              >
-                <PricingCard
-                  planName={t(tier.nameKey)}
-                  price={tier.enterprise ? '' : t(tier.priceKey[billing])}
-                  period={tier.enterprise ? '' : t(periodKey)}
-                  volume={t(tier.volumeKey)}
-                  description={t(tier.descKey)}
-                  features={tier.features.map((f) => ({
-                    label: t(f.key),
-                    included: f.included,
-                  }))}
-                  ctaText={t(tier.ctaKey)}
-                  ctaHref={tier.ctaHref}
-                  popular={tier.popular}
-                  enterprise={tier.enterprise}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProductPricing product="tracking" apiProduct="tracker" fallbackPlans={FALLBACK_PLANS} />
     </>
   );
 }

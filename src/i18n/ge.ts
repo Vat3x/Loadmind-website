@@ -145,8 +145,8 @@ export const ge: Record<string, string> = {
   // Pricing Page
   'pricing.title': 'აირჩიე შენზე მორგებული გეგმა',
   'pricing.subtitle': 'დაიწყე უფასოდ. განახლდი როცა დაგჭირდება.',
-  'pricing.tab.3dplan': '3D პლანერი',
-  'pricing.tab.tracking': 'თრექინგი',
+  'pricing.tab.3dplan': '3D დაგეგმვა',
+  'pricing.tab.tracking': 'მონიტორინგი',
   'pricing.tab.allinone': 'ყველა ერთში',
   'pricing.billing.monthly': 'ყოველთვიური',
   'pricing.billing.annual': 'წლიური',
