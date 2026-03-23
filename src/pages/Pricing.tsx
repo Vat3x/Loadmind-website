@@ -178,9 +178,17 @@ const PLANS_TRACKING: TierData[] = [
 const API_BASE = 'https://admin-panel-be9fc.web.app';
 
 function apiPlanToTier(plan: ApiPlan, productType: '3d' | 'tracking'): TierData {
-  const isEnterprise = plan.price === null;
-  const monthlyPrice = plan.price !== null ? `$${plan.price}` : '';
-  const annualPrice = plan.yearlyPrice != null ? `$${Math.round(plan.yearlyPrice / 12)}` : monthlyPrice;
+  const isEnterprise = plan.price === null && plan.name.toLowerCase() === 'enterprise';
+  const hasPriceLabel = plan.price === null && !isEnterprise;
+
+  const monthlyPrice = plan.price !== null
+    ? `$${plan.price}`
+    : hasPriceLabel
+      ? (plan.priceLabel || '')
+      : '';
+  const annualPrice = plan.yearlyPrice != null
+    ? `$${Math.round(plan.yearlyPrice / 12)}`
+    : monthlyPrice;
 
   const ctaHref = isEnterprise
     ? '/contact'
