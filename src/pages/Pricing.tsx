@@ -354,7 +354,7 @@ export default function Pricing() {
       const res = await fetch(`${API_BASE}/api/public/payg/create-checkout`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: user.id, returnUrl: `${window.location.origin}/checkout/return` }),
+        body: JSON.stringify({ userId: user.id, email: user.email, returnUrl: `${window.location.origin}/checkout/return` }),
       });
       const data = await res.json();
       if (data.checkout_url) {
