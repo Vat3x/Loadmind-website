@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Box, MapPin, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
@@ -21,6 +21,7 @@ interface TierData {
   enterprise?: boolean;
   noteKey?: string;
   fromApi?: boolean;
+  isPayg?: boolean;
 }
 
 interface ApiPlan {
@@ -214,6 +215,7 @@ function apiPlanToTier(plan: ApiPlan, productType: '3d' | 'tracking'): TierData 
     ctaHref,
     popular: plan.popular,
     enterprise: isEnterprise,
+    isPayg: hasPriceLabel,
     noteKey: plan.price === 0 && !isEnterprise ? 'pricing.note.free' : undefined,
     fromApi: true,
   };
@@ -223,10 +225,12 @@ function PricingGrid({
   plans,
   billing,
   t,
+  onPaygClick,
 }: {
   plans: TierData[];
   billing: BillingCycle;
   t: (key: string) => string;
+  onPaygClick?: () => void;
 }) {
   const periodKey = billing === 'monthly' ? 'pricing.period.monthly' : 'pricing.period.annual';
 
@@ -264,6 +268,7 @@ function PricingGrid({
               popular={tier.popular}
               enterprise={tier.enterprise}
               note={note}
+              onCtaClick={tier.isPayg ? onPaygClick : undefined}
             />
           </div>
         );
@@ -338,6 +343,24 @@ export default function Pricing() {
     t('pricing.billing.annual'),
   ];
 
+  const handlePaygCheckout = useCallback(async () => {
+    try {
+      const res = await fetch(`${API_BASE}/api/public/payg/create-checkout`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ returnUrl: `${window.location.origin}/checkout/return` }),
+      });
+      const data = await res.json();
+      if (data.checkout_url) {
+        window.location.href = data.checkout_url;
+      } else {
+        alert(data.message || 'Failed to start checkout');
+      }
+    } catch {
+      alert('Failed to start checkout. Please try again.');
+    }
+  }, []);
+
   const pricingFAQ = [
     { question: t('pricing.faq.q1'), answer: t('pricing.faq.a1') },
     { question: t('pricing.faq.q2'), answer: t('pricing.faq.a2') },
@@ -408,7 +431,7 @@ export default function Pricing() {
                         badge={{ index: 1, text: t('pricing.billing.save') }}
                       />
                     </div>
-                    <PricingGrid plans={plans} billing={billing} t={t} />
+                    <PricingGrid plans={plans} billing={billing} t={t} onPaygClick={product.id === '3d' ? handlePaygCheckout : undefined} />
                   </div>
                 </div>
               </div>

@@ -16,6 +16,7 @@ interface PricingCardProps {
   enterprise?: boolean;
   note?: string;
   savings?: string;
+  onCtaClick?: () => void;
 }
 
 export function PricingCard({
@@ -31,6 +32,7 @@ export function PricingCard({
   enterprise,
   note,
   savings,
+  onCtaClick,
 }: PricingCardProps) {
   return (
     <Card
@@ -93,7 +95,8 @@ export function PricingCard({
 
       <Button
         variant={popular ? 'primary' : enterprise ? 'ghost' : 'secondary'}
-        href={ctaHref}
+        href={onCtaClick ? undefined : ctaHref}
+        onClick={onCtaClick}
         className="w-full"
       >
         {ctaText}

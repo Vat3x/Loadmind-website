@@ -8,22 +8,25 @@ export default function App3D() {
   const { user, loading } = useAuth();
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [plan, setPlan] = useState<string | null>(null);
+  const [maskedCard, setMaskedCard] = useState<string | null>(null);
   const [iframeReady, setIframeReady] = useState(false);
 
-  // Fetch user's plan from profiles table
+  // Fetch user's plan and card info from profiles table
   useEffect(() => {
     if (!user) {
       setPlan(null);
+      setMaskedCard(null);
       return;
     }
 
     supabase
       .from('profiles')
-      .select('plan')
+      .select('plan, flitt_masked_card')
       .eq('id', user.id)
       .single()
       .then(({ data }) => {
         setPlan(data?.plan || 'free');
+        setMaskedCard(data?.flitt_masked_card || null);
       });
   }, [user]);
 
@@ -34,8 +37,9 @@ export default function App3D() {
       userId: user.id,
       email: user.email || '',
       plan: plan || 'free',
+      maskedCard: maskedCard || undefined,
     };
-  }, [user, plan]);
+  }, [user, plan, maskedCard]);
 
   // Send auth state to iframe
   const sendAuthState = useCallback(() => {
