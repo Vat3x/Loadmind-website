@@ -360,14 +360,9 @@ export default function Pricing() {
   ];
 
   const handlePlanCheckout = useCallback(async (planId: string, planName: string, _price: number, product: string) => {
-    // Tracker plans → website register first (if not logged in), then tracker registration
+    // Tracker plans → straight to tracker registration
     if (product === 'tracker') {
-      const trackerUrl = `/tracker/register?plan=${planName.toLowerCase()}`;
-      if (!user) {
-        window.location.href = `/register?redirect=${encodeURIComponent(trackerUrl)}`;
-      } else {
-        window.location.href = trackerUrl;
-      }
+      window.location.href = `/tracker/register?plan=${planName.toLowerCase()}`;
       return;
     }
 
