@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Box, MapPin, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useAuth } from '@/hooks/useAuth';
 import { PageHero } from '@/components/ui/PageHero';
 import { PricingCard } from '@/components/ui/PricingCard';
 import { PricingToggle } from '@/components/ui/PricingToggle';
@@ -306,6 +307,7 @@ const PRODUCTS = [
 
 export default function Pricing() {
   const { t } = useLanguage();
+  const { user } = useAuth();
   const [billing, setBilling] = useState<BillingCycle>('monthly');
   const [selected, setSelected] = useState<SelectedProduct>(null);
   const [apiPlans, setApiPlans] = useState<Record<string, TierData[]>>({});
@@ -344,11 +346,15 @@ export default function Pricing() {
   ];
 
   const handlePaygCheckout = useCallback(async () => {
+    if (!user) {
+      window.location.href = '/login?redirect=/pricing';
+      return;
+    }
     try {
       const res = await fetch(`${API_BASE}/api/public/payg/create-checkout`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ returnUrl: `${window.location.origin}/checkout/return` }),
+        body: JSON.stringify({ userId: user.id, returnUrl: `${window.location.origin}/checkout/return` }),
       });
       const data = await res.json();
       if (data.checkout_url) {
@@ -359,7 +365,7 @@ export default function Pricing() {
     } catch {
       alert('Failed to start checkout. Please try again.');
     }
-  }, []);
+  }, [user]);
 
   const pricingFAQ = [
     { question: t('pricing.faq.q1'), answer: t('pricing.faq.a1') },
