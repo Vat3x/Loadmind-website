@@ -484,7 +484,7 @@ export default function Pricing() {
                 <div
                   ref={(el) => { gridRefs.current[product.id] = el; }}
                   tabIndex={-1}
-                  className={`grid transition-all duration-500 ease-in-out outline-none ${
+                  className={`grid transition-all duration-500 ease-in-out outline-none ring-0 focus:outline-none focus:ring-0 ${
                     isOpen ? 'grid-rows-[1fr] opacity-100 mt-8' : 'grid-rows-[0fr] opacity-0'
                   }`}
                 >
