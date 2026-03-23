@@ -223,7 +223,7 @@ function apiPlanToTier(plan: ApiPlan, productType: '3d' | 'tracking'): TierData 
     noteKey: plan.price === 0 && !isEnterprise ? 'pricing.note.free' : undefined,
     fromApi: true,
     planId: plan.id,
-    planPrice: plan.price,
+    planPrice: plan.price ?? undefined,
     apiProduct: plan.product === 'tracker' ? 'tracker' : '3d-planning',
   };
 }
