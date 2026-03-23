@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, MapPin, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
@@ -20,8 +20,24 @@ interface TierData {
   popular?: boolean;
   enterprise?: boolean;
   noteKey?: string;
+  fromApi?: boolean;
 }
 
+interface ApiPlan {
+  id: string;
+  product: string;
+  name: string;
+  price: number | null;
+  yearlyPrice?: number | null;
+  priceLabel?: string | null;
+  interval: string;
+  limit: string;
+  features: string[];
+  popular?: boolean;
+  order: number;
+}
+
+// Fallback plans if API is unavailable
 const PLANS_3D: TierData[] = [
   {
     nameKey: 'pricing.3d.free.name',
@@ -159,35 +175,91 @@ const PLANS_TRACKING: TierData[] = [
   },
 ];
 
-function PricingGrid({ plans, billing, t }: { plans: TierData[]; billing: BillingCycle; t: (key: string) => string }) {
+const API_BASE = 'https://admin-panel-be9fc.web.app';
+
+function apiPlanToTier(plan: ApiPlan, productType: '3d' | 'tracking'): TierData {
+  const isEnterprise = plan.price === null;
+  const monthlyPrice = plan.price !== null ? `$${plan.price}` : '';
+  const annualPrice = plan.yearlyPrice != null ? `$${Math.round(plan.yearlyPrice / 12)}` : monthlyPrice;
+
+  const ctaHref = isEnterprise
+    ? '/contact'
+    : productType === '3d'
+      ? '/3d'
+      : plan.name.toLowerCase() === 'demo'
+        ? '/demo'
+        : '/tracker';
+
+  const ctaKey = isEnterprise
+    ? 'pricing.cta.enterprise'
+    : plan.price === 0
+      ? 'pricing.cta.free'
+      : 'pricing.cta.start';
+
+  return {
+    nameKey: plan.name,
+    priceKey: { monthly: monthlyPrice, annual: annualPrice },
+    descKey: plan.limit,
+    volumeKey: plan.limit,
+    features: plan.features.map((f) => ({ key: f, included: true })),
+    ctaKey,
+    ctaHref,
+    popular: plan.popular,
+    enterprise: isEnterprise,
+    noteKey: plan.price === 0 && !isEnterprise ? 'pricing.note.free' : undefined,
+    fromApi: true,
+  };
+}
+
+function PricingGrid({
+  plans,
+  billing,
+  t,
+}: {
+  plans: TierData[];
+  billing: BillingCycle;
+  t: (key: string) => string;
+}) {
   const periodKey = billing === 'monthly' ? 'pricing.period.monthly' : 'pricing.period.annual';
 
   return (
     <div className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${plans.length > 4 ? 'lg:grid-cols-5 lg:gap-4' : 'lg:grid-cols-4'}`}>
-      {plans.map((tier, i) => (
-        <div
-          key={i}
-          style={{ animationDelay: `${i * 80}ms` }}
-          className="animate-[fade-in-up_0.4s_ease_both]"
-        >
-          <PricingCard
-            planName={t(tier.nameKey)}
-            price={tier.enterprise ? '' : t(tier.priceKey[billing])}
-            period={tier.enterprise ? '' : t(periodKey)}
-            volume={t(tier.volumeKey)}
-            description={t(tier.descKey)}
-            features={tier.features.map((f) => ({
-              label: t(f.key),
-              included: f.included,
-            }))}
-            ctaText={t(tier.ctaKey)}
-            ctaHref={tier.ctaHref}
-            popular={tier.popular}
-            enterprise={tier.enterprise}
-            note={tier.noteKey ? t(tier.noteKey) : undefined}
-          />
-        </div>
-      ))}
+      {plans.map((tier, i) => {
+        const isApi = tier.fromApi;
+        const planName = isApi ? tier.nameKey : t(tier.nameKey);
+        const price = tier.enterprise ? '' : (isApi ? tier.priceKey[billing] : t(tier.priceKey[billing]));
+        const period = tier.enterprise ? '' : t(periodKey);
+        const volume = isApi ? tier.volumeKey : t(tier.volumeKey);
+        const description = isApi ? tier.descKey : t(tier.descKey);
+        const features = tier.features.map((f) => ({
+          label: isApi ? f.key : t(f.key),
+          included: f.included,
+        }));
+        const ctaText = t(tier.ctaKey);
+        const note = tier.noteKey ? t(tier.noteKey) : undefined;
+
+        return (
+          <div
+            key={i}
+            style={{ animationDelay: `${i * 80}ms` }}
+            className="animate-[fade-in-up_0.4s_ease_both]"
+          >
+            <PricingCard
+              planName={planName}
+              price={price}
+              period={period}
+              volume={volume}
+              description={description}
+              features={features}
+              ctaText={ctaText}
+              ctaHref={tier.ctaHref}
+              popular={tier.popular}
+              enterprise={tier.enterprise}
+              note={note}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -195,6 +267,7 @@ function PricingGrid({ plans, billing, t }: { plans: TierData[]; billing: Billin
 const PRODUCTS = [
   {
     id: '3d' as const,
+    apiProduct: '3d-planning',
     icon: Box,
     titleKey: 'pricing.tab.3dplan',
     descKey: 'products.3dplan.description',
@@ -202,10 +275,11 @@ const PRODUCTS = [
     gradient: 'from-blue-500 to-indigo-600',
     glow: 'shadow-blue-500/20',
     borderActive: 'border-blue-500/60',
-    plans: PLANS_3D,
+    fallbackPlans: PLANS_3D,
   },
   {
     id: 'tracking' as const,
+    apiProduct: 'tracker',
     icon: MapPin,
     titleKey: 'pricing.tab.tracking',
     descKey: 'products.tracking.description',
@@ -213,7 +287,7 @@ const PRODUCTS = [
     gradient: 'from-emerald-500 to-teal-600',
     glow: 'shadow-emerald-500/20',
     borderActive: 'border-emerald-500/60',
-    plans: PLANS_TRACKING,
+    fallbackPlans: PLANS_TRACKING,
   },
 ];
 
@@ -221,6 +295,35 @@ export default function Pricing() {
   const { t } = useLanguage();
   const [billing, setBilling] = useState<BillingCycle>('monthly');
   const [selected, setSelected] = useState<SelectedProduct>(null);
+  const [apiPlans, setApiPlans] = useState<Record<string, TierData[]>>({});
+  const [apiLoaded, setApiLoaded] = useState(false);
+
+  useEffect(() => {
+    fetch(`${API_BASE}/api/public/plans`)
+      .then((res) => res.json())
+      .then((plans: ApiPlan[]) => {
+        const grouped: Record<string, TierData[]> = {};
+
+        const plansByProduct: Record<string, ApiPlan[]> = {};
+        for (const p of plans) {
+          if (!plansByProduct[p.product]) plansByProduct[p.product] = [];
+          plansByProduct[p.product].push(p);
+        }
+
+        for (const [product, productPlans] of Object.entries(plansByProduct)) {
+          const productType = product === 'tracker' ? 'tracking' : '3d';
+          grouped[product] = productPlans
+            .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+            .map((p) => apiPlanToTier(p, productType));
+        }
+
+        setApiPlans(grouped);
+        setApiLoaded(true);
+      })
+      .catch(() => {
+        // Silently fall back to hardcoded plans
+      });
+  }, []);
 
   const billingLabels = [
     t('pricing.billing.monthly'),
@@ -245,6 +348,8 @@ export default function Pricing() {
           {PRODUCTS.map((product) => {
             const Icon = product.icon;
             const isOpen = selected === product.id;
+            const dynamicPlans = apiLoaded ? apiPlans[product.apiProduct] : undefined;
+            const plans = dynamicPlans && dynamicPlans.length > 0 ? dynamicPlans : product.fallbackPlans;
 
             return (
               <div key={product.id}>
@@ -295,7 +400,7 @@ export default function Pricing() {
                         badge={{ index: 1, text: t('pricing.billing.save') }}
                       />
                     </div>
-                    <PricingGrid plans={product.plans} billing={billing} t={t} />
+                    <PricingGrid plans={plans} billing={billing} t={t} />
                   </div>
                 </div>
               </div>
