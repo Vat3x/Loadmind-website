@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
-import { PageHero } from '@/components/ui/PageHero';
 import { Card } from '@/components/ui/Card';
 
 const API_URL = 'https://admin-panel-be9fc.web.app/api/public/demo-request';
@@ -48,10 +47,29 @@ export default function Contact() {
 
   return (
     <>
-      <PageHero title={t('contact.hero.title')} />
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-slate-950 pt-32 pb-16 text-center">
+        {/* Watermark */}
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center select-none overflow-hidden">
+          <span className="text-[22rem] font-extrabold text-white opacity-[0.025] leading-none tracking-tighter">LM</span>
+        </div>
+        {/* Glows */}
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-20 left-1/2 -translate-x-1/2 h-[400px] w-[700px] rounded-full bg-blue-600/10 blur-[120px]" />
+          <div className="absolute top-0 right-0 h-[300px] w-[300px] rounded-full bg-indigo-600/8 blur-[100px]" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-4xl px-4">
+          <h1 className="text-4xl font-bold md:text-5xl text-white">{t('contact.hero.title')}</h1>
+          <p className="mt-4 text-slate-400">{t('contact.hero.subtitle')}</p>
+        </div>
+      </section>
 
-      <section ref={ref} className="pb-20">
-        <div className="mx-auto max-w-4xl px-4">
+      <section ref={ref} className="relative pb-20">
+        {/* Bottom glow */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute bottom-0 left-1/3 h-[400px] w-[600px] rounded-full bg-blue-600/5 blur-[120px]" />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
             {/* Info */}
             <div className="reveal reveal-delay-1 md:col-span-2">
