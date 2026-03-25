@@ -79,8 +79,8 @@ export const ge: Record<string, string> = {
   'howItWorks.step4.desc': 'PDF, Excel ან 3D ბმული.',
 
   // How It Works — Tracker
-  'howItWorks.tracker.step1.title': 'დაუკავშირე TMS',
-  'howItWorks.tracker.step1.desc': 'API გასაღებით, IT გარეშე.',
+  'howItWorks.tracker.step1.title': 'შექმენი ანგარიში',
+  'howItWorks.tracker.step1.desc': 'რეგისტრაცია წუთებში ან მოითხოვე დემო.',
   'howItWorks.tracker.step2.title': 'შექმენი რეისი',
   'howItWorks.tracker.step2.desc': 'მიუთითე მძღოლი, სადგომები და მარშრუტი.',
   'howItWorks.tracker.step3.title': 'თვალყური ადევნე რეალურ დროში',

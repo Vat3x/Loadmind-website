@@ -79,8 +79,8 @@ export const en: Record<string, string> = {
   'howItWorks.step4.desc': 'PDF, Excel, or a 3D link.',
 
   // How It Works — Tracker
-  'howItWorks.tracker.step1.title': 'Connect Your TMS',
-  'howItWorks.tracker.step1.desc': 'API key, no IT team needed.',
+  'howItWorks.tracker.step1.title': 'Create an Account',
+  'howItWorks.tracker.step1.desc': 'Sign up in minutes or request a demo.',
   'howItWorks.tracker.step2.title': 'Create a Trip',
   'howItWorks.tracker.step2.desc': 'Assign a driver, add stops and set the route.',
   'howItWorks.tracker.step3.title': 'Track in Real Time',

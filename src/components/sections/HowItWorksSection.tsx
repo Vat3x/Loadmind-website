@@ -7,17 +7,17 @@ export function HowItWorksSection() {
   const ref = useRevealChildren<HTMLElement>();
 
   const plannerSteps = [
-    { icon: Truck, titleKey: 'howItWorks.step1.title', descKey: 'howItWorks.step1.desc', color: 'from-blue-500 to-indigo-500', glow: 'shadow-blue-500/20' },
-    { icon: Package, titleKey: 'howItWorks.step2.title', descKey: 'howItWorks.step2.desc', color: 'from-indigo-500 to-violet-500', glow: 'shadow-indigo-500/20' },
-    { icon: LayoutGrid, titleKey: 'howItWorks.step3.title', descKey: 'howItWorks.step3.desc', color: 'from-violet-500 to-purple-500', glow: 'shadow-violet-500/20' },
-    { icon: Share2, titleKey: 'howItWorks.step4.title', descKey: 'howItWorks.step4.desc', color: 'from-purple-500 to-pink-500', glow: 'shadow-pink-500/20' },
+    { icon: Truck, titleKey: 'howItWorks.step1.title', descKey: 'howItWorks.step1.desc', iconColor: 'text-blue-400' },
+    { icon: Package, titleKey: 'howItWorks.step2.title', descKey: 'howItWorks.step2.desc', iconColor: 'text-indigo-400' },
+    { icon: LayoutGrid, titleKey: 'howItWorks.step3.title', descKey: 'howItWorks.step3.desc', iconColor: 'text-violet-400' },
+    { icon: Share2, titleKey: 'howItWorks.step4.title', descKey: 'howItWorks.step4.desc', iconColor: 'text-purple-400' },
   ];
 
   const trackerSteps = [
-    { icon: Wifi, titleKey: 'howItWorks.tracker.step1.title', descKey: 'howItWorks.tracker.step1.desc', color: 'from-teal-500 to-cyan-500', glow: 'shadow-teal-500/20' },
-    { icon: Truck, titleKey: 'howItWorks.tracker.step2.title', descKey: 'howItWorks.tracker.step2.desc', color: 'from-cyan-500 to-sky-500', glow: 'shadow-cyan-500/20' },
-    { icon: Eye, titleKey: 'howItWorks.tracker.step3.title', descKey: 'howItWorks.tracker.step3.desc', color: 'from-sky-500 to-blue-500', glow: 'shadow-sky-500/20' },
-    { icon: Send, titleKey: 'howItWorks.tracker.step4.title', descKey: 'howItWorks.tracker.step4.desc', color: 'from-blue-500 to-indigo-500', glow: 'shadow-blue-500/20' },
+    { icon: Wifi, titleKey: 'howItWorks.tracker.step1.title', descKey: 'howItWorks.tracker.step1.desc', iconColor: 'text-teal-400' },
+    { icon: Truck, titleKey: 'howItWorks.tracker.step2.title', descKey: 'howItWorks.tracker.step2.desc', iconColor: 'text-cyan-400' },
+    { icon: Eye, titleKey: 'howItWorks.tracker.step3.title', descKey: 'howItWorks.tracker.step3.desc', iconColor: 'text-sky-400' },
+    { icon: Send, titleKey: 'howItWorks.tracker.step4.title', descKey: 'howItWorks.tracker.step4.desc', iconColor: 'text-blue-400' },
   ];
 
   const renderSteps = (steps: typeof plannerSteps) => (
@@ -34,13 +34,12 @@ export function HowItWorksSection() {
             )}
             <div className={`reveal reveal-delay-${i + 1} group flex-1 rounded-2xl bg-slate-900 border border-slate-700 p-5 text-center transition-all duration-300 hover:border-slate-600 hover:-translate-y-1`}>
               <div className="relative mx-auto mb-4 w-fit">
-                <div
-                  className={`flex h-13 w-13 items-center justify-center rounded-2xl bg-gradient-to-br ${step.color} shadow-lg ${step.glow} group-hover:scale-110 transition-transform duration-300`}
+                <Icon
+                  className={`h-10 w-10 ${step.iconColor} group-hover:scale-110 transition-transform duration-300`}
+                  strokeWidth={1.5}
                   style={{ animation: `icon-float 3s ease-in-out ${i * 0.4}s infinite` }}
-                >
-                  <Icon className="h-5.5 w-5.5 text-white" />
-                </div>
-                <span className="absolute -top-2 -right-2 flex h-5.5 w-5.5 items-center justify-center rounded-full bg-white text-[10px] font-bold text-slate-900 shadow">
+                />
+                <span className="absolute -top-2 -right-3 flex h-5 w-5 items-center justify-center rounded-full bg-white text-[10px] font-bold text-slate-900 shadow">
                   {i + 1}
                 </span>
               </div>
