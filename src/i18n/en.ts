@@ -435,7 +435,7 @@ export const en: Record<string, string> = {
 
   // Contact Page
   'contact.hero.title': 'Get in touch',
-  'contact.hero.subtitle': 'We\'re a small team in Tbilisi — we read every message.',
+  'contact.hero.subtitle': 'Questions, partnerships or a demo request — we respond within 24 hours.',
   'contact.info.title': 'Contact Info',
   'contact.info.email': 'team@load-mind.com',
   'contact.info.location': 'Based in Tbilisi, Georgia',

@@ -435,7 +435,7 @@ export const ge: Record<string, string> = {
 
   // Contact Page
   'contact.hero.title': 'დაგვიკავშირდი',
-  'contact.hero.subtitle': 'პატარა გუნდი ვართ თბილისში — ყველა შეტყობინებას ვკითხულობთ.',
+  'contact.hero.subtitle': 'შეკითხვა, პარტნიორობა ან დემოს მოთხოვნა — 24 საათში ვპასუხობთ.',
   'contact.info.title': 'საკონტაქტო ინფორმაცია',
   'contact.info.email': 'team@load-mind.com',
   'contact.info.location': 'თბილისი, საქართველო',
