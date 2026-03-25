@@ -13,10 +13,10 @@ export const en: Record<string, string> = {
   'hero.cta2': 'Contact Us',
 
   // Trust
-  'trust.noCard': 'No Credit Card',
-  'trust.cancel': 'Cancel Anytime',
-  'trust.freeTrial': 'Free Trial',
-  'trust.support': '24/7 Support',
+  'trust.noCard': '3D Load Planning',
+  'trust.cancel': 'Real-time GPS Tracking',
+  'trust.freeTrial': 'Free Plan Available',
+  'trust.support': 'Setup in Minutes',
 
   // Mid CTA
   'midCta.title': 'Ready to optimize your dispatch?',
@@ -32,7 +32,7 @@ export const en: Record<string, string> = {
   'products.3dplan.feature2': 'AI cargo description',
   'products.3dplan.feature3': 'Export & share load plans',
   'products.3dplan.feature4': 'TMS integration',
-  'products.3dplan.cta': 'Plan a Load →',
+  'products.3dplan.cta': 'Learn More →',
   'products.tracking.title': 'LoadMind Tracker',
   'products.tracking.problem': 'Fleet. Real-time.',
   'products.tracking.description': 'Know where every truck is at any time. GPS tracking, live ETA, and full route history on one dashboard.',
@@ -329,7 +329,7 @@ export const en: Record<string, string> = {
   'nav.contact': 'Contact',
 
   // 3D Plan Product Page
-  '3dplan.hero.title': 'LoadMind 3D Load Planner',
+  '3dplan.hero.title': '3D Load Planner',
   '3dplan.hero.subtitle': 'Real optimization calculations — not just 3D visualization. Maximize space utilization, prevent overloading, and export a verified load plan in seconds.',
   '3dplan.hero.cta': 'Try Free, No Login',
   '3dplan.pricing.label': '$0 first month, then $39/mo',
@@ -353,8 +353,8 @@ export const en: Record<string, string> = {
   '3dplan.comparison.price.them': '$55-79/mo',
 
   // 3D Plan Showcase
-  '3dplan.showcase.title': 'See It in Action',
-  '3dplan.showcase.subtitle': 'Physics, engineering, and 3D modeling in one tool. Try it yourself.',
+  '3dplan.showcase.title': '3D Load Planner',
+  '3dplan.showcase.subtitle': 'Real optimization calculations, beyond 3D visualization. Maximize space utilization and reduce overloading risk.',
   '3dplan.feature.ai.title': 'Cargo Description',
   '3dplan.feature.ai.desc': 'Enter cargo dimensions, weight, and quantity manually, or just describe it in plain text and AI will parse everything. All items are listed in the Cargo Manifest before simulation.',
   '3dplan.feature.optimization.title': 'Detailed Analytics',

@@ -13,7 +13,7 @@ export function ValuePropsSection() {
   ];
 
   return (
-    <section ref={ref} className="relative py-20 bg-slate-950 border-y border-slate-800/50 z-20">
+    <section ref={ref} className="relative py-20 bg-blue-950/40 border-y border-blue-900/40 z-20">
       <div className="mx-auto max-w-5xl px-4">
         <div className="grid grid-cols-1 gap-0 md:grid-cols-3">
           {props.map((p, i) => (

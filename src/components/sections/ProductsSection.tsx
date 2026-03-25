@@ -29,7 +29,7 @@ export function ProductsSection() {
                 t('products.3dplan.feature4'),
               ]}
               ctaText={t('products.3dplan.cta')}
-              ctaHref="/3d"
+              ctaHref="/3d-plan"
               imageUrl="/product-3d-problem.png"
             />
           </div>

@@ -1,4 +1,4 @@
-import { Sparkles, BarChart3, Download, ListOrdered, History } from 'lucide-react';
+import { Sparkles, BarChart3, Download, ListOrdered, History, Monitor, Smartphone } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
 import { PageHero } from '@/components/ui/PageHero';
@@ -77,22 +77,26 @@ export default function Product3DPlan() {
 
   return (
     <>
-      <PageHero
-        title={t('3dplan.hero.title')}
-        subtitle={t('3dplan.hero.subtitle')}
-        ctaText={t('3dplan.hero.cta')}
-        ctaHref="/3d"
-      />
-
       {/* App Showcase */}
-      <section ref={showcaseRef} className="pb-24">
+      <section ref={showcaseRef} className="pt-28 pb-28">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="reveal mb-4 text-center text-2xl font-bold md:text-3xl gradient-text">
+          <h1 className="reveal mb-6 text-center text-4xl font-extrabold md:text-5xl text-white">
             {t('3dplan.showcase.title')}
-          </h2>
-          <p className="reveal mb-12 text-center text-slate-400 max-w-2xl mx-auto">
+          </h1>
+          <p className="reveal mb-10 text-center text-lg text-slate-400 max-w-2xl mx-auto">
             {t('3dplan.showcase.subtitle')}
           </p>
+
+          <div className="reveal mb-16 flex flex-wrap items-center justify-center gap-3">
+            <div className="flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-blue-400">
+              <Monitor className="h-4 w-4" />
+              <span className="text-xs font-semibold uppercase tracking-wider">Web App</span>
+            </div>
+            <div className="flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-blue-400">
+              <Smartphone className="h-4 w-4" />
+              <span className="text-xs font-semibold uppercase tracking-wider">Mobile Friendly</span>
+            </div>
+          </div>
 
           {/* Main screenshot in browser frame */}
           <div className="reveal rounded-2xl border border-slate-800 bg-slate-900/60 p-2 shadow-2xl shadow-blue-500/10">

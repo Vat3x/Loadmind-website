@@ -11,7 +11,7 @@ interface PageHeroProps {
 
 export function PageHero({ title, subtitle, ctaText, ctaHref, secondaryCtaText, secondaryCtaHref }: PageHeroProps) {
   return (
-    <section className="relative py-24 text-center bg-slate-950">
+    <section className="relative py-24 text-center bg-blue-950/40 border-b border-blue-900/40">
       <div className="mx-auto max-w-4xl px-4">
         <h1 className="text-4xl font-extrabold md:text-5xl text-white">{title}</h1>
         {subtitle && (

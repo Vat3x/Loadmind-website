@@ -1,7 +1,6 @@
 import { MapPin, Bell, History, Navigation, ClipboardList, Smartphone, Monitor } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
-import { PageHero } from '@/components/ui/PageHero';
 import { StepCard } from '@/components/ui/StepCard';
 import { Card } from '@/components/ui/Card';
 import { ProductPricing, type TierData } from '@/components/sections/ProductPricing';
@@ -92,22 +91,25 @@ export default function ProductTracking() {
 
   return (
     <>
-      <PageHero
-        title={t('tracking.hero.title')}
-        subtitle={t('tracking.hero.subtitle')}
-        ctaText={t('tracking.hero.demoCta')}
-        ctaHref="/demo"
-      />
-
       {/* App Showcase — Phone Mockups */}
-      <section ref={showcaseRef} className="pb-24">
+      <section ref={showcaseRef} className="pt-28 pb-28">
         <div className="mx-auto max-w-5xl px-4">
-          <div className="reveal mb-4 flex items-center justify-center gap-2 text-emerald-400">
-            <Smartphone className="h-5 w-5" />
-            <span className="text-sm font-semibold uppercase tracking-wider">Driver App</span>
-            <span className="text-slate-600 mx-2">+</span>
-            <Monitor className="h-5 w-5" />
-            <span className="text-sm font-semibold uppercase tracking-wider">Dispatch Dashboard</span>
+          <h1 className="reveal mb-6 text-center text-4xl font-extrabold md:text-5xl text-white">
+            {t('tracking.hero.title')}
+          </h1>
+          <p className="reveal mb-16 text-center text-lg text-slate-400 max-w-2xl mx-auto">
+            {t('tracking.hero.subtitle')}
+          </p>
+          <div className="reveal mb-10 flex flex-wrap items-center justify-center gap-3">
+            <div className="flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-400">
+              <Smartphone className="h-4 w-4" />
+              <span className="text-xs font-semibold uppercase tracking-wider">Driver App</span>
+            </div>
+            <span className="text-slate-600 text-sm">+</span>
+            <div className="flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-400">
+              <Monitor className="h-4 w-4" />
+              <span className="text-xs font-semibold uppercase tracking-wider">Dispatch Dashboard</span>
+            </div>
           </div>
           <h2 className="reveal mb-16 text-center text-2xl font-bold md:text-3xl gradient-text">
             {t('tracking.showcase.title')}

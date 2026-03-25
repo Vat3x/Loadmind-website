@@ -13,10 +13,10 @@ export const ge: Record<string, string> = {
   'hero.cta2': 'დაგვიკავშირდით',
 
   // Trust
-  'trust.noCard': 'ბარათის გარეშე',
-  'trust.cancel': 'გაუქმება ნებისმიერ დროს',
-  'trust.freeTrial': 'უფასო პერიოდი',
-  'trust.support': '24/7 მხარდაჭერა',
+  'trust.noCard': '3D ტვირთის განლაგება',
+  'trust.cancel': 'GPS მონიტორინგი რეალურ დროში',
+  'trust.freeTrial': 'უფასო გეგმა',
+  'trust.support': 'წუთებში დაყენება',
 
   // Mid CTA
   'midCta.title': 'მზად ხარ დისპეჩერიზაციის ოპტიმიზაციისთვის?',
@@ -32,7 +32,7 @@ export const ge: Record<string, string> = {
   'products.3dplan.feature2': 'AI ტვირთის აღწერა',
   'products.3dplan.feature3': 'ექსპორტი და გაზიარება',
   'products.3dplan.feature4': 'TMS ინტეგრაცია',
-  'products.3dplan.cta': 'დაგეგმე ტვირთი →',
+  'products.3dplan.cta': 'გაიგე მეტი →',
   'products.tracking.title': 'LoadMind ტრეკერი',
   'products.tracking.problem': 'ფლოტი. რეალურ დროში.',
   'products.tracking.description': 'იცოდე სად არის ყველა მანქანა ნებისმიერ დროს. GPS თვალყურის დევნა, ცოცხალი ETA და სრული მარშრუტის ისტორია ერთ დეშბორდზე.',
@@ -69,7 +69,7 @@ export const ge: Record<string, string> = {
 
   // How It Works
   'howItWorks.title': 'როგორ მუშაობს',
-  'howItWorks.plannerTitle': '3D ტვირთის ოპტიმიზატორი',
+  'howItWorks.plannerTitle': '3D Load Optimizer',
   'howItWorks.trackerTitle': 'მარშრუტის მონიტორინგი',
   'howItWorks.step1.title': 'აირჩიე სატვირთო',
   'howItWorks.step1.desc': 'სტანდარტული ან საკუთარი ზომები.',
@@ -329,7 +329,7 @@ export const ge: Record<string, string> = {
   'nav.contact': 'კონტაქტი',
 
   // 3D Plan Product Page
-  '3dplan.hero.title': 'LoadMind 3D Load Planner',
+  '3dplan.hero.title': '3D Load Planner',
   '3dplan.hero.subtitle': 'რეალური ოპტიმიზაციის გამოთვლები, 3D ვიზუალიზაციის მიღმა. გამოიყენე სივრცე სრულად, შეამცირე გადატვირთვის რისკი და ექსპორტი გააკეთე წამებში.',
   '3dplan.hero.cta': 'სცადე უფასოდ, რეგისტრაციის გარეშე',
   '3dplan.pricing.label': 'პირველი თვე $0, შემდეგ $39/თვე',
@@ -353,8 +353,8 @@ export const ge: Record<string, string> = {
   '3dplan.comparison.price.them': '$55-79/თვე',
 
   // 3D Plan Showcase
-  '3dplan.showcase.title': 'ნახე მოქმედებაში',
-  '3dplan.showcase.subtitle': 'ფიზიკა, ინჟინერია და 3D მოდელირება ერთ ხელსაწყოში. გამოცადე თავად.',
+  '3dplan.showcase.title': '3D Load Planner',
+  '3dplan.showcase.subtitle': 'რეალური ოპტიმიზაციის გამოთვლები, 3D ვიზუალიზაციის მიღმა. გამოიყენე სივრცე სრულად, შეამცირე გადატვირთვის რისკი.',
   '3dplan.feature.ai.title': 'ტვირთის აღწერა',
   '3dplan.feature.ai.desc': 'შეიყვანე ტვირთის ზომები, წონა და რაოდენობა ხელით, ან უბრალოდ აღწერე ტექსტით და AI გაარჩევს. ყველა ნივთი ჩამოთვლილია Cargo Manifest-ში სიმულაციამდე.',
   '3dplan.feature.optimization.title': 'დეტალური ანალიტიკა',
