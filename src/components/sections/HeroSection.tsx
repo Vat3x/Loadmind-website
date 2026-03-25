@@ -32,10 +32,10 @@ export function HeroSection() {
           className="hero-animate mt-8 flex items-center justify-center gap-3 flex-wrap md:mt-12 md:gap-4"
           style={{ animation: 'fade-in-up 0.7s ease 0.15s forwards', opacity: 0 }}
         >
-          <a href="#products" className="inline-flex items-center justify-center rounded-full bg-white text-slate-900 hover:bg-slate-100 hover:shadow-lg hover:shadow-white/10 active:scale-[0.98] transition-all duration-300 hover:scale-[1.02] h-10 px-6 text-sm font-semibold md:h-11 md:px-7">
+          <a href="#products" className="inline-flex items-center justify-center rounded-full bg-white/10 backdrop-blur border border-white/20 text-white hover:bg-white/15 hover:border-white/30 active:scale-[0.98] transition-all duration-300 hover:scale-[1.02] h-10 px-6 text-sm font-semibold md:h-11 md:px-7">
             {t('hero.cta')}
           </a>
-          <Link to="/contact" className="inline-flex items-center justify-center rounded-full border border-white/30 text-white hover:border-white/60 hover:bg-white/5 active:scale-[0.98] transition-all duration-300 hover:scale-[1.02] h-10 px-6 text-sm font-semibold md:h-11 md:px-7">
+          <Link to="/contact" className="inline-flex items-center justify-center rounded-full border border-white/15 text-slate-400 hover:border-white/25 hover:text-slate-300 active:scale-[0.98] transition-all duration-300 hover:scale-[1.02] h-10 px-6 text-sm font-semibold md:h-11 md:px-7">
             {t('hero.cta2')}
           </Link>
         </div>
