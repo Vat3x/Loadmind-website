@@ -361,6 +361,8 @@ export const ge: Record<string, string> = {
   '3dplan.feature.loadingOrder.desc': 'მიიღე დანომრილი დატვირთვის თანმიმდევრობა ზუსტი განთავსების ინსტრუქციებით: რიგი, სვეტი და იატაკის პოზიცია ყველა ნივთისთვის. მძღოლმა ზუსტად იცის რა სად მიდის.',
   '3dplan.feature.export.title': 'ექსპორტი და გაზიარება',
   '3dplan.feature.export.desc': 'შექმენი PDF რეპორტი, Excel ფაილი ან გასაზიარებელი ლინკი ერთი კლიკით. გაუგზავნე დატვირთვის გეგმა პირდაპირ მძღოლებს ან დისპეტჩერებს.',
+  '3dplan.feature.history.title': 'დატვირთვის ისტორია',
+  '3dplan.feature.history.desc': 'ყოველი გეგმა ავტომატურად ინახება. ჩატვირთე წინა კონფიგურაცია, შეადარე შედეგები და განაგრძე ადრე დაწყებული სამუშაო ნულიდან დაწყების გარეშე.',
 
   // Tracking Product Page
   'tracking.hero.title': 'LoadMind Tracker',

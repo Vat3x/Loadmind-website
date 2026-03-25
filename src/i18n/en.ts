@@ -361,6 +361,8 @@ export const en: Record<string, string> = {
   '3dplan.feature.loadingOrder.desc': 'Get a numbered loading sequence with exact placement instructions: row, column, and floor position for every item. Your drivers know exactly what goes where.',
   '3dplan.feature.export.title': 'Export & Share',
   '3dplan.feature.export.desc': 'Generate PDF reports, Excel spreadsheets, or shareable links with one click. Send load plans directly to drivers or dispatchers.',
+  '3dplan.feature.history.title': 'Load History',
+  '3dplan.feature.history.desc': 'Every load plan is saved automatically. Reload previous configurations, compare results, and build on past work without starting from scratch.',
 
   // Tracking Product Page
   'tracking.hero.title': 'LoadMind Tracking',

@@ -1,4 +1,4 @@
-import { Sparkles, BarChart3, Download, ListOrdered } from 'lucide-react';
+import { Sparkles, BarChart3, Download, ListOrdered, History } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
 import { PageHero } from '@/components/ui/PageHero';
@@ -229,6 +229,31 @@ export default function Product3DPlan() {
                 className="w-auto max-h-80 rounded-xl"
                 loading="lazy"
               />
+            </div>
+          </div>
+
+          {/* Load History */}
+          <div className="reveal grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2 items-center">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 shadow-xl shadow-violet-500/10 order-2 md:order-1">
+              <img
+                src="/3d-history.webp"
+                alt="Load History"
+                className="w-full rounded-xl"
+                loading="lazy"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-purple-600">
+                  <History className="h-5 w-5 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white md:text-2xl">
+                  {t('3dplan.feature.history.title')}
+                </h3>
+              </div>
+              <p className="text-slate-400 leading-relaxed">
+                {t('3dplan.feature.history.desc')}
+              </p>
             </div>
           </div>
 
