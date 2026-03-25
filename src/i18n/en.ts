@@ -75,8 +75,8 @@ export const en: Record<string, string> = {
   'howItWorks.step2.desc': 'Enter manually or describe cargo with AI.',
   'howItWorks.step3.title': 'Get the Load Plan',
   'howItWorks.step3.desc': 'LoadMind places everything and shows the 3D layout.',
-  'howItWorks.step4.title': 'Send to Your Team',
-  'howItWorks.step4.desc': 'PDF, link, or print — one click.',
+  'howItWorks.step4.title': 'Share Easily',
+  'howItWorks.step4.desc': 'PDF, Excel, or a 3D link.',
 
   // How It Works — Tracker
   'howItWorks.tracker.step1.title': 'Connect Your TMS',

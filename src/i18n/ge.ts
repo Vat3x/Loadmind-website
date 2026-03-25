@@ -75,8 +75,8 @@ export const ge: Record<string, string> = {
   'howItWorks.step2.desc': 'დეტალურად ან AI-ის დახმარებით.',
   'howItWorks.step3.title': 'მიიღე ჩატვირთვის გეგმა',
   'howItWorks.step3.desc': 'LoadMind ალაგებს ყველაფერს და გიჩვენებს 3D-ში.',
-  'howItWorks.step4.title': 'გაუგზავნე გუნდს',
-  'howItWorks.step4.desc': 'PDF, ბმული ან ბეჭდვა — ერთი კლიკით.',
+  'howItWorks.step4.title': 'გააზიარე მარტივად',
+  'howItWorks.step4.desc': 'PDF, Excel ან 3D ბმული.',
 
   // How It Works — Tracker
   'howItWorks.tracker.step1.title': 'დაუკავშირე TMS',
