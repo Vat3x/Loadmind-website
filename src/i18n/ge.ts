@@ -353,8 +353,8 @@ export const ge: Record<string, string> = {
   // 3D Plan Showcase
   '3dplan.showcase.title': 'ნახე მოქმედებაში',
   '3dplan.showcase.subtitle': 'ფიზიკა, ინჟინერია და 3D მოდელირება ერთ ხელსაწყოში. გამოცადე თავად.',
-  '3dplan.feature.ai.title': 'AI ტვირთის შეყვანა',
-  '3dplan.feature.ai.desc': 'აღწერე ტვირთი ტექსტით და AI ავტომატურად ამოიცნობს ზომებს, წონას და დაწყობის წესებს. ხელით შეყვანა აღარ გჭირდება.',
+  '3dplan.feature.ai.title': 'ტვირთის აღწერა',
+  '3dplan.feature.ai.desc': 'შეიყვანე ტვირთის ზომები, წონა და რაოდენობა ხელით, ან უბრალოდ აღწერე ტექსტით და AI გაარჩევს. ყველა ნივთი ჩამოთვლილია Cargo Manifest-ში სიმულაციამდე.',
   '3dplan.feature.optimization.title': 'დეტალური ანალიტიკა',
   '3dplan.feature.optimization.desc': 'ნახე სრული სტატისტიკა: გამოყენებული სივრცე, დარჩენილი ადგილი, წონის განაწილება, შეფუთვის ეფექტურობა და სიმძიმის ცენტრი. ყოველი გეგმა გაანალიზებული და ოპტიმიზებულია.',
   '3dplan.feature.loadingOrder.title': 'დატვირთვის თანმიმდევრობა',

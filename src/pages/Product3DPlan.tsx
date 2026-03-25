@@ -124,13 +124,23 @@ export default function Product3DPlan() {
 
           {/* AI Cargo Input */}
           <div className="reveal grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2 items-center">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 shadow-xl shadow-purple-500/10 order-2 md:order-1">
-              <img
-                src="/3d-ai-input.webp"
-                alt="AI Cargo Input"
-                className="w-full rounded-xl"
-                loading="lazy"
-              />
+            <div className="grid grid-cols-2 gap-3 order-2 md:order-1">
+              <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-2 shadow-xl shadow-purple-500/10">
+                <img
+                  src="/3d-cargo-form.webp"
+                  alt="Cargo Geometry Form"
+                  className="w-full rounded-xl"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-2 shadow-xl shadow-purple-500/10">
+                <img
+                  src="/3d-cargo-manifest.webp"
+                  alt="Cargo Manifest"
+                  className="w-full rounded-xl"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="order-1 md:order-2">
               <div className="flex items-center gap-3 mb-4">

@@ -353,8 +353,8 @@ export const en: Record<string, string> = {
   // 3D Plan Showcase
   '3dplan.showcase.title': 'See It in Action',
   '3dplan.showcase.subtitle': 'Physics, engineering, and 3D modeling in one tool. Try it yourself.',
-  '3dplan.feature.ai.title': 'AI-Powered Cargo Input',
-  '3dplan.feature.ai.desc': 'Describe your cargo in plain text and let AI parse dimensions, weight, and stacking rules automatically. No manual data entry needed.',
+  '3dplan.feature.ai.title': 'Cargo Description',
+  '3dplan.feature.ai.desc': 'Enter cargo dimensions, weight, and quantity manually, or just describe it in plain text and AI will parse everything. All items are listed in the Cargo Manifest before simulation.',
   '3dplan.feature.optimization.title': 'Detailed Analytics',
   '3dplan.feature.optimization.desc': 'See full statistics: used space, remaining capacity, weight distribution, packing efficiency, and center of gravity. Every plan is analyzed and optimized.',
   '3dplan.feature.loadingOrder.title': 'Step-by-Step Loading Order',
