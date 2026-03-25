@@ -81,8 +81,8 @@ export const en: Record<string, string> = {
   // How It Works — Tracker
   'howItWorks.tracker.step1.title': 'Connect Your TMS',
   'howItWorks.tracker.step1.desc': 'API key, no IT team needed.',
-  'howItWorks.tracker.step2.title': 'Assign Loads',
-  'howItWorks.tracker.step2.desc': 'Driver is linked to the active route automatically.',
+  'howItWorks.tracker.step2.title': 'Create a Trip',
+  'howItWorks.tracker.step2.desc': 'Assign a driver, add stops and set the route.',
   'howItWorks.tracker.step3.title': 'Track in Real Time',
   'howItWorks.tracker.step3.desc': 'Live map, ETA, speed — all on one screen.',
   'howItWorks.tracker.step4.title': 'Share ETAs Instantly',

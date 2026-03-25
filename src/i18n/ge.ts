@@ -81,8 +81,8 @@ export const ge: Record<string, string> = {
   // How It Works — Tracker
   'howItWorks.tracker.step1.title': 'დაუკავშირე TMS',
   'howItWorks.tracker.step1.desc': 'API გასაღებით, IT გარეშე.',
-  'howItWorks.tracker.step2.title': 'მიანიჭე ტვირთები',
-  'howItWorks.tracker.step2.desc': 'მძღოლი ავტომატურად უკავშირდება მარშრუტს.',
+  'howItWorks.tracker.step2.title': 'შექმენი რეისი',
+  'howItWorks.tracker.step2.desc': 'მიუთითე მძღოლი, სადგომები და მარშრუტი.',
   'howItWorks.tracker.step3.title': 'თვალყური ადევნე რეალურ დროში',
   'howItWorks.tracker.step3.desc': 'ლაივ რუკა, ETA, სიჩქარე — ერთ ეკრანზე.',
   'howItWorks.tracker.step4.title': 'გაუზიარე ETA მყისიერად',

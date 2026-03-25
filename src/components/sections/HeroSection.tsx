@@ -6,7 +6,7 @@ export function HeroSection() {
 
   return (
     <section className="relative overflow-hidden bg-slate-950 -mt-16 pt-28 pb-24 md:pt-40 md:pb-56">
-      {/* ── Background Image ── */}
+      {/* ── Background ── */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <img
           src="/hero-bg.webp"
@@ -14,7 +14,7 @@ export function HeroSection() {
           className="absolute inset-0 w-full h-full object-cover object-center"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-slate-950/60 md:bg-slate-950/70" />
+        <div className="absolute inset-0 bg-slate-950/40" />
         <div className="absolute -top-32 -left-32 h-[600px] w-[600px] rounded-full bg-blue-600/10 blur-[140px]" />
         <div className="absolute -bottom-32 -right-32 h-[600px] w-[600px] rounded-full bg-indigo-600/10 blur-[140px]" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/40" />
@@ -23,7 +23,7 @@ export function HeroSection() {
       {/* ── Hero Content ── */}
       <div className="relative z-20 mx-auto max-w-4xl px-5 text-center">
         <h1
-          className="hero-animate text-3xl font-extrabold tracking-tight sm:text-4xl md:text-7xl lg:text-[5rem] leading-[1.08] text-white"
+          className="hero-animate text-3xl font-bold tracking-tight sm:text-4xl md:text-7xl lg:text-[5rem] leading-[1.08] text-white"
           style={{ animation: 'fade-in-up 0.7s ease forwards', opacity: 0 }}
         >
           {t('hero.title')}
