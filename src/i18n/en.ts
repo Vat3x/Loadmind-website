@@ -8,7 +8,7 @@ export const en: Record<string, string> = {
 
   // Hero
   'hero.title': 'Intelligence for the Modern Dispatcher',
-  'hero.subtitle': 'Stop guessing. Start shipping. The LoadMind Suite combines perfectly balanced 3D load planning and live fleet tracking into one powerful platform.',
+  'hero.subtitle': 'Stop guessing. Start optimizing. The LoadMind Suite combines intelligent cargo space optimization and live fleet tracking into one powerful platform.',
   'hero.cta': 'Explore Our Tools',
   'hero.cta2': 'Contact Us',
 
@@ -26,8 +26,8 @@ export const en: Record<string, string> = {
   // Products
   'products.title': 'Our Products',
   'products.3dplan.title': 'LoadMind 3D Planner',
-  'products.3dplan.problem': 'Stop guessing if it fits.',
-  'products.3dplan.description': 'Plan cargo placement in 3D. See what fits and where, check weight distribution, and share the plan with one click.',
+  'products.3dplan.problem': 'Every cubic meter. Calculated.',
+  'products.3dplan.description': 'Advanced optimization algorithms calculate the best cargo placement, maximize space utilization, and balance weight distribution to reduce loading risks.',
   'products.3dplan.feature1': 'Axle weight compliance',
   'products.3dplan.feature2': 'AI cargo description',
   'products.3dplan.feature3': 'Export & share load plans',
@@ -328,7 +328,7 @@ export const en: Record<string, string> = {
 
   // 3D Plan Product Page
   '3dplan.hero.title': 'LoadMind 3D Load Planner',
-  '3dplan.hero.subtitle': 'Place cargo optimally, calculate the best configuration, and maximize your space.',
+  '3dplan.hero.subtitle': 'Real optimization calculations — not just 3D visualization. Maximize space utilization, prevent overloading, and export a verified load plan in seconds.',
   '3dplan.hero.cta': 'Try Free, No Login',
   '3dplan.pricing.label': '$0 first month, then $39/mo',
   '3dplan.pricing.cta': 'Start Free',
