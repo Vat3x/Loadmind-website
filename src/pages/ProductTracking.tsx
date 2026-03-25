@@ -96,6 +96,16 @@ export default function ProductTracking() {
         title="Real-Time Fleet Tracking"
         description="Track drivers in real time. Share live tracking links, monitor ETAs, and manage your fleet from one dashboard."
         canonical="/tracking"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: 'LoadMind Tracking',
+          applicationCategory: 'BusinessApplication',
+          operatingSystem: 'Web, Android, iOS',
+          url: 'https://load-mind.com/tracking',
+          offers: { '@type': 'Offer', price: '39', priceCurrency: 'USD' },
+          description: 'Real-time fleet tracking for LTL dispatchers. Share live tracking links, monitor ETAs.',
+        }}
       />
       {/* App Showcase — Phone Mockups */}
       <section ref={showcaseRef} className="pt-28 pb-28">

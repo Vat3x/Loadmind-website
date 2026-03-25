@@ -81,6 +81,16 @@ export default function Product3DPlan() {
         title="3D Load Planning Tool"
         description="Plan truck loads in 3D. Balance weight, check height limits, export to PDF or Excel. Free tier available."
         canonical="/3d-plan"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: 'LoadMind 3D Load Planner',
+          applicationCategory: 'BusinessApplication',
+          operatingSystem: 'Web',
+          url: 'https://load-mind.com/3d-plan',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+          description: 'Plan truck loads in 3D. Balance weight across axles, check height limits, export PDF or Excel.',
+        }}
       />
       {/* App Showcase */}
       <section ref={showcaseRef} className="pt-28 pb-28">

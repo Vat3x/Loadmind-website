@@ -47,6 +47,17 @@ export default function FAQ() {
         title="FAQ"
         description="Frequently asked questions about LoadMind 3D load planning and fleet tracking tools."
         canonical="/faq"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: categories.flatMap((cat) =>
+            cat.items.map((item) => ({
+              '@type': 'Question',
+              name: item.question,
+              acceptedAnswer: { '@type': 'Answer', text: item.answer },
+            }))
+          ),
+        }}
       />
       <PageHero title={t('faq.title')} />
 
