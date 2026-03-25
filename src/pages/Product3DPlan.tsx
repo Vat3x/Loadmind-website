@@ -109,7 +109,7 @@ export default function Product3DPlan() {
               </div>
             </div>
             <img
-              src="/3d-main-view.webp"
+              src="/3d-history.webp"
               alt="LoadMind 3D Load Planner"
               className="w-full rounded-b-xl"
               loading="lazy"
