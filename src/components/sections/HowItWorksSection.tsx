@@ -8,16 +8,16 @@ export function HowItWorksSection() {
 
   const plannerSteps = [
     { icon: Truck, titleKey: 'howItWorks.step1.title', descKey: 'howItWorks.step1.desc', iconColor: 'text-blue-400' },
-    { icon: Package, titleKey: 'howItWorks.step2.title', descKey: 'howItWorks.step2.desc', iconColor: 'text-indigo-400' },
+    { icon: Package, titleKey: 'howItWorks.step2.title', descKey: 'howItWorks.step2.desc', iconColor: 'text-emerald-400' },
     { icon: LayoutGrid, titleKey: 'howItWorks.step3.title', descKey: 'howItWorks.step3.desc', iconColor: 'text-violet-400' },
-    { icon: Share2, titleKey: 'howItWorks.step4.title', descKey: 'howItWorks.step4.desc', iconColor: 'text-purple-400' },
+    { icon: Share2, titleKey: 'howItWorks.step4.title', descKey: 'howItWorks.step4.desc', iconColor: 'text-orange-400' },
   ];
 
   const trackerSteps = [
     { icon: Wifi, titleKey: 'howItWorks.tracker.step1.title', descKey: 'howItWorks.tracker.step1.desc', iconColor: 'text-teal-400' },
-    { icon: Truck, titleKey: 'howItWorks.tracker.step2.title', descKey: 'howItWorks.tracker.step2.desc', iconColor: 'text-cyan-400' },
-    { icon: Eye, titleKey: 'howItWorks.tracker.step3.title', descKey: 'howItWorks.tracker.step3.desc', iconColor: 'text-sky-400' },
-    { icon: Send, titleKey: 'howItWorks.tracker.step4.title', descKey: 'howItWorks.tracker.step4.desc', iconColor: 'text-blue-400' },
+    { icon: Truck, titleKey: 'howItWorks.tracker.step2.title', descKey: 'howItWorks.tracker.step2.desc', iconColor: 'text-blue-400' },
+    { icon: Eye, titleKey: 'howItWorks.tracker.step3.title', descKey: 'howItWorks.tracker.step3.desc', iconColor: 'text-purple-400' },
+    { icon: Send, titleKey: 'howItWorks.tracker.step4.title', descKey: 'howItWorks.tracker.step4.desc', iconColor: 'text-amber-400' },
   ];
 
   const renderSteps = (steps: typeof plannerSteps) => (
@@ -70,7 +70,7 @@ export function HowItWorksSection() {
 
         {/* 3D Planner */}
         <div className="reveal mb-20">
-          <h3 className="text-center text-2xl md:text-3xl font-extrabold text-white mb-10">3D Planner</h3>
+          <h3 className="text-center text-2xl md:text-3xl font-bold text-white mb-10">{t('howItWorks.plannerTitle')}</h3>
           {renderSteps(plannerSteps)}
         </div>
 
@@ -83,7 +83,7 @@ export function HowItWorksSection() {
 
         {/* Tracker */}
         <div className="reveal">
-          <h3 className="text-center text-2xl md:text-3xl font-extrabold text-white mb-10">Tracker</h3>
+          <h3 className="text-center text-2xl md:text-3xl font-bold text-white mb-10">{t('howItWorks.trackerTitle')}</h3>
           {renderSteps(trackerSteps)}
         </div>
       </div>

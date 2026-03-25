@@ -16,14 +16,14 @@ export function CTASection() {
       </div>
 
       <div className="relative z-20 mx-auto max-w-3xl px-4 text-center">
-        <h2 className="text-4xl font-extrabold md:text-5xl text-white">
+        <h2 className="text-4xl font-bold md:text-5xl text-white">
           {t('cta.title')}
         </h2>
-        <p className="mt-6 text-xl leading-relaxed text-slate-400">
+        <p className="mt-6 text-lg leading-relaxed text-slate-400">
           {t('cta.subtitle')}
         </p>
-        <div className="mt-12">
-          <Button theme="dark" variant="primary" href="/3d" size="lg">
+        <div className="mt-10">
+          <Button theme="light" variant="primary" href="/3d" size="md">
             {t('cta.button')}
           </Button>
         </div>

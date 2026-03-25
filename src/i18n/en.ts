@@ -34,7 +34,7 @@ export const en: Record<string, string> = {
   'products.3dplan.feature4': 'TMS integration',
   'products.3dplan.cta': 'Plan a Load →',
   'products.tracking.title': 'LoadMind Tracker',
-  'products.tracking.problem': '"Where\'s my truck?" Answered.',
+  'products.tracking.problem': 'Fleet. Real-time.',
   'products.tracking.description': 'Know where every truck is at any time. GPS tracking, live ETA, and full route history on one dashboard.',
   'products.tracking.feature1': 'Real-time GPS tracking',
   'products.tracking.feature2': 'ETA notifications',
@@ -61,7 +61,7 @@ export const en: Record<string, string> = {
   'valueProps.speed.label': 'Less planning time',
   'valueProps.speed.desc': 'What took minutes now takes seconds. Plan loads fast and accurately.',
   'valueProps.inspection.metric': '100%',
-  'valueProps.inspection.label': '100% Accuracy',
+  'valueProps.inspection.label': 'Guaranteed Accuracy',
   'valueProps.inspection.desc': 'Eliminate rework. Every schematic is engineered to pass DOT inspection.',
   'valueProps.price.metric': '$0',
   'valueProps.price.label': 'Zero friction entry',
@@ -69,6 +69,8 @@ export const en: Record<string, string> = {
 
   // How It Works
   'howItWorks.title': 'How It Works',
+  'howItWorks.plannerTitle': '3D Load Optimizer',
+  'howItWorks.trackerTitle': 'Tracker',
   'howItWorks.step1.title': 'Pick Your Trailer',
   'howItWorks.step1.desc': 'Standard or custom dimensions.',
   'howItWorks.step2.title': 'Add Your Cargo',

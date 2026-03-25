@@ -14,10 +14,10 @@ export function ValuePropsSection() {
 
   return (
     <section ref={ref} className="relative py-20 bg-slate-950 border-y border-slate-800/50 z-20">
-      <div className="mx-auto max-w-4xl px-4">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+      <div className="mx-auto max-w-5xl px-4">
+        <div className="grid grid-cols-1 gap-0 md:grid-cols-3">
           {props.map((p, i) => (
-            <div key={p.metricKey} className={`reveal reveal-delay-${i + 1} value-divider`}>
+            <div key={p.metricKey} className={`reveal reveal-delay-${i + 1} value-divider px-10 py-4`}>
               <ValuePropBadge
                 metric={t(p.metricKey)}
                 label={t(p.labelKey)}

@@ -51,7 +51,7 @@ export default function Contact() {
       <section className="relative overflow-hidden bg-slate-950 pt-32 pb-16 text-center">
         {/* Watermark */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center select-none overflow-hidden">
-          <img src="/logo.svg" alt="" className="h-[28rem] w-[28rem] opacity-[0.04]" />
+          <img src="/logo.svg" alt="" className="h-[38rem] w-[38rem] opacity-[0.12]" />
         </div>
         {/* Glows */}
         <div className="pointer-events-none absolute inset-0">
