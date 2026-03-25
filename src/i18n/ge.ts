@@ -70,23 +70,23 @@ export const ge: Record<string, string> = {
   // How It Works
   'howItWorks.title': 'როგორ მუშაობს',
   'howItWorks.step1.title': 'აირჩიე სატვირთო',
-  'howItWorks.step1.desc': '53-ფუტიანი დრაი ვენი, ფლეტბედი, სპრინტერი, ან შეიყვანე საკუთარი ზომები. 5 წამი სჭირდება.',
+  'howItWorks.step1.desc': 'სტანდარტული ან საკუთარი ზომები.',
   'howItWorks.step2.title': 'დაამატე ტვირთი',
-  'howItWorks.step2.desc': 'შეიყვანე ხელით, ჩასვი Excel-იდან, ან აღწერე AI-ს. LoadMind ავტომატურად წაიკითხავს ზომებს, წონებს და რაოდენობას.',
+  'howItWorks.step2.desc': 'ხელით, Excel-იდან, ან AI-ს აღწერით.',
   'howItWorks.step3.title': 'მიიღე ჩატვირთვის გეგმა',
-  'howItWorks.step3.desc': 'დააჭირე გამოთვლას. LoadMind ალაგებს ყველა ნივთს, აბალანსებს ღერძის წონებს და გიჩვენებს 3D განლაგებას წამებში.',
+  'howItWorks.step3.desc': 'LoadMind ალაგებს ყველაფერს და გიჩვენებს 3D-ში.',
   'howItWorks.step4.title': 'გაუგზავნე გუნდს',
-  'howItWorks.step4.desc': 'ექსპორტი PDF-ად, ბმულის გაზიარება, ან ბეჭდვა. საწყობის თანამშრომლები და მძღოლები ზუსტად ხედავენ რა სად დგას.',
+  'howItWorks.step4.desc': 'PDF, ბმული ან ბეჭდვა — ერთი კლიკით.',
 
   // How It Works — Tracker
   'howItWorks.tracker.step1.title': 'დაუკავშირე TMS',
-  'howItWorks.tracker.step1.desc': 'შეაერთე TMS API გასაღებით. IT გუნდი არ გჭირდება, რამდენიმე წუთში მზადაა.',
+  'howItWorks.tracker.step1.desc': 'API გასაღებით, IT გარეშე.',
   'howItWorks.tracker.step2.title': 'მიანიჭე ტვირთები',
-  'howItWorks.tracker.step2.desc': 'გააგზავნე დისპეჩი ჩვეულებისამებრ. LoadMind Tracker ავტომატურად აკავშირებს მძღოლს აქტიურ ტვირთთან.',
+  'howItWorks.tracker.step2.desc': 'მძღოლი ავტომატურად უკავშირდება მარშრუტს.',
   'howItWorks.tracker.step3.title': 'თვალყური ადევნე რეალურ დროში',
-  'howItWorks.tracker.step3.desc': 'ნახე ყველა მანქანა ლაივ რუკაზე: ETA, სიჩქარე, სტატუსი. აღარ გჭირდება ზარები.',
+  'howItWorks.tracker.step3.desc': 'ლაივ რუკა, ETA, სიჩქარე — ერთ ეკრანზე.',
   'howItWorks.tracker.step4.title': 'გაუზიარე ETA მყისიერად',
-  'howItWorks.tracker.step4.desc': 'გაუგზავნე ბროკერს ან შიპერს ლაივ ბმული ერთი კლიკით. ისინი ხედავენ პროგრესს, შენ იღებ ნაკლებ ზარს.',
+  'howItWorks.tracker.step4.desc': 'ბროკერს ან შიპერს — ლაივ ბმული ერთი კლიკით.',
 
   // Testimonial
   'testimonial.title': 'მოწინავე ლოჯისტიკური კომპანიების არჩევანი',

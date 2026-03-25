@@ -34,7 +34,10 @@ export function HowItWorksSection() {
             )}
             <div className={`reveal reveal-delay-${i + 1} group flex-1 rounded-2xl bg-slate-900 border border-slate-700 p-5 text-center transition-all duration-300 hover:border-slate-600 hover:-translate-y-1`}>
               <div className="relative mx-auto mb-4 w-fit">
-                <div className={`flex h-13 w-13 items-center justify-center rounded-2xl bg-gradient-to-br ${step.color} shadow-lg ${step.glow} group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`flex h-13 w-13 items-center justify-center rounded-2xl bg-gradient-to-br ${step.color} shadow-lg ${step.glow} group-hover:scale-110 transition-transform duration-300`}
+                  style={{ animation: `icon-float 3s ease-in-out ${i * 0.4}s infinite` }}
+                >
                   <Icon className="h-5.5 w-5.5 text-white" />
                 </div>
                 <span className="absolute -top-2 -right-2 flex h-5.5 w-5.5 items-center justify-center rounded-full bg-white text-[10px] font-bold text-slate-900 shadow">

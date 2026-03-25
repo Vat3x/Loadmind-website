@@ -255,6 +255,11 @@
   }
 }
 
+@keyframes icon-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
 /* Focus-visible styles */
 :focus-visible {
   outline: 2px solid var(--color-primary);

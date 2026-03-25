@@ -70,23 +70,23 @@ export const en: Record<string, string> = {
   // How It Works
   'howItWorks.title': 'How It Works',
   'howItWorks.step1.title': 'Pick Your Trailer',
-  'howItWorks.step1.desc': 'Choose a 53-ft dry van, flatbed, sprinter, or enter custom dimensions. Takes 5 seconds.',
+  'howItWorks.step1.desc': 'Standard or custom dimensions.',
   'howItWorks.step2.title': 'Add Your Cargo',
-  'howItWorks.step2.desc': 'Type it in, paste from Excel, or describe it to AI. LoadMind reads dimensions, weights, and quantities automatically.',
+  'howItWorks.step2.desc': 'Manual entry, Excel paste, or AI description.',
   'howItWorks.step3.title': 'Get the Load Plan',
-  'howItWorks.step3.desc': 'Hit calculate. LoadMind places every item, balances axle weights, and shows you the 3D layout in seconds.',
+  'howItWorks.step3.desc': 'LoadMind places everything and shows the 3D layout.',
   'howItWorks.step4.title': 'Send to Your Team',
-  'howItWorks.step4.desc': 'Export as PDF, share a link, or print. Your warehouse crew and drivers see exactly where each item goes.',
+  'howItWorks.step4.desc': 'PDF, link, or print — one click.',
 
   // How It Works — Tracker
   'howItWorks.tracker.step1.title': 'Connect Your TMS',
-  'howItWorks.tracker.step1.desc': 'Plug in your TMS with an API key. No IT team needed, setup takes minutes.',
+  'howItWorks.tracker.step1.desc': 'API key, no IT team needed.',
   'howItWorks.tracker.step2.title': 'Assign Loads',
-  'howItWorks.tracker.step2.desc': 'Dispatch as usual. LoadMind Tracker automatically links each driver to their active load.',
+  'howItWorks.tracker.step2.desc': 'Driver is linked to the active route automatically.',
   'howItWorks.tracker.step3.title': 'Track in Real Time',
-  'howItWorks.tracker.step3.desc': 'See every truck on a live map with ETA, speed, and status. No more check calls.',
+  'howItWorks.tracker.step3.desc': 'Live map, ETA, speed — all on one screen.',
   'howItWorks.tracker.step4.title': 'Share ETAs Instantly',
-  'howItWorks.tracker.step4.desc': 'Send a live tracking link to your broker or shipper with one click. They see progress, you get fewer calls.',
+  'howItWorks.tracker.step4.desc': 'Live link to broker or shipper — one click.',
 
   // Testimonial
   'testimonial.title': 'Trusted by the Fast Fleet',
