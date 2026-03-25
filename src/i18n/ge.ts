@@ -13,10 +13,10 @@ export const ge: Record<string, string> = {
   'hero.cta2': 'დაგვიკავშირდით',
 
   // Trust
-  'trust.noCard': '3D ტვირთის განლაგება',
-  'trust.cancel': 'GPS მონიტორინგი რეალურ დროში',
+  'trust.noCard': '3D ტვირთის ოპტიმიზაცია',
+  'trust.cancel': 'GPS რეალურ დროში',
   'trust.freeTrial': 'უფასო გეგმა',
-  'trust.support': 'წუთებში დაყენება',
+  'trust.support': 'API ინტეგრაცია',
 
   // Mid CTA
   'midCta.title': 'მზად ხარ დისპეჩერიზაციის ოპტიმიზაციისთვის?',
@@ -26,14 +26,14 @@ export const ge: Record<string, string> = {
   // Products
   'products.title': 'ჩვენი პროდუქტები',
   'products.3dplan.title': 'ტვირთის თავსევადობა',
-  'products.3dplan.problem': 'ყველა კუბური მეტრი. გამოთვლილი.',
+  'products.3dplan.problem': 'ყველა დეტალი გათვლილია.',
   'products.3dplan.description': 'ოპტიმიზაციის ალგორითმები გამოთვლიან ტვირთის საუკეთესო განლაგებას, სრულად იყენებენ სივრცეს და ანაწილებენ წონას დატვირთვის რისკის შესამცირებლად.',
   'products.3dplan.feature1': 'ღერძის წონის შესაბამისობა',
   'products.3dplan.feature2': 'AI ტვირთის აღწერა',
   'products.3dplan.feature3': 'ექსპორტი და გაზიარება',
   'products.3dplan.feature4': 'TMS ინტეგრაცია',
   'products.3dplan.cta': 'გაიგე მეტი →',
-  'products.tracking.title': 'LoadMind ტრეკერი',
+  'products.tracking.title': 'LoadMind მონიტორინგი',
   'products.tracking.problem': 'ფლოტი. რეალურ დროში.',
   'products.tracking.description': 'იცოდე სად არის ყველა მანქანა ნებისმიერ დროს. GPS თვალყურის დევნა, ცოცხალი ETA და სრული მარშრუტის ისტორია ერთ დეშბორდზე.',
   'products.tracking.feature1': 'GPS თვალყურის დევნა რეალურ დროში',
@@ -367,7 +367,7 @@ export const ge: Record<string, string> = {
   '3dplan.feature.history.desc': 'ყოველი გეგმა ავტომატურად ინახება. ჩატვირთე წინა კონფიგურაცია, შეადარე შედეგები და განაგრძე ადრე დაწყებული სამუშაო ნულიდან დაწყების გარეშე.',
 
   // Tracking Product Page
-  'tracking.hero.title': 'LoadMind Tracker',
+  'tracking.hero.title': 'LoadMind მონიტორინგი',
   'tracking.hero.subtitle': 'იცოდე სად არის ყველა მანქანა. GPS თვალყურის დევნა რეალურ დროში, TMS ინტეგრაციით, ერთ ცოცხალ დეშბორდზე.',
   'tracking.hero.cta': 'გახსენი თრექინგ დეშბორდი',
   'tracking.hero.demoCta': 'დემოს მოთხოვნა',

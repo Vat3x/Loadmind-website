@@ -22,7 +22,7 @@ export function TrustSection() {
               key={b.key}
               className={`reveal reveal-delay-${i + 1} flex items-center justify-center gap-3`}
             >
-              <b.icon className="h-5 w-5 text-blue-400 shrink-0" strokeWidth={1.5} />
+              <b.icon className="h-6 w-6 text-emerald-400 shrink-0" strokeWidth={1.5} />
               <span className="text-sm font-semibold text-white">{t(b.key)}</span>
             </div>
           ))}

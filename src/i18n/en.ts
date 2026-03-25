@@ -26,7 +26,7 @@ export const en: Record<string, string> = {
   // Products
   'products.title': 'Our Products',
   'products.3dplan.title': 'LoadMind 3D Planner',
-  'products.3dplan.problem': 'Every cubic meter. Calculated.',
+  'products.3dplan.problem': 'Every detail. Calculated.',
   'products.3dplan.description': 'Advanced optimization algorithms calculate the best cargo placement, maximize space utilization, and balance weight distribution to reduce loading risks.',
   'products.3dplan.feature1': 'Axle weight compliance',
   'products.3dplan.feature2': 'AI cargo description',
