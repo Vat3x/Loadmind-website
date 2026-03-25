@@ -1,7 +1,9 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Box, MapPin, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/hooks/useAuth';
+import { PaymentModal } from '@/components/PaymentModal';
 import { PageHero } from '@/components/ui/PageHero';
 import { PricingCard } from '@/components/ui/PricingCard';
 import { PricingToggle } from '@/components/ui/PricingToggle';
@@ -322,11 +324,13 @@ const PRODUCTS = [
 export default function Pricing() {
   const { t } = useLanguage();
   const { user } = useAuth();
+  const navigate = useNavigate();
   const [billing, setBilling] = useState<BillingCycle>('monthly');
   const [selected, setSelected] = useState<SelectedProduct>(null);
   const [apiPlans, setApiPlans] = useState<Record<string, TierData[]>>({});
   const [apiLoaded, setApiLoaded] = useState(false);
   const gridRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const [checkoutUrl, setCheckoutUrl] = useState<string | null>(null);
 
   useEffect(() => {
     fetch(`${API_BASE}/api/public/plans`)
@@ -375,7 +379,7 @@ export default function Pricing() {
       return;
     }
 
-    // 3D Planning plans → Flitt checkout
+    // 3D Planning plans → Flitt checkout in modal
     if (!user) {
       window.location.href = '/login?redirect=/pricing';
       return;
@@ -395,7 +399,7 @@ export default function Pricing() {
       });
       const data = await res.json();
       if (data.checkout_url) {
-        window.location.href = data.checkout_url;
+        setCheckoutUrl(data.checkout_url);
       } else {
         alert(data.message || 'Failed to start checkout');
       }
@@ -417,7 +421,7 @@ export default function Pricing() {
       });
       const data = await res.json();
       if (data.checkout_url) {
-        window.location.href = data.checkout_url;
+        setCheckoutUrl(data.checkout_url);
       } else {
         alert(data.message || 'Failed to start checkout');
       }
@@ -436,6 +440,17 @@ export default function Pricing() {
 
   return (
     <>
+      {checkoutUrl && (
+        <PaymentModal
+          checkoutUrl={checkoutUrl}
+          onClose={() => setCheckoutUrl(null)}
+          onComplete={(plan) => {
+            setCheckoutUrl(null);
+            navigate(`/checkout/return${plan ? `?plan=${plan}` : ''}`, { replace: true });
+          }}
+        />
+      )}
+
       <PageHero title={t('pricing.title')} subtitle={t('pricing.subtitle')} />
 
       {/* Product Cards */}

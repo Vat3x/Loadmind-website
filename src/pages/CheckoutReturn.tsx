@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/Button';
@@ -5,6 +6,13 @@ import { Button } from '@/components/ui/Button';
 export default function CheckoutReturn() {
   const [searchParams] = useSearchParams();
   const plan = searchParams.get('plan');
+
+  // When loaded inside an iframe (payment modal), notify the parent
+  useEffect(() => {
+    if (window.parent !== window) {
+      window.parent.postMessage({ type: 'flitt-payment-complete', plan: plan ?? undefined }, '*');
+    }
+  }, [plan]);
 
   const isPlan = plan && plan !== 'payg';
   const planName = plan ? plan.charAt(0).toUpperCase() + plan.slice(1) : '';
