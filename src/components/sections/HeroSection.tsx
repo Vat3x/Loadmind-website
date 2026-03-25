@@ -9,7 +9,7 @@ export function HeroSection() {
       {/* ── Background Image ── */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <img
-          src="/hero-bg.png"
+          src="/hero-bg.webp"
           alt=""
           className="absolute inset-0 w-full h-full object-cover object-center"
           aria-hidden="true"
