@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -44,6 +45,7 @@ export default function Register() {
 
   return (
     <>
+      <SEO title="Create Account" description="Create your LoadMind account." noindex />
       <PageHero title={t('auth.register.title')} />
 
       <section ref={ref} className="pb-20">

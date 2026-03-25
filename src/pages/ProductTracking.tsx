@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { MapPin, Bell, History, Navigation, ClipboardList, Smartphone, Monitor } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
@@ -91,6 +92,11 @@ export default function ProductTracking() {
 
   return (
     <>
+      <SEO
+        title="Real-Time Fleet Tracking"
+        description="Track drivers in real time. Share live tracking links, monitor ETAs, and manage your fleet from one dashboard."
+        canonical="/tracking"
+      />
       {/* App Showcase — Phone Mockups */}
       <section ref={showcaseRef} className="pt-28 pb-28">
         <div className="mx-auto max-w-5xl px-4">

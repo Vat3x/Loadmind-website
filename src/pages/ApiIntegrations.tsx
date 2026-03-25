@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { Plug, MonitorSmartphone } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
@@ -8,6 +9,11 @@ export default function ApiIntegrations() {
 
   return (
     <>
+      <SEO
+        title="API Integrations"
+        description="Connect LoadMind to your TMS or ERP with our REST API. Automate load plans and tracking data."
+        canonical="/api"
+      />
       <PageHero title={t('api.hero.title')} subtitle={t('api.hero.subtitle')} />
 
       <section className="pb-20">

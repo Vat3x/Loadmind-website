@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { useState } from 'react';
 import { CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -77,6 +78,11 @@ export default function Demo() {
 
   return (
     <>
+      <SEO
+        title="Request a Demo"
+        description="See LoadMind in action. Request a free demo of our 3D load planning and fleet tracking tools."
+        canonical="/demo"
+      />
       <PageHero title={t('demo.title')} />
 
       <section className="pb-20">

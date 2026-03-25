@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { useState } from 'react';
 import { Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -47,6 +48,11 @@ export default function Contact() {
 
   return (
     <>
+      <SEO
+        title="Contact"
+        description="Get in touch with the LoadMind team. We're based in Tbilisi, Georgia."
+        canonical="/contact"
+      />
       {/* Hero */}
       <section className="relative overflow-hidden bg-slate-950 pt-32 pb-16 text-center">
         {/* Watermark */}

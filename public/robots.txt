@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /login
+Disallow: /register
+Disallow: /account
+Disallow: /auth/
+Disallow: /checkout/
+Disallow: /3d
+Disallow: /tracker
+
+Sitemap: https://load-mind.com/sitemap.xml

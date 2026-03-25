@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
 import { Card } from '@/components/ui/Card';
@@ -12,6 +13,11 @@ export default function Terms() {
 
   return (
     <>
+      <SEO
+        title="Terms of Service"
+        description="LoadMind terms of service."
+        canonical="/terms"
+      />
       <PageHero title={t('terms.hero.title')} />
 
       <section className="pb-20">

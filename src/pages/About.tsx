@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { Rocket, Users, Award } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
@@ -15,6 +16,11 @@ export default function About() {
 
   return (
     <>
+      <SEO
+        title="About"
+        description="Meet the team behind LoadMind — dispatch tools built for LTL carriers."
+        canonical="/about"
+      />
       <PageHero title={t('about.hero.title')} />
 
       <section className="pb-20">

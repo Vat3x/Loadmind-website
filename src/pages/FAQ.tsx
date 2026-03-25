@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
 import { FAQAccordion } from '@/components/ui/FAQAccordion';
@@ -42,6 +43,11 @@ export default function FAQ() {
 
   return (
     <>
+      <SEO
+        title="FAQ"
+        description="Frequently asked questions about LoadMind 3D load planning and fleet tracking tools."
+        canonical="/faq"
+      />
       <PageHero title={t('faq.title')} />
 
       <section className="pb-20">

@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from '@/i18n/LanguageContext';
 import { AuthProvider } from '@/auth/AuthContext';
 import { PageLayout } from '@/components/layout/PageLayout';
@@ -53,11 +54,13 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <LanguageProvider>
-      <AuthProvider>
-        <RouterProvider router={router} />
-      </AuthProvider>
-    </LanguageProvider>
+    <HelmetProvider>
+      <LanguageProvider>
+        <AuthProvider>
+          <RouterProvider router={router} />
+        </AuthProvider>
+      </LanguageProvider>
+    </HelmetProvider>
   );
 }
 

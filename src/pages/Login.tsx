@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -35,6 +36,7 @@ export default function Login() {
 
   return (
     <>
+      <SEO title="Sign In" description="Sign in to LoadMind." noindex />
       <PageHero title={t('auth.login.title')} />
 
       <section ref={ref} className="pb-20">

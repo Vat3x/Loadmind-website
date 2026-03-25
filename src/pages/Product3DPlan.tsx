@@ -1,7 +1,7 @@
+import { SEO } from '@/components/SEO';
 import { Sparkles, BarChart3, Download, ListOrdered, History, Monitor, Smartphone } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
-import { PageHero } from '@/components/ui/PageHero';
 import { ProductPricing, type TierData } from '@/components/sections/ProductPricing';
 
 const FALLBACK_PLANS: TierData[] = [
@@ -77,6 +77,11 @@ export default function Product3DPlan() {
 
   return (
     <>
+      <SEO
+        title="3D Load Planning Tool"
+        description="Plan truck loads in 3D. Balance weight, check height limits, export to PDF or Excel. Free tier available."
+        canonical="/3d-plan"
+      />
       {/* App Showcase */}
       <section ref={showcaseRef} className="pt-28 pb-28">
         <div className="mx-auto max-w-6xl px-4">

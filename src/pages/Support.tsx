@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { MessageCircleQuestion, Mail, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -35,6 +36,11 @@ export default function Support() {
 
   return (
     <>
+      <SEO
+        title="Support"
+        description="Get help with LoadMind. Browse our FAQ, contact support, or check our documentation."
+        canonical="/support"
+      />
       <PageHero title={t('support.hero.title')} subtitle={t('support.hero.subtitle')} />
 
       <section ref={ref} className="pb-20">

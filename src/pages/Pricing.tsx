@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, MapPin, ChevronDown } from 'lucide-react';
@@ -440,6 +441,11 @@ export default function Pricing() {
 
   return (
     <>
+      <SEO
+        title="Pricing"
+        description="Simple, transparent pricing for 3D load planning and fleet tracking. Free tier included. No credit card required."
+        canonical="/pricing"
+      />
       {checkoutUrl && (
         <PaymentModal
           checkoutUrl={checkoutUrl}

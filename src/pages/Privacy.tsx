@@ -1,3 +1,4 @@
+import { SEO } from '@/components/SEO';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageHero } from '@/components/ui/PageHero';
 import { Card } from '@/components/ui/Card';
@@ -12,6 +13,11 @@ export default function Privacy() {
 
   return (
     <>
+      <SEO
+        title="Privacy Policy"
+        description="LoadMind privacy policy."
+        canonical="/privacy"
+      />
       <PageHero title={t('privacy.hero.title')} />
 
       <section className="pb-20">
