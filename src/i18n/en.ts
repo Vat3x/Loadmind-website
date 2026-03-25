@@ -72,7 +72,7 @@ export const en: Record<string, string> = {
   'howItWorks.step1.title': 'Pick Your Trailer',
   'howItWorks.step1.desc': 'Standard or custom dimensions.',
   'howItWorks.step2.title': 'Add Your Cargo',
-  'howItWorks.step2.desc': 'Manual entry, Excel paste, or AI description.',
+  'howItWorks.step2.desc': 'Enter manually or describe cargo with AI.',
   'howItWorks.step3.title': 'Get the Load Plan',
   'howItWorks.step3.desc': 'LoadMind places everything and shows the 3D layout.',
   'howItWorks.step4.title': 'Send to Your Team',

@@ -72,7 +72,7 @@ export const ge: Record<string, string> = {
   'howItWorks.step1.title': 'აირჩიე სატვირთო',
   'howItWorks.step1.desc': 'სტანდარტული ან საკუთარი ზომები.',
   'howItWorks.step2.title': 'დაამატე ტვირთი',
-  'howItWorks.step2.desc': 'ხელით, Excel-იდან, ან AI-ს აღწერით.',
+  'howItWorks.step2.desc': 'ხელით შეიყვანე ან AI-ით აღწერე ტვირთი.',
   'howItWorks.step3.title': 'მიიღე ჩატვირთვის გეგმა',
   'howItWorks.step3.desc': 'LoadMind ალაგებს ყველაფერს და გიჩვენებს 3D-ში.',
   'howItWorks.step4.title': 'გაუგზავნე გუნდს',
