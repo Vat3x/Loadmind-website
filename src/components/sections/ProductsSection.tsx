@@ -27,6 +27,7 @@ export function ProductsSection() {
                 t('products.3dplan.feature2'),
                 t('products.3dplan.feature3'),
                 t('products.3dplan.feature4'),
+                t('products.3dplan.feature5'),
               ]}
               ctaText={t('products.3dplan.cta')}
               ctaHref="/3d-plan"

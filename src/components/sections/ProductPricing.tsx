@@ -170,12 +170,12 @@ export function ProductPricing({ product, apiProduct, fallbackPlans }: ProductPr
   }, [user, product]);
 
   return (
-    <section className="pb-24">
+    <section className="py-24">
       <div className="mx-auto max-w-7xl px-4">
-        <h2 className="mb-4 text-center text-2xl font-bold md:text-3xl gradient-text">
+        <h2 className="mb-6 text-center text-2xl font-bold md:text-3xl gradient-text">
           {t('pricing.title')}
         </h2>
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-10">
           <PricingToggle
             labels={billingLabels}
             activeIndex={billing === 'monthly' ? 0 : 1}

@@ -22,7 +22,6 @@ export default function FAQ() {
         { question: t('faqPage.q5'), answer: t('faqPage.a5') },
         { question: t('faqPage.q6'), answer: t('faqPage.a6') },
         { question: t('faqPage.q7'), answer: t('faqPage.a7') },
-        { question: t('faqPage.q8'), answer: t('faqPage.a8') },
       ],
     },
     {

@@ -1,5 +1,5 @@
 import { SEO } from '@/components/SEO';
-import { Sparkles, BarChart3, Download, ListOrdered, History, Monitor, Smartphone } from 'lucide-react';
+import { Sparkles, BarChart3, Download, ListOrdered, History, Monitor, Smartphone, AlertTriangle } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
 import { ProductPricing, type TierData } from '@/components/sections/ProductPricing';
@@ -176,9 +176,42 @@ export default function Product3DPlan() {
             </div>
           </div>
 
-          {/* Optimization & Metrics */}
+          {/* Partial Load Warnings */}
           <div className="reveal grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2 items-center">
             <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-600">
+                  <AlertTriangle className="h-5 w-5 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white md:text-2xl">
+                  {t('3dplan.feature.warnings.title')}
+                </h3>
+              </div>
+              <p className="text-slate-400 leading-relaxed">
+                {t('3dplan.feature.warnings.desc')}
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-2 shadow-xl shadow-amber-500/10">
+              <img
+                src="/3d-recommendations.webp"
+                alt="Partial Load Recommendations"
+                className="w-full rounded-xl"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          {/* Detailed Analytics */}
+          <div className="reveal grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2 items-center">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-2 shadow-xl shadow-blue-500/10 order-2 md:order-1">
+              <img
+                src="/3d-advanced-metrics.webp"
+                alt="Advanced Metrics"
+                className="w-full rounded-xl"
+                loading="lazy"
+              />
+            </div>
+            <div className="order-1 md:order-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600">
                   <BarChart3 className="h-5 w-5 text-white" />
@@ -191,37 +224,11 @@ export default function Product3DPlan() {
                 {t('3dplan.feature.optimization.desc')}
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-2 shadow-xl shadow-blue-500/10">
-                <img
-                  src="/3d-optimization.webp"
-                  alt="Optimization Complete"
-                  className="w-full rounded-xl"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-2 shadow-xl shadow-blue-500/10">
-                <img
-                  src="/3d-metrics.webp"
-                  alt="Advanced Metrics"
-                  className="w-full rounded-xl"
-                  loading="lazy"
-                />
-              </div>
-            </div>
           </div>
 
           {/* Loading Order */}
           <div className="reveal grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2 items-center">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 shadow-xl shadow-amber-500/10 order-2 md:order-1">
-              <img
-                src="/3d-loading-order.webp"
-                alt="Loading Order"
-                className="w-full rounded-xl"
-                loading="lazy"
-              />
-            </div>
-            <div className="order-1 md:order-2">
+            <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-600">
                   <ListOrdered className="h-5 w-5 text-white" />
@@ -234,11 +241,27 @@ export default function Product3DPlan() {
                 {t('3dplan.feature.loadingOrder.desc')}
               </p>
             </div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 shadow-xl shadow-amber-500/10">
+              <img
+                src="/3d-loading-order.webp"
+                alt="Loading Order"
+                className="w-full rounded-xl"
+                loading="lazy"
+              />
+            </div>
           </div>
 
           {/* Export & Share */}
           <div className="reveal grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2 items-center">
-            <div>
+            <div className="flex justify-center rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-xl shadow-emerald-500/10 order-2 md:order-1">
+              <img
+                src="/3d-export.webp"
+                alt="Export Load Plan"
+                className="w-auto max-h-80 rounded-xl"
+                loading="lazy"
+              />
+            </div>
+            <div className="order-1 md:order-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600">
                   <Download className="h-5 w-5 text-white" />
@@ -251,27 +274,11 @@ export default function Product3DPlan() {
                 {t('3dplan.feature.export.desc')}
               </p>
             </div>
-            <div className="flex justify-center rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-xl shadow-emerald-500/10">
-              <img
-                src="/3d-export.webp"
-                alt="Export Load Plan"
-                className="w-auto max-h-80 rounded-xl"
-                loading="lazy"
-              />
-            </div>
           </div>
 
           {/* Load History */}
           <div className="reveal grid grid-cols-1 gap-8 md:gap-12 md:grid-cols-2 items-center">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 shadow-xl shadow-violet-500/10 order-2 md:order-1">
-              <img
-                src="/3d-history.webp"
-                alt="Load History"
-                className="w-full rounded-xl"
-                loading="lazy"
-              />
-            </div>
-            <div className="order-1 md:order-2">
+            <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-purple-600">
                   <History className="h-5 w-5 text-white" />
@@ -283,6 +290,14 @@ export default function Product3DPlan() {
               <p className="text-slate-400 leading-relaxed">
                 {t('3dplan.feature.history.desc')}
               </p>
+            </div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 shadow-xl shadow-violet-500/10">
+              <img
+                src="/3d-history.webp"
+                alt="Load History"
+                className="w-full rounded-xl"
+                loading="lazy"
+              />
             </div>
           </div>
 
