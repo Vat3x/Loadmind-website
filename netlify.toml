@@ -2,6 +2,12 @@
   command = "npm run build"
   publish = "dist"
 
+[[headers]]
+  for = "/.well-known/apple-app-site-association"
+  [headers.values]
+    Content-Type = "application/json"
+    Cache-Control = "no-cache"
+
 [[redirects]]
   from = "/embed"
   to = "https://3dloadplanning.netlify.app/embed"
