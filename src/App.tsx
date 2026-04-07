@@ -27,6 +27,7 @@ import Account from '@/pages/Account';
 const router = createBrowserRouter([
   { path: '/3d', element: <App3D /> },
   { path: '/tracker', element: <AppTracking /> },
+  { path: '/tracker/*', element: <AppTracking /> },
   {
     element: <PageLayout />,
     children: [
