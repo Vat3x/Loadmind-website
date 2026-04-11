@@ -20,54 +20,19 @@
   status = 200
   force = true
 
-[[redirects]]
-  from = "/tracker/invite/*"
-  to = "https://tracking-app-f6ad7.web.app/invite/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/tracker/track/*"
-  to = "https://tracking-app-f6ad7.web.app/track/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/tracker/register/*"
-  to = "https://tracking-app-f6ad7.web.app/register/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/tracker/register"
-  to = "https://tracking-app-f6ad7.web.app/register"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/tracker/auth/*"
-  to = "https://tracking-app-f6ad7.web.app/auth/:splat"
-  status = 200
-  force = true
-
-# Catch-all for any other tracker paths (dashboard, settings, etc.)
+# Legacy /tracker/* redirects → new subdomain (permanent)
 [[redirects]]
   from = "/tracker/*"
-  to = "https://tracking-app-f6ad7.web.app/:splat"
-  status = 200
+  to = "https://tracking.load-mind.com/:splat"
+  status = 301
   force = true
 
 [[redirects]]
   from = "/tracker"
-  to = "https://tracking-app-f6ad7.web.app/"
-  status = 200
+  to = "https://tracking.load-mind.com/"
+  status = 301
   force = true
 
-# Proxy Firebase dashboard assets (hashed filenames won't collide with Netlify's own assets)
-[[redirects]]
-  from = "/assets/*"
-  to = "https://tracking-app-f6ad7.web.app/assets/:splat"
-  status = 200
 
 [[redirects]]
   from = "/*"
