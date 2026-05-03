@@ -4,7 +4,7 @@ import { LanguageProvider } from '@/i18n/LanguageContext';
 import { AuthProvider } from '@/auth/AuthContext';
 import { PageLayout } from '@/components/layout/PageLayout';
 import Landing from '@/pages/Landing';
-import Pricing from '@/pages/Pricing';
+// import Pricing from '@/pages/Pricing';
 import FAQ from '@/pages/FAQ';
 import Product3DPlan from '@/pages/Product3DPlan';
 import ProductTracking from '@/pages/ProductTracking';

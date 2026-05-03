@@ -4,9 +4,9 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
 import { StepCard } from '@/components/ui/StepCard';
 import { Card } from '@/components/ui/Card';
-import { ProductPricing, type TierData } from '@/components/sections/ProductPricing';
+// import { ProductPricing, type TierData } from '@/components/sections/ProductPricing';
 
-const FALLBACK_PLANS: TierData[] = [
+/* const FALLBACK_PLANS: TierData[] = [
   {
     nameKey: 'pricing.track.demo.name',
     priceKey: { monthly: 'pricing.track.demo.name', annual: 'pricing.track.demo.name' },
@@ -75,7 +75,7 @@ const FALLBACK_PLANS: TierData[] = [
     ctaHref: '/contact',
     enterprise: true,
   },
-];
+]; */
 
 export default function ProductTracking() {
   const { t } = useLanguage();

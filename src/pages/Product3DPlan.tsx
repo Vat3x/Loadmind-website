@@ -2,9 +2,9 @@ import { SEO } from '@/components/SEO';
 import { Sparkles, BarChart3, Download, ListOrdered, History, Monitor, Smartphone, AlertTriangle } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRevealChildren } from '@/hooks/useRevealChildren';
-import { ProductPricing, type TierData } from '@/components/sections/ProductPricing';
+// import { ProductPricing, type TierData } from '@/components/sections/ProductPricing';
 
-const FALLBACK_PLANS: TierData[] = [
+/* const FALLBACK_PLANS: TierData[] = [
   {
     nameKey: 'pricing.3d.free.name',
     priceKey: { monthly: 'pricing.3d.free.price.monthly', annual: 'pricing.3d.free.price.annual' },
@@ -68,7 +68,7 @@ const FALLBACK_PLANS: TierData[] = [
     ctaHref: '/contact',
     enterprise: true,
   },
-];
+]; */
 
 export default function Product3DPlan() {
   const { t } = useLanguage();
