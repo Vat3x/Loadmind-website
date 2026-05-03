@@ -34,11 +34,11 @@ export function Footer() {
                   {t('footer.tracking')}
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/pricing" className="text-sm text-muted-fg hover:text-foreground transition-colors">
                   {t('footer.pricing')}
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/api" className="text-sm text-muted-fg hover:text-foreground transition-colors">
                   {t('footer.api')}

@@ -304,7 +304,7 @@ export default function Product3DPlan() {
         </div>
       </section>
 
-      <ProductPricing product="3d" apiProduct="3d-planning" fallbackPlans={FALLBACK_PLANS} />
+      {/* <ProductPricing product="3d" apiProduct="3d-planning" fallbackPlans={FALLBACK_PLANS} /> */}
     </>
   );
 }

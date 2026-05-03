@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       { path: '/', element: <Landing /> },
       { path: '/3d-plan', element: <Product3DPlan /> },
       { path: '/tracking', element: <ProductTracking /> },
-      { path: '/pricing', element: <Pricing /> },
+      // { path: '/pricing', element: <Pricing /> },
       { path: '/api', element: <ApiIntegrations /> },
       { path: '/faq', element: <FAQ /> },
       { path: '/about', element: <About /> },

@@ -366,10 +366,10 @@ export const en: Record<string, string> = {
   '3dplan.feature.history.desc': 'Every load plan is saved automatically. Reload previous configurations, compare results, and build on past work without starting from scratch.',
 
   // Tracking Product Page
-  'tracking.hero.title': 'LoadMind Tracking',
-  'tracking.hero.subtitle': 'Know where every truck is. Real-time GPS tracking with TMS integration, all on one live dashboard.',
-  'tracking.hero.cta': 'Open Tracking Dashboard',
-  'tracking.hero.demoCta': 'Request Demo',
+  'tracking.hero.title': 'Dispatch trips, track drivers live, and share ETAs with clients — all from one dashboard.',
+  'tracking.hero.subtitle': 'Simpler to use, costs less, and was built for dispatchers — not Fortune 500 IT departments.',
+  'tracking.hero.cta': 'Start Free — No Credit Card Required',
+  'tracking.hero.demoCta': 'Book Demo',
   'tracking.cta.title': 'Ready to track your fleet?',
   'tracking.cta.desc': 'Get real-time GPS visibility for your entire fleet. See every truck on a live map, integrated directly with your TMS.',
   'tracking.cta.button': 'Launch Tracking Dashboard',

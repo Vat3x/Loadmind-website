@@ -44,7 +44,7 @@ export function StickyHeader() {
   }, []);
 
   const navLinks = [
-    { label: t('nav.pricing'), href: '/pricing' },
+    // { label: t('nav.pricing'), href: '/pricing' },
     { label: t('nav.api'), href: '/api' },
     { label: t('nav.faq'), href: '/faq' },
     { label: t('nav.contact'), href: '/contact' },

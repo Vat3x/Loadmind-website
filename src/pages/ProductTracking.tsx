@@ -113,9 +113,17 @@ export default function ProductTracking() {
           <h1 className="reveal mb-6 text-center text-4xl font-extrabold md:text-5xl text-white">
             {t('tracking.hero.title')}
           </h1>
-          <p className="reveal mb-16 text-center text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="reveal mb-8 text-center text-lg text-slate-400 max-w-2xl mx-auto">
             {t('tracking.hero.subtitle')}
           </p>
+          <div className="reveal mb-16 flex justify-center">
+            <a
+              href="/demo"
+              className="rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/20 hover:opacity-90 transition-opacity"
+            >
+              {t('tracking.hero.demoCta')}
+            </a>
+          </div>
           <div className="reveal mb-10 flex flex-wrap items-center justify-center gap-3">
             <div className="flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-400">
               <Smartphone className="h-4 w-4" />
@@ -348,7 +356,28 @@ export default function ProductTracking() {
         </div>
       </section>
 
-      <ProductPricing product="tracking" apiProduct="tracker" fallbackPlans={FALLBACK_PLANS} />
+      {/* <ProductPricing product="tracking" apiProduct="tracker" fallbackPlans={FALLBACK_PLANS} /> */}
+
+      {/* Bottom Demo CTA */}
+      <section className="pb-28 pt-4">
+        <div className="mx-auto max-w-2xl px-4 text-center">
+          <h2 className="mb-4 text-3xl font-extrabold text-white md:text-4xl">
+            See LoadMind in action — in 15 minutes.
+          </h2>
+          <p className="mb-8 text-lg text-slate-400 leading-relaxed">
+            We'll show you exactly how to replace your current tracking tool, set up your first trip, and get your drivers on the app — live, on a call with you.
+          </p>
+          <a
+            href="/demo"
+            className="inline-block rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-emerald-500/20 hover:opacity-90 transition-opacity"
+          >
+            Book a Free Demo
+          </a>
+          <p className="mt-5 text-sm text-slate-500">
+            No commitment. No credit card. Just 15 minutes.
+          </p>
+        </div>
+      </section>
     </>
   );
 }
