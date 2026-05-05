@@ -364,6 +364,9 @@ export const ge: Record<string, string> = {
   '3dplan.feature.export.desc': 'შექმენი PDF რეპორტი, Excel ფაილი ან გასაზიარებელი ლინკი ერთი კლიკით. გაუგზავნე დატვირთვის გეგმა პირდაპირ მძღოლებს ან დისპეტჩერებს.',
   '3dplan.feature.history.title': 'დატვირთვის ისტორია',
   '3dplan.feature.history.desc': 'ყოველი გეგმა ავტომატურად ინახება. ჩატვირთე წინა კონფიგურაცია, შეადარე შედეგები და განაგრძე ადრე დაწყებული სამუშაო ნულიდან დაწყების გარეშე.',
+  '3dplan.cta.title': 'მზად ხარ უკეთ დაგეგმო?',
+  '3dplan.cta.subtitle': 'სცადე 3D Load Planner უფასოდ — რეგისტრაცია არ სჭირდება.',
+  '3dplan.cta.button': 'სცადე →',
 
   // Tracking Product Page
   'tracking.hero.title': 'LoadMind მონიტორინგი',

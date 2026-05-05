@@ -364,6 +364,9 @@ export const en: Record<string, string> = {
   '3dplan.feature.export.desc': 'Generate PDF reports, Excel spreadsheets, or shareable links with one click. Send load plans directly to drivers or dispatchers.',
   '3dplan.feature.history.title': 'Load History',
   '3dplan.feature.history.desc': 'Every load plan is saved automatically. Reload previous configurations, compare results, and build on past work without starting from scratch.',
+  '3dplan.cta.title': 'Ready to Plan Smarter?',
+  '3dplan.cta.subtitle': 'Try the 3D Load Planner free — no login required.',
+  '3dplan.cta.button': 'Try Now →',
 
   // Tracking Product Page
   'tracking.hero.title': 'Dispatch trips, track drivers live, and share ETAs with clients — all from one dashboard.',

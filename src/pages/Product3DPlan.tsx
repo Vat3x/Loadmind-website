@@ -304,6 +304,26 @@ export default function Product3DPlan() {
         </div>
       </section>
 
+      {/* Try Now CTA */}
+      <section className="pb-28">
+        <div className="mx-auto max-w-3xl px-4 text-center">
+          <div className="rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 p-12">
+            <h2 className="mb-4 text-3xl font-extrabold text-white md:text-4xl">
+              {t('3dplan.cta.title')}
+            </h2>
+            <p className="mb-8 text-lg text-slate-400">
+              {t('3dplan.cta.subtitle')}
+            </p>
+            <a
+              href="/3d"
+              className="inline-block rounded-xl bg-blue-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-blue-500/25 transition hover:bg-blue-500"
+            >
+              {t('3dplan.cta.button')}
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* <ProductPricing product="3d" apiProduct="3d-planning" fallbackPlans={FALLBACK_PLANS} /> */}
     </>
   );
