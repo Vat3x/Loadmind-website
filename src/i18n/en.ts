@@ -94,7 +94,7 @@ export const en: Record<string, string> = {
   // Testimonial
   'testimonial.title': 'Trusted by the Fast Fleet',
   'testimonial.quote': '"LoadMind fundamentally changed our daily routine. It turned a stressful hour of manual weight calculations into a 2-minute visual export. Our drivers haven\'t hit an overweight fine since we deployed it."',
-  'testimonial.author': 'Operations Manager, Action Express',
+  'testimonial.author': 'Operations Manager',
 
   // Why LoadMind
   'why.title': 'Why LoadMind',

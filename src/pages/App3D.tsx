@@ -78,6 +78,7 @@ export default function App3D() {
       title="LoadMind 3D Planner"
       className="fixed inset-0 h-full w-full border-0"
       allow="clipboard-read; clipboard-write"
+      data-hj-allow-iframe
       onLoad={() => setIframeReady(true)}
     />
   );

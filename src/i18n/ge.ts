@@ -94,7 +94,7 @@ export const ge: Record<string, string> = {
   // Testimonial
   'testimonial.title': 'მოწინავე ლოჯისტიკური კომპანიების არჩევანი',
   'testimonial.quote': '"LoadMind-მა ფუნდამენტურად შეცვალა ჩვენი დღის რუტინა. მან ხელით დაგეგმვის სტრესული საათი 2-წუთიან ვიზუალურ პროცესად აქცია. ამ სისტემის დანერგვის შემდეგ ჩვენს მძღოლებს წონაზე ჯარიმა აღარ მიუღიათ."',
-  'testimonial.author': 'ოპერაციების მენეჯერი, Action Express',
+  'testimonial.author': 'ოპერაციების მენეჯერი',
 
   // Why LoadMind (Even though removed from landing, keeping translations intact)
   'why.title': 'რატომ LoadMind',
