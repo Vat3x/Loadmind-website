@@ -140,7 +140,7 @@ export const en: Record<string, string> = {
   'footer.support': 'Support',
   'footer.description': 'LoadMind is a dispatch toolset combining 3D load planning and real-time fleet tracking into one powerful platform.',
   'footer.api': 'API & Integrations',
-  'footer.builtBy': 'Built by Nexsus',
+  'footer.builtBy': 'Built by Nexus Dynamics',
   'footer.location': 'Tbilisi, Georgia',
 
   // Pricing Page
@@ -287,7 +287,7 @@ export const en: Record<string, string> = {
   'faqPage.q9': 'When will tracking be available?',
   'faqPage.a9': 'LoadMind Tracking launches soon. Sign up for updates on the tracking page.',
   'faqPage.q10': 'What TMS platforms does tracking support?',
-  'faqPage.a10': 'Currently integrated with Action Express. More platforms coming soon.',
+  'faqPage.a10': 'Currently integrated with Pilot Company. More platforms coming soon.',
   'faqPage.q11': 'What happens after the free month?',
   'faqPage.a11': 'You can upgrade to Pro ($39/mo) or stop using. No automatic charges.',
   'faqPage.q12': 'Can I cancel anytime?',
@@ -414,7 +414,7 @@ export const en: Record<string, string> = {
   'api.hero.subtitle': 'Connect LoadMind to your existing workflow.',
   'api.tms.title': 'TMS Integration',
   'api.tms.desc': 'LoadMind works alongside your TMS. Plan loads in LoadMind, track drivers in real time, all connected.',
-  'api.tms.supported': 'Currently supported: Action Express dispatch board',
+  'api.tms.supported': 'Currently supported: Pilot Company dispatch board',
   'api.embed.title': 'Embed Widget',
   'api.embed.desc': 'Embed the 3D load viewer in your own platform. Show clients interactive load plans.',
   'api.embed.route': 'Available at /embed',

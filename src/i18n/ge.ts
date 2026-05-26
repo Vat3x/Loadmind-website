@@ -140,7 +140,7 @@ export const ge: Record<string, string> = {
   'footer.support': 'მხარდაჭერა',
   'footer.description': 'LoadMind არის სადისპეჩერო ხელსაწყოების ნაკრები, რომელიც აერთიანებს 3D ტვირთის დაგეგმვასა და ფლოტის თვალყურის დევნას ერთ მძლავრ პლატფორმაში.',
   'footer.api': 'API და ინტეგრაციები',
-  'footer.builtBy': 'შექმნილია Nexsus-ის მიერ',
+  'footer.builtBy': 'შექმნილია Nexus Dynamics-ის მიერ',
   'footer.location': 'თბილისი, საქართველო',
 
   // Pricing Page
@@ -287,7 +287,7 @@ export const ge: Record<string, string> = {
   'faqPage.q9': 'როდის გამოვა თრექინგი?',
   'faqPage.a9': 'LoadMind Tracking მალე გამოვა. დარეგისტრირდი სიახლეებისთვის.',
   'faqPage.q10': 'რა TMS პლატფორმებს უჭერს მხარს?',
-  'faqPage.a10': 'ამჟამად Action Express-თან ინტეგრირებული. მეტი პლატფორმა მალე.',
+  'faqPage.a10': 'ამჟამად Pilot Company-თან ინტეგრირებული. მეტი პლატფორმა მალე.',
   'faqPage.q11': 'რა ხდება უფასო თვის შემდეგ?',
   'faqPage.a11': 'შეგიძლია გადახვიდე Pro-ზე ($39/თვე) ან შეწყვიტო. ავტომატური ჩარჯი არ არის.',
   'faqPage.q12': 'შეწყვეტა ნებისმიერ დროს შეიძლება?',
@@ -414,7 +414,7 @@ export const ge: Record<string, string> = {
   'api.hero.subtitle': 'დააკავშირე LoadMind შენს არსებულ სამუშაო პროცესს.',
   'api.tms.title': 'TMS ინტეგრაცია',
   'api.tms.desc': 'LoadMind მუშაობს შენს TMS-თან ერთად. დაგეგმე ტვირთი, თვალყური ადევნე მძღოლებს, ყველაფერი დაკავშირებული.',
-  'api.tms.supported': 'ამჟამად მხარდაჭერილი: Action Express dispatch board',
+  'api.tms.supported': 'ამჟამად მხარდაჭერილი: Pilot Company dispatch board',
   'api.embed.title': 'Embed Widget',
   'api.embed.desc': 'ჩააშენე 3D ვიზუალიზატორი შენს პლატფორმაში. აჩვენე კლიენტებს ინტერაქტიული გეგმები.',
   'api.embed.route': 'ხელმისაწვდომია /embed-ზე',
